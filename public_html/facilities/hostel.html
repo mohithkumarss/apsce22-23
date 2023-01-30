@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="apsce-modified.png">
+  <link rel="stylesheet" href="depstyle.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <link rel="stylesheet" href="../style2.css">
+  <link rel="stylesheet" href="depstyle.css">
+  <link rel="stylesheet" href="/bootstrap-5.1.3-dist/css/bootstrap.css" />
+  <script src="/bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
+  <script src="https://kit.fontawesome.com/c4d40c1d88.js" crossorigin="anonymous"></script>
+  <title>Hostel - APS College of Engineering</title>
+  <link rel="stylesheet" href="../style2.css">
+</head>
+
+<body onload="myfunction()">
+  <div id="nav-placeholder"></div>
+  <div class="part1">
+
+    <div id='title1'>
+      <span>
+        Student Hostels
+      </span>
+
+    </div>
+  </div>
+
+  <div class="tabs">
+
+    <input type="radio" id="tab1" name="tab-control" checked>
+    <input type="radio" id="tab2" name="tab-control">
+    <input type="radio" id="tab3" name="tab-control">
+    <input type="radio" id="tab4" name="tab-control">
+    <ul class="toplist">
+      <li title="Features"><label for="tab1" role="button"><br><span>APS Boys Hostel</span></label></li>
+      <!-- <li title="Delivery Contents"><label for="tab2" role="button"><br><span>Warden</span></label></li> -->
+      <li title="Shipping"><label for="tab2" role="button"><br><span> APS Girls Hostel</span></label></li>
+      <!-- <li title="Returns"><label for="tab4" role="button"><br><span>Medical Facilities</span></label></li> -->
+    </ul>
+
+
+
+    <div class="slider">
+      <div class="indicator"></div>
+    </div>
+    <hr>
+    <div class="content1" style="color: #000;">
+
+      <section>
+
+
+        <div class="dep-content">
+          <img src="boys hostel.jpg" alt="" style="height: 15rem; margin-right: 2rem;">
+          <div class="content-text" style="width: 50%;">
+
+
+            The campus has a Hostel for men, which is a home away from home for nearly 150 students hailing from
+            different states all over the country. Adequate leisure is ensured to the hostilities by way of General
+            Library, Entertainment Centre, Indoor and Outdoor Sports facility and even a gymnasium.
+
+            Well furnished rooms with an accommodation choice of single, double and triple occupancy are available.
+
+            In other to go with this industrial trends and standard, a student needs to learn some extra technical
+            skills which are more to practical oriented.
+
+            So we provide our students the opportunities to learn extra industrial technical skills which provide them
+            the confidence to compete with other students in the industry.
+
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="dep-content">
+          <img src="girls-hostel.jpg" alt="" style="height: 15rem; margin-right:2rem ;">
+          <div class="content-text" style="width: 50%;">
+            The campus also has a Hostel for women, which is a home away from home for nearly 150 students hailing from
+            different states all over the country. Adequate leisure is ensured to the hostilities by way of General
+            Library, Entertainment Centre, Indoor and Outdoor Sports facility and even a gymnasium.
+
+            Well furnished rooms with an accommodation choice of single, double and triple occupancy are available.
+
+            In other to go with this industrial trends and standard, a student needs to learn some extra technical
+            skills which are more to practical oriented.
+
+            So we provide our students the opportunities to learn extra industrial technical skills which provide them
+            the confidence to compete with other students in the industry.
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+      </section>
+      <section>
+
+
+
+      </section>
+      <section>
+      </section>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+
+  <script>
+    $('.card5').hover(function () {
+      if ($(this).hasClass("active")) {
+        $('.card5 .bottom5').slideUp(function () {
+          $('.card5').removeClass("active");
+        });
+      } else {
+        $('.card5').addClass("active");
+        $('.card5 .bottom5').stop().slideDown();
+      }
+    });
+  </script>
+  <script>
+    var preloader = document.getElementById('loadscreen');
+    function myfunction() {
+      preloader.style.display = 'none';
+    }
+  </script>
+  <script>
+    $(function () {
+      $("#nav-placeholder").load("../navbar.html");
+    });
+
+    $(function () {
+      $("#footer-placeholder").load("../footer.html");
+    });
+  </script>
+</body>
+
+</html>

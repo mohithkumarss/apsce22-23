@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('http://fonts.cdnfonts.com/css/geomanist');
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+  }
+  
+
+  body {
+	color: #ffffff;
+	font-family: "Poppins", serif;
+  }
+	
+.headimg {
+	/* Aps logo on top */
+	margin-top: 0.4rem;
+	margin-left: 1.5rem;
+	position: absolute;
+	height: auto;
+	width: 12%;
+	z-index: 999;
+  }
+
+  .part1{
+	 height: 16rem;
+	 background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+	overflow: hidden;
+	 
+  }
+  
+  #title1 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	color: #FFF;
+	text-align: center;
+	font-weight: 300;
+	font-size: 50px;
+	margin: 5rem 0;
+	font-family: 'Geomanist', sans-serif;
+                                                
+  }
+  #title span {
+	background: -webkit-linear-gradient(white, #38495a);
+	
+	-webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes animStar {
+	from {
+	  transform: translateY(0px);
+	}
+	to {
+	  transform: translateY(-2000px);
+	}
+  }
+
+  .para{
+	  color: #000;
+	  margin-bottom: 4rem;
+  }
+  .tablee{
+	  color: #000;
+	  margin-bottom: 3rem;
+  }
+  .Criteria{
+	  color: #000;
+	  margin-bottom: 3rem;
+  }
+
+  hr.styled {
+    margin: 30px 0 30px 0;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #fff;
+}
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+}
+.overview{
+	width: 70%;
+	background-color: rgb(245, 245, 245);
+    box-shadow: 0px 3px 0px 0px #f0f2f4;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    display: block;
+    padding: 30px 30px 10px 30px;
+    color: #444;
+}
+.all{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 3rem;
+}
+.head{
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 1.5rem;
+}
+.head img{
+	width: 5%;
+	height: 5%;
+	margin-right: 1.5rem;
+	
+}
+
+.table table{
+	width: 80%;
+	margin-bottom: 4rem;
+}
+.table th{
+	text-align: center;
+}
+.table td{
+	text-align: center;
+}
+.table h1{
+	margin-bottom: 2rem;
+}
+.aside h4{
+   margin-bottom: 1rem;
+}
+.aside{
+	margin-top: 2rem;
+}
+.logosbox{
+	margin: 4rem 6rem 2rem;
+}
+.sect1{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1rem;
+}
+.sect1 img{
+	width: 19%;
+	height: auto;
+}
+
+
+
+
+  .heading5 hr{
+	  width: 25%;
+	  margin: auto;
+	  margin-top: 0.5rem;
+	  border: 3px solid rgb(255, 0, 0);
+	  border-radius: 1rem;
+  }
+   .ef{
+	  width: 86%;
+	  background-color: rgb(245, 245, 245);
+	  border-radius: 10px;
+	  margin: auto;
+  }
+
+.gh{
+	display: flex;
+	justify-content: flex-start;
+}
+.ef p{
+	margin: 1rem 2rem 1rem;
+	text-align: justify;
+}
+.a20{
+	display: flex;
+	justify-content: flex-start;
+}
+.a30{
+	display: flex;
+	justify-content: flex-start;
+	
+}
+
+@media screen and (max-width: 970px) {
+
+	.part1{
+		margin-top: 1rem;
+	}
+
+
+	.all{
+		
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+	}
+
+	.sect1{
+		flex-direction: column;
+		
+	}
+
+	.sect1 img{
+		width: 100%;
+		margin-top: 1rem;
+	}
+
+	.overview{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 auto;
+		width: 90%;
+	}
+	
+
+	.ab{
+		flex-direction: column;
+		margin: 0 auto;
+	}
+	.cd{
+		margin: 0 auto 1rem auto;
+	}
+	.ef{
+		margin: 0 auto 1rem auto;
+	}
+}
+.alll{
+	margin: 0 2.5rem 6rem;
+}

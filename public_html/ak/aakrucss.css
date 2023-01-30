@@ -1,0 +1,231 @@
+@import url(//db.onlinewebfonts.com/c/7e96eba370659b4e4563309dc4ebb33f?family=Samarkan);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    color: #ffffff;
+    font-family: "Poppins", serif;
+}
+
+
+.part1 {
+    height: 16rem;
+    background: black;
+    overflow: hidden;
+
+}
+
+#title1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: #FFF;
+    text-align: center;
+    font-weight: 300;
+    font-size: 100px;
+    margin: 4rem 0;
+    font-family: 'Samarkan';
+}
+
+#title span {
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-text-fill-color: transparent;
+}
+
+.all {
+    display: flex;
+    justify-items: flex-start;
+}
+
+.u-clearfix:after {
+    clear: both;
+}
+
+.subtle {
+    color: #aaa;
+}
+
+.card-container {
+    margin: 25px 25px 25px;
+    max-width: 30%;
+}
+
+
+.card {
+    height: 45rem;
+    background-color: #fff;
+    padding: 2.5rem;
+    position: relative;
+    box-shadow: -5px -5px 5px -5px rgba(75, 75, 75, .32), 7px 5px 5px -5px rgba(75, 75, 75, .32);
+    border-radius: 1rem;
+}
+
+
+.card-number {
+    margin-top: 15px;
+}
+
+
+.card-circle {
+    border: 1.5px solid rgb(134, 134, 134);
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 22px;
+    font-size: 12px;
+    height: 25px;
+    text-align: center;
+    width: 25px;
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 10px 0;
+}
+
+.card-author {
+    display: block;
+    font-size: 16px;
+    letter-spacing: .5px;
+    margin: 15px 0 0;
+    text-transform: uppercase;
+}
+
+
+.card-description {
+    display: inline-block;
+    font-weight: 300;
+    line-height: 22px;
+    margin: 10px 0;
+}
+
+.card-Enroll {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    margin: 10px 0 5px;
+    position: relative;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+
+.card-media {
+    height: auto;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+
+.card-shadow {
+    background-color: #fff;
+    box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1), 0 0 100px 3px rgba(0, 0, 0, .25);
+    height: 1px;
+    margin: -1px auto 0;
+    width: 95%;
+    z-index: -1;
+}
+
+video {
+    margin: 1rem 1.5rem 1rem;
+    border-radius: .5rem;
+    width: 640px;
+    height: 360px;
+}
+
+iframe {
+    margin: 1rem 1.5rem 1rem;
+    border-radius: .5rem;
+    width: 50%;
+    height: 22.75rem;
+}
+
+.first {
+    display: flex;
+    justify-content: flex-start;
+}
+.day{
+    font-size: 4rem;  
+    color: black; 
+    margin: 1rem 3rem 1rem;
+}
+
+@media screen and (max-width: 1100px) {
+      iframe{
+          display: none;
+      }
+      .card-media {
+        margin-top: 1.5rem;
+    }
+    #title1 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        color: #FFF;
+        text-align: center;
+        font-weight: 300;
+        font-size: 80px;
+        margin: 4rem 0;
+        font-family: 'Samarkan';
+    }
+
+    video {
+        margin: 1rem auto 1rem;
+        border-radius: .5rem;
+        width: 320px;
+        height: 180px;
+    }
+
+    .first {
+        display: flex;
+        flex-direction: column;
+    }
+
+    iframe {
+        margin: 1rem 1.5rem 1rem;
+        border-radius: .5rem;
+        width: auto;
+        height: 10rem;
+    }
+
+    .all {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-container {
+        margin: 25px 25px 25px;
+        width: auto;
+    }
+
+    .card-container {
+        margin: 25px 25px 25px;
+        max-width: 90%;
+    }
+
+    .card {
+        height: 40rem;
+        background-color: #fff;
+        padding: 1rem;
+       
+        position: relative;
+        box-shadow: 5px 5px 5px -5px rgba(75, 75, 75, .32), -7px 5px 5px -5px rgba(75, 75, 75, .32);
+        border-radius: 1rem;
+    }
+    .day{
+        font-size: 2rem;  
+        color: black; 
+        margin: 1rem 3rem 1rem;
+    }
+
+}

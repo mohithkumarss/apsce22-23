@@ -1,0 +1,213 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('http://fonts.cdnfonts.com/css/geomanist');
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+  }
+  
+
+  body {
+	color: #ffffff;
+	font-family: "Poppins",sans-serif;
+	overflow-x: hidden;
+  }
+	
+
+  
+  @media screen and (max-width: 1000px) {
+	  .part1{
+		  margin-top: 1rem;
+	  }
+	.allco{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	p{
+		font-size: 14px;
+	}
+
+	#contact-form{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	/* .sec1{
+		width: 140%;
+	} */
+	
+	/* .sec2{
+		
+		margin-left: 5rem;
+	} */
+  }
+  nav input {
+	display: none;
+  }
+
+  .part1{
+	 height: 16rem;
+	 background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+	overflow: hidden;
+	 
+  }
+  
+  #title1 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	color: #FFF;
+	text-align: center;
+	font-weight: 300;
+	font-size: 50px;
+	margin: 5rem 0;
+	font-family: 'Geomanist', sans-serif;
+                                                
+  }
+  #title span {
+	background: -webkit-linear-gradient(white, #38495a);
+	
+	-webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes animStar {
+	from {
+	  transform: translateY(0px);
+	}
+	to {
+	  transform: translateY(-2000px);
+	}
+  }
+.allco{
+	display: flex;
+	justify-content: space-evenly;
+}
+.sec1{
+	background-color: rgb(245, 245, 245);
+	width: 70%;
+	margin: 4rem 2rem 4rem;
+	border-radius: 10px;
+}
+.p1{
+	margin-left: 2rem;
+	margin-top: 1rem;
+	margin-right: 2rem;
+}
+.hat{
+	display: flex;
+	flex-direction: row;
+	
+}
+.hat img{
+	width: auto;
+	height: 2.5rem;
+	margin-right: 1rem;
+	margin-top: 0.2rem;
+}
+.p2{
+	margin-left: 2rem;
+	margin-top: 1rem;
+	margin-right: 2rem;
+}
+.hatt{
+	display: flex;
+	flex-direction: row;
+	
+}
+.hatt img{
+	width: auto;
+	height: 2.5rem;
+	margin-right: 1rem;
+	margin-top: 0.2rem;
+}
+
+
+
+
+.containergal {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
+}
+
+
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	
+	width: 85%;
+	height: 85%;
+	display: flex;
+	justify-content: center;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	/* margin: 1rem; */
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width:100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
