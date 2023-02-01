@@ -86,7 +86,6 @@
             style="position: absolute;"></button>
           <img src="bannerapsce.png" alt="">
         </div>
-        <!-- <div class="modal-footer"> -->
 
         <a href="contact/public/contactform.html" class="btn justify-content-center"
           style="color: white; text-decoration: none; background-color: #00093c; font-size: 12px; padding: 0.9rem;">
@@ -412,222 +411,359 @@
           <div class="nae11">
             <a href=""> <img src="2jan1.png" alt=""></a>
             <a href=""> <img src="2jan1.png" alt=""></a>
-            <a href=""> <img src="2jan1.png" alt=""></a>
+
           </div>
           <div class="nae12">
             <a href=""> <img src="2jan1.png" alt=""></a>
             <a href=""> <img src="2jan1.png" alt=""></a>
-            <a href=""> <img src="2jan1.png" alt=""></a>
+
           </div>
         </div>
         <div class="nae2">
 
+          <div class="wrapper">
+            <div class="scroll-list">
+              <div class="scroll-list__wrp js-scroll-content js-scroll-list">
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+                <div class="scroll-list__item js-scroll-list-item"></div>
+              </div>
+            </div>
+          </div>
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/smooth-scrollbar.js'></script>
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/plugins/overscroll.js'></script>
+          <script src="./script.js"></script>
+
+          <script>
+            $(document).ready(function () {
+              var Scrollbar = window.Scrollbar;
+
+              Scrollbar.use(window.OverscrollPlugin);
+
+              var customScroll = Scrollbar.init(document.querySelector('.js-scroll-list'), {
+                plugins: {
+                  overscroll: true
+                }
+              });
+
+              var listItem = $('.js-scroll-list-item');
+
+              listItem.eq(0).addClass('item-focus');
+              listItem.eq(1).addClass('item-next');
+
+              customScroll.addListener(function (status) {
+
+                var $content = $('.js-scroll-content');
+
+                var viewportScrollDistance = 0;
+
+
+                viewportScrollDistance = status.offset.y;
+                var viewportHeight = $content.height();
+                var listHeight = 0;
+                var $listItems = $content.find('.js-scroll-list-item');
+                for (var i = 0; i < $listItems.length; i++) {
+                  listHeight += $($listItems[i]).height();
+                }
+
+                var top = status.offset.y;
+                // console.log(top);
+                var visibleCenterVertical = 0;
+                visibleCenterVertical = top;
+
+                var parentTop = 1;
+                var $lis = $('.js-scroll-list-item');
+                var $focusLi;
+                for (var i = 0; i < $lis.length; i++) {
+                  var $li = $($lis[i]);
+                  var liTop = $li.position().top;
+                  var liRelTop = liTop - parentTop;
+
+                  var distance = 0;
+                  var distance = Math.abs(top - liRelTop);
+                  var maxDistance = $('.js-scroll-content').height() / 2;
+                  var distancePercent = distance / (maxDistance / 100);
+
+
+                  if (liRelTop + $li.parent().scrollTop() > top) {
+                    if (!$li.hasClass('item-focus')) {
+                      $li.prev().addClass('item-hide');
+                      $lis.removeClass('item-focus');
+                      $lis.removeClass('item-next');
+                    }
+                    $li.removeClass('item-hide');
+                    $li.addClass('item-focus');
+                    $li.next().addClass('item-next');
+                    break;
+                  }
+                }
+              });
+
+            });
+          </script>
+
         </div>
+
       </div>
+    </div>
 
-      <div class="principal-message">
-        <img src="/departments/Civil/Dr.AGNataraj.jpg">
-        <div class="principal-content">
+    <div class="principal-message">
+      <img src="/departments/Civil/Dr.AGNataraj.jpg">
+      <div class="principal-content">
 
-          <h6 style="color: #383838;"><b> <i class="bi bi-envelope-paper-fill"
-                style="margin-right: 1rem;"></i>Principal' s Message
-              <hr>
-            </b>
-          </h6>
-          <p>
+        <h6 style="color: #383838;"><b> <i class="bi bi-envelope-paper-fill" style="margin-right: 1rem;"></i>Principal'
+            s Message
+            <hr>
+          </b>
+        </h6>
+        <p>
 
-            Hearty Welcome to Green Campus.
+          Hearty Welcome to Green Campus.
 
-            Change is the only constant that is happening in the world. World is changing fast due to fast advancement
-            of technology as such we should be on our toes for the change expected in these modern days.
+          Change is the only constant that is happening in the world. World is changing fast due to fast advancement
+          of technology as such we should be on our toes for the change expected in these modern days.
 
-            Government of India at the center and Government of Karnataka are adopting latest curriculum in engineering
-            colleges. National Education Policy-2020(NEP) is one such program happening to bring lot of changes in the
-            field education in general and engineering in particular. Our Institution is ready for the change that is
-            happening in state and national level to give our students the best through technical, non technical,
-            general knowledge and ethical to make future responsible citizens of country.
+          Government of India at the center and Government of Karnataka are adopting latest curriculum in engineering
+          colleges. National Education Policy-2020(NEP) is one such program happening to bring lot of changes in the
+          field education in general and engineering in particular. Our Institution is ready for the change that is
+          happening in state and national level to give our students the best through technical, non technical,
+          general knowledge and ethical to make future responsible citizens of country.
 
-            The young minds are nurtured towards competing world class changes. With the vision of reaching higher
-            education through professional curriculum to the needy minds to succeed their life with greater ambitions.
+          The young minds are nurtured towards competing world class changes. With the vision of reaching higher
+          education through professional curriculum to the needy minds to succeed their life with greater ambitions.
 
-            The dedicated staff will inspire towards learning from basic concepts to industry requirements. The Industry
-            and Institute interaction will provide couple of opportunities to adapt the upcoming technologies with
-            agility. Complete your journey of four years with passion to reach destiny. The human life is a journey with
-            holistic development such as ethical, cultural, Sports along with Academics.
+          The dedicated staff will inspire towards learning from basic concepts to industry requirements. The Industry
+          and Institute interaction will provide couple of opportunities to adapt the upcoming technologies with
+          agility. Complete your journey of four years with passion to reach destiny. The human life is a journey with
+          holistic development such as ethical, cultural, Sports along with Academics.
 
-            Once again welcome to the peace environment towards building better future.
-          </p>
-          <h6>
-            <hr>Dr. A.G. Nataraj
-          </h6>
-          <p class="principal-degree">B.E, M.Tech, Ph.D</p>
-        </div>
+          Once again welcome to the peace environment towards building better future.
+        </p>
+        <h6>
+          <hr>Dr. A.G. Nataraj
+        </h6>
+        <p class="principal-degree">B.E, M.Tech, Ph.D</p>
       </div>
+    </div>
 
 
-      <!-- Events and achievements -->
-      <div class="container">
+    <!-- Events and achievements -->
+    <div class="container">
 
-        <h1 style="margin-top: 6rem; font-size: 1.5rem;"><i class="fa-solid fa-trophy"
-            style="margin-right: 1rem; font-size: 1.5rem;"></i>Events and Achievements
-          <hr>
-        </h1>
-        <div class="events">
-          <div class="row">
-            <div class="col-md-3 mb-3">
-              <div class="carde h-100">
-                <div class="card-mediae">
-                  <img src="images/princ.jpg" />
-                </div>
-                <div class="card-contente">
-                  <header class="card-headere">
-                    <span class="card-datee">December 29, 2021</span>
-                    <h3>
-                      <a href="https://www.facebook.com/apscebluru/photos/1942888162557813" target="_blank">MoU with
-                        Industries</a>
-                    </h3>
-                  </header>
-
-                  <footer class="card-footere">
-                    <a href="https://www.facebook.com/apscebluru/photos/1942888162557813" class="read-more-linke"
-                      target="_blank">Read more
-                      <svg fill="none" viewBox="0 0 16 8">
-                        <path
-                          d="M15.354 4.354a.5.5 0 000-.708L12.172.464a.5.5 0 10-.708.708L14.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM0 4.5h15v-1H0v1z"
-                          fill="currentColor" />
-                      </svg>
-                    </a>
-                  </footer>
-                </div>
-                <div class="card-bordere">
-                  <span class="top"></span>
-                  <span class="right"></span>
-                  <span class="bottom"></span>
-                  <span class="left"></span>
-                </div>
+      <h1 style="margin-top: 6rem; font-size: 1.5rem;"><i class="fa-solid fa-trophy"
+          style="margin-right: 1rem; font-size: 1.5rem;"></i>Events and Achievements
+        <hr>
+      </h1>
+      <div class="events">
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <div class="carde h-100">
+              <div class="card-mediae">
+                <img src="images/princ.jpg" />
               </div>
+              <div class="card-contente">
+                <header class="card-headere">
+                  <span class="card-datee">December 29, 2021</span>
+                  <h3>
+                    <a href="https://www.facebook.com/apscebluru/photos/1942888162557813" target="_blank">MoU with
+                      Industries</a>
+                  </h3>
+                </header>
 
-            </div>
-
-            <div class="col-md-3 mb-3">
-              <div class="carde h-100">
-                <div class="card-mediae">
-                  <img src="images/grad.jpg" />
-                </div>
-                <div class="card-contente">
-                  <header class="card-headere">
-                    <span class="card-datee">August 19,2021</span>
-                    <h3>
-                      <a href="https://www.facebook.com/apscebluru/photos/1846701568843140" target="_blank">Graduation
-                        Day</a>
-                    </h3>
-                  </header>
-
-                  <footer class="card-footere">
-                    <a href="https://www.facebook.com/apscebluru/photos/1846701568843140" target="_blank"
-                      class="read-more-linke">Read more
-                      <svg fill="none" viewBox="0 0 16 8">
-                        <path
-                          d="M15.354 4.354a.5.5 0 000-.708L12.172.464a.5.5 0 10-.708.708L14.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM0 4.5h15v-1H0v1z"
-                          fill="currentColor" />
-                      </svg>
-                    </a>
-                  </footer>
-                </div>
-                <div class="card-bordere">
-                  <span class="top"></span>
-                  <span class="right"></span>
-                  <span class="bottom"></span>
-                  <span class="left"></span>
-                </div>
+                <footer class="card-footere">
+                  <a href="https://www.facebook.com/apscebluru/photos/1942888162557813" class="read-more-linke"
+                    target="_blank">Read more
+                    <svg fill="none" viewBox="0 0 16 8">
+                      <path
+                        d="M15.354 4.354a.5.5 0 000-.708L12.172.464a.5.5 0 10-.708.708L14.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM0 4.5h15v-1H0v1z"
+                        fill="currentColor" />
+                    </svg>
+                  </a>
+                </footer>
+              </div>
+              <div class="card-bordere">
+                <span class="top"></span>
+                <span class="right"></span>
+                <span class="bottom"></span>
+                <span class="left"></span>
               </div>
             </div>
 
-            <div class="col-md-3 mb-3">
-              <div class="carde h-100">
-                <div class="card-mediae">
-                  <img src="images/recognize.jpg" />
-                </div>
-                <div class="card-contente">
-                  <header class="card-headere">
-                    <span class="card-datee">October 30, 2021</span>
-                    <h3>
-                      <a href="https://www.facebook.com/apscebluru/photos/1899613753551921" target="_blank">Education
-                        alliance by UIpath</a>
-                    </h3>
-                  </header>
+          </div>
 
-                  <footer class="card-footere">
-                    <a href="https://www.facebook.com/apscebluru/photos/1899613753551921" target="_blank"
-                      class="read-more-linke">Read more
-                      <svg fill="none" viewBox="0 0 16 8">
-                        <path
-                          d="M15.354 4.354a.5.5 0 000-.708L12.172.464a.5.5 0 10-.708.708L14.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM0 4.5h15v-1H0v1z"
-                          fill="currentColor" />
-                      </svg>
-                    </a>
-                  </footer>
-                </div>
-                <div class="card-bordere">
-                  <span class="top"></span>
-                  <span class="right"></span>
-                  <span class="bottom"></span>
-                  <span class="left"></span>
-                </div>
+          <div class="col-md-3 mb-3">
+            <div class="carde h-100">
+              <div class="card-mediae">
+                <img src="images/grad.jpg" />
               </div>
+              <div class="card-contente">
+                <header class="card-headere">
+                  <span class="card-datee">August 19,2021</span>
+                  <h3>
+                    <a href="https://www.facebook.com/apscebluru/photos/1846701568843140" target="_blank">Graduation
+                      Day</a>
+                  </h3>
+                </header>
 
-
-
+                <footer class="card-footere">
+                  <a href="https://www.facebook.com/apscebluru/photos/1846701568843140" target="_blank"
+                    class="read-more-linke">Read more
+                    <svg fill="none" viewBox="0 0 16 8">
+                      <path
+                        d="M15.354 4.354a.5.5 0 000-.708L12.172.464a.5.5 0 10-.708.708L14.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM0 4.5h15v-1H0v1z"
+                        fill="currentColor" />
+                    </svg>
+                  </a>
+                </footer>
+              </div>
+              <div class="card-bordere">
+                <span class="top"></span>
+                <span class="right"></span>
+                <span class="bottom"></span>
+                <span class="left"></span>
+              </div>
             </div>
-            <div class="col-md-3 mb-3 ">
-              <div class="carde h-100">
-                <div class="card-mediae">
-                  <img src="images/boys.jpg" />
-                </div>
-                <div class="card-contente">
-                  <header class="card-headere">
-                    <span class="card-datee">December 03, 2021</span>
-                    <h3>
-                      <a href="https://www.facebook.com/apscebluru/photos/pcb.1924292057750757/1924291764417453/"
-                        target="_blank"> Green Vehicle Expo Event </a>
-                    </h3>
-                  </header>
+          </div>
 
-                  <footer class="card-footere">
-                    <a href="https://www.facebook.com/apscebluru/photos/pcb.1924292057750757/1924291764417453/"
-                      target="_blank" class="read-more-linke">Read more
-                      <svg fill="none" viewBox="0 0 16 8">
-                        <path
-                          d="M15.354 4.354a.5.5 0 000-.708L12.172.464a.5.5 0 10-.708.708L14.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM0 4.5h15v-1H0v1z"
-                          fill="currentColor" />
-                      </svg>
-                    </a>
-                  </footer>
-                </div>
-                <div class="card-bordere">
-                  <span class="top"></span>
-                  <span class="right"></span>
-                  <span class="bottom"></span>
-                  <span class="left"></span>
-                </div>
+          <div class="col-md-3 mb-3">
+            <div class="carde h-100">
+              <div class="card-mediae">
+                <img src="images/recognize.jpg" />
+              </div>
+              <div class="card-contente">
+                <header class="card-headere">
+                  <span class="card-datee">October 30, 2021</span>
+                  <h3>
+                    <a href="https://www.facebook.com/apscebluru/photos/1899613753551921" target="_blank">Education
+                      alliance by UIpath</a>
+                  </h3>
+                </header>
+
+                <footer class="card-footere">
+                  <a href="https://www.facebook.com/apscebluru/photos/1899613753551921" target="_blank"
+                    class="read-more-linke">Read more
+                    <svg fill="none" viewBox="0 0 16 8">
+                      <path
+                        d="M15.354 4.354a.5.5 0 000-.708L12.172.464a.5.5 0 10-.708.708L14.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM0 4.5h15v-1H0v1z"
+                        fill="currentColor" />
+                    </svg>
+                  </a>
+                </footer>
+              </div>
+              <div class="card-bordere">
+                <span class="top"></span>
+                <span class="right"></span>
+                <span class="bottom"></span>
+                <span class="left"></span>
               </div>
             </div>
 
 
 
           </div>
+          <div class="col-md-3 mb-3 ">
+            <div class="carde h-100">
+              <div class="card-mediae">
+                <img src="images/boys.jpg" />
+              </div>
+              <div class="card-contente">
+                <header class="card-headere">
+                  <span class="card-datee">December 03, 2021</span>
+                  <h3>
+                    <a href="https://www.facebook.com/apscebluru/photos/pcb.1924292057750757/1924291764417453/"
+                      target="_blank"> Green Vehicle Expo Event </a>
+                  </h3>
+                </header>
+
+                <footer class="card-footere">
+                  <a href="https://www.facebook.com/apscebluru/photos/pcb.1924292057750757/1924291764417453/"
+                    target="_blank" class="read-more-linke">Read more
+                    <svg fill="none" viewBox="0 0 16 8">
+                      <path
+                        d="M15.354 4.354a.5.5 0 000-.708L12.172.464a.5.5 0 10-.708.708L14.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM0 4.5h15v-1H0v1z"
+                        fill="currentColor" />
+                    </svg>
+                  </a>
+                </footer>
+              </div>
+              <div class="card-bordere">
+                <span class="top"></span>
+                <span class="right"></span>
+                <span class="bottom"></span>
+                <span class="left"></span>
+              </div>
+            </div>
+          </div>
+
+
+
         </div>
       </div>
+    </div>
 
-      <section class="map">
-        <h1 style="margin-top: 6rem; font-size: 2rem;"><i class="fa-solid fa-street-view"
-            style="margin-right: 1rem; font-size: 1.8rem;"></i>360 View
-          <hr>
-        </h1>
-        <iframe src="app-files/index.html" width="1200" height="450" style="border:0;" allowfullscreen=""
-          loading="lazy"></iframe>
+    <section class="map">
+      <h1 style="margin-top: 6rem; font-size: 2rem;"><i class="fa-solid fa-street-view"
+          style="margin-right: 1rem; font-size: 1.8rem;"></i>360 View
+        <hr>
+      </h1>
+      <iframe src="app-files/index.html" width="1200" height="450" style="border:0;" allowfullscreen=""
+        loading="lazy"></iframe>
 
-      </section>
+    </section>
     </div>
     </div>
 
