@@ -27,7 +27,7 @@
 
 
 <body onload="myfunction()">
-  <div id="loadscreen"></div>
+  <div id="load"></div>
   <div id="nav-placeholder">
 
   </div>
@@ -421,7 +421,7 @@
         </div>
         <div class="nae2">
 
-          <div class="wrapper">
+          <!-- <div class="wrapper-scroll">
             <div class="scroll-list">
               <div class="scroll-list__wrp js-scroll-content js-scroll-list">
                 <div class="scroll-list__item js-scroll-list-item"></div>
@@ -482,7 +482,7 @@
                 <div class="scroll-list__item js-scroll-list-item"></div>
               </div>
             </div>
-          </div>
+          </div> -->
           <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
           <script src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/smooth-scrollbar.js'></script>
           <script src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/plugins/overscroll.js'></script>
@@ -603,6 +603,61 @@
 
     <!-- Events and achievements -->
     <div class="container">
+      <h9 style="margin-top: 6rem; font-size: 1.5rem;"><i class="fa-solid fa-trophy"
+          style="margin-right: 1rem; font-size: 1.5rem;"></i>Events and Updates
+        <hr>
+      </h9>
+      <div class="snip">
+        <figure class="snip1529">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/pr-sample13.jpg" alt="pr-sample13" />
+          <div class="date"><span class="day">28</span><span class="month">Apr</span></div>
+          <figcaption>
+            <h4>An Abstract Post Heading</h4>
+            <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
+          </figcaption>
+          <div class="hover"><i class="bi bi-box-arrow-up-right"></i></div>
+          <a href="#"></a>
+        </figure>
+        <figure class="snip1529"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/pr-sample21.jpg"
+            alt="pr-sample21" />
+          <div class="date"><span class="day">17</span><span class="month">May</span></div>
+          <figcaption>
+            <h4>Down with this sort of thing</h4>
+            <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
+          </figcaption>
+          <div class="hover"><i class="bi bi-box-arrow-up-right"></i></div>
+          <a href="#"></a>
+        </figure>
+        <figure class="snip1529"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/pr-sample21.jpg"
+            alt="pr-sample21" />
+          <div class="date"><span class="day">17</span><span class="month">May</span></div>
+          <figcaption>
+            <h4>Down with this sort of thing</h4>
+            <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
+          </figcaption>
+          <div class="hover"><i class="bi bi-box-arrow-up-right"></i></div>
+          <a href="#"></a>
+        </figure>
+        <figure class="snip1529"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/pr-sample23.jpg"
+            alt="pr-sample23" />
+          <div class="date"><span class="day">08</span><span class="month">June</span></div>
+          <figcaption>
+            <h4>The World Ended Yesterday</h4>
+            <p>The only skills I have the patience to learn are those that have no real application in life. </p>
+          </figcaption>
+          <div class="hover"><i class="bi bi-box-arrow-up-right"></i></div>
+          <a href="#"></a>
+        </figure>
+      </div>
+    </div>
+    <!-- <script>
+      $(".hover").mouseleave(
+        function () {
+          $(this).removeClass("hover");
+        }
+      );
+    </script> -->
+    <!-- <div class="container">
 
       <h1 style="margin-top: 6rem; font-size: 1.5rem;"><i class="fa-solid fa-trophy"
           style="margin-right: 1rem; font-size: 1.5rem;"></i>Events and Achievements
@@ -618,7 +673,7 @@
               <div class="card-contente">
                 <header class="card-headere">
                   <span class="card-datee">December 29, 2021</span>
-                  <h3>
+                  <h4>
                     <a href="https://www.facebook.com/apscebluru/photos/1942888162557813" target="_blank">MoU with
                       Industries</a>
                   </h3>
@@ -753,18 +808,17 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
+    <div class="container">
+      <section class="map">
+        <h1 style="margin-top: 6rem; font-size: 2rem;"><i class="fa-solid fa-street-view"
+            style="margin-right: 1rem; font-size: 1.8rem;"></i>360 View
+          <hr>
+        </h1>
+        <iframe src="app-files/index.html" width="1200" height="450" style="border:0;" allowfullscreen=""
+          loading="lazy"></iframe>
 
-    <section class="map">
-      <h1 style="margin-top: 6rem; font-size: 2rem;"><i class="fa-solid fa-street-view"
-          style="margin-right: 1rem; font-size: 1.8rem;"></i>360 View
-        <hr>
-      </h1>
-      <iframe src="app-files/index.html" width="1200" height="450" style="border:0;" allowfullscreen=""
-        loading="lazy"></iframe>
-
-    </section>
-    </div>
+      </section>
     </div>
 
     <!--footer-->
@@ -774,7 +828,7 @@
     <a href="contact/public/contactform.html" class="float">
       <p>Contact Now</p>
     </a>
-    <a href="/Placements/index.html" class="float" style="bottom: 130px;">
+    <a href="/Placements/index.html" class="float" style="bottom: 140px;">
       <p>Placements</p>
     </a>
     <!-- JavaScript functions -->
@@ -844,6 +898,9 @@
 
       $(function () {
         $("#back-to-top").load("/backtotop.html");
+      });
+      $(function () {
+        $("#load").load("./preloader/index.html");
       });
     </script>
 
