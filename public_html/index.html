@@ -47,13 +47,13 @@
             Youtube</span></a></li>
     </ul>
   </nav>
-  <div class="modal fade justify-content-center" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+  <!-- <div class="modal fade justify-content-center" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content"> -->
 
         <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
-        <style>
+        <!-- <style>
           .modal-content {
             width: 700px;
           }
@@ -92,9 +92,9 @@
           Contact Now : +91 9448452508 | pricipal@apsce.ac.in</a>
 
         <!-- </div> -->
-      </div>
+      <!-- </div>
     </div>
-  </div>
+  </div> -->
   <section id="slider" class="wrap">
     <button id="nav-left" class="nav-left">
       < </button>
@@ -110,14 +110,9 @@
 
           <div class="item"><img src="./Untitled-2.png"></div>
         </div>
-
-
-
         <ul id="navs" class="navigation">
         </ul>
-
         <div class="slider-timer"></div>
-
   </section>
   <!-- style slider -->
   <style>
@@ -633,69 +628,83 @@
 
       </div>
     </div>
+  </section>
 
-    <script>
-      const height = elem => {
+  <script>
+    const height = elem => {
 
-        return elem.getBoundingClientRect().height;
+      return elem.getBoundingClientRect().height;
+
+    };
+
+    const distance = (elemA, elemB, prop) => {
+
+      const sizeA = elemA.getBoundingClientRect()[prop];
+      const sizeB = elemB.getBoundingClientRect()[prop];
+
+      return sizeB - sizeA;
+
+    };
+
+    const factor = (elemA, elemB, prop) => {
+
+      const sizeA = elemA.getBoundingClientRect()[prop];
+      const sizeB = elemB.getBoundingClientRect()[prop];
+
+      return sizeB / sizeA;
+
+    };
+
+    document.querySelectorAll('.card').forEach(elem => {
+
+      const head = elem.querySelector('.card__head');
+      const image = elem.querySelector('.card__image');
+      const author = elem.querySelector('.card__author');
+      const body = elem.querySelector('.card__body');
+      const foot = elem.querySelector('.card__foot');
+
+      elem.onmouseenter = () => {
+
+        elem.classList.add('hover');
+
+        const imageScale = 1 + factor(head, body, 'height');
+        image.style.transform = `scale(${imageScale})`;
+
+        const bodyDistance = height(foot) * -1;
+        body.style.transform = `translateY(${bodyDistance}px)`;
+
+        const authorDistance = distance(head, author, 'height');
+        author.style.transform = `translateY(${authorDistance}px)`;
 
       };
 
-      const distance = (elemA, elemB, prop) => {
+      elem.onmouseleave = () => {
 
-        const sizeA = elemA.getBoundingClientRect()[prop];
-        const sizeB = elemB.getBoundingClientRect()[prop];
+        elem.classList.remove('hover');
 
-        return sizeB - sizeA;
-
-      };
-
-      const factor = (elemA, elemB, prop) => {
-
-        const sizeA = elemA.getBoundingClientRect()[prop];
-        const sizeB = elemB.getBoundingClientRect()[prop];
-
-        return sizeB / sizeA;
+        image.style.transform = `none`;
+        body.style.transform = `none`;
+        author.style.transform = `none`;
 
       };
 
-      document.querySelectorAll('.card').forEach(elem => {
+    });
+  </script>
 
-        const head = elem.querySelector('.card__head');
-        const image = elem.querySelector('.card__image');
-        const author = elem.querySelector('.card__author');
-        const body = elem.querySelector('.card__body');
-        const foot = elem.querySelector('.card__foot');
+  <!-- Boxes -->
+  <div class="box">
+    <div class="fbox">
 
-        elem.onmouseenter = () => {
+    </div>
+    <div class="sbox">
 
-          elem.classList.add('hover');
+    </div>
+    <div class="tbox">
 
-          const imageScale = 1 + factor(head, body, 'height');
-          image.style.transform = `scale(${imageScale})`;
+    </div>
+  </div>
 
-          const bodyDistance = height(foot) * -1;
-          body.style.transform = `translateY(${bodyDistance}px)`;
-
-          const authorDistance = distance(head, author, 'height');
-          author.style.transform = `translateY(${authorDistance}px)`;
-
-        };
-
-        elem.onmouseleave = () => {
-
-          elem.classList.remove('hover');
-
-          image.style.transform = `none`;
-          body.style.transform = `none`;
-          author.style.transform = `none`;
-
-        };
-
-      });
-    </script>
-
-    <!-- <div class="container">
+  <!-- <div class="container">
      
       <div class="snip">
         <figure class="snip1529">
@@ -741,7 +750,7 @@
       </div>
     </div> -->
 
-    <!-- <div class="row1">
+  <!-- <div class="row1">
       <div class="blog-slider">
         <div class="blog-slider__wrp swiper-wrapper">
           <div class="blog-slider__item swiper-slide">
@@ -926,55 +935,67 @@
       setup();
 
     </script> -->
-    <div class="principal-message">
-      <img src="/departments/Civil/Dr.AGNataraj.jpg">
-      <div class="principal-content">
 
-        <h6 style="color: #383838;"><b> <i class="bi bi-envelope-paper-fill" style="margin-right: 1rem;"></i>Principal'
-            s Message
-            <hr>
-          </b>
-        </h6>
-        <p>
+  <div class="container">
+    <section class="map">
+      <h1 style="margin-top: 6rem; font-size: 2rem;"><i class="fa-solid fa-street-view"
+          style="margin-right: 1rem; font-size: 1.8rem;"></i>360 View
+        <hr>
+      </h1>
+      <iframe src="app-files/index.html" width="1200" height="450" style="border:0;" allowfullscreen=""
+        loading="lazy"></iframe>
 
-          Hearty Welcome to Green Campus.
+    </section>
+  </div>
+  <div class="principal-message">
+    <img src="/departments/Civil/Dr.AGNataraj.jpg">
+    <div class="principal-content">
 
-          Change is the only constant that is happening in the world. World is changing fast due to fast advancement
-          of technology as such we should be on our toes for the change expected in these modern days.
+      <h6 style="color: #383838;"><b> <i class="bi bi-envelope-paper-fill" style="margin-right: 1rem;"></i>Principal'
+          s Message
+          <hr>
+        </b>
+      </h6>
+      <p>
 
-          Government of India at the center and Government of Karnataka are adopting latest curriculum in engineering
-          colleges. National Education Policy-2020(NEP) is one such program happening to bring lot of changes in the
-          field education in general and engineering in particular. Our Institution is ready for the change that is
-          happening in state and national level to give our students the best through technical, non technical,
-          general knowledge and ethical to make future responsible citizens of country.
+        Hearty Welcome to Green Campus.
 
-          The young minds are nurtured towards competing world class changes. With the vision of reaching higher
-          education through professional curriculum to the needy minds to succeed their life with greater ambitions.
+        Change is the only constant that is happening in the world. World is changing fast due to fast advancement
+        of technology as such we should be on our toes for the change expected in these modern days.
 
-          The dedicated staff will inspire towards learning from basic concepts to industry requirements. The Industry
-          and Institute interaction will provide couple of opportunities to adapt the upcoming technologies with
-          agility. Complete your journey of four years with passion to reach destiny. The human life is a journey with
-          holistic development such as ethical, cultural, Sports along with Academics.
+        Government of India at the center and Government of Karnataka are adopting latest curriculum in engineering
+        colleges. National Education Policy-2020(NEP) is one such program happening to bring lot of changes in the
+        field education in general and engineering in particular. Our Institution is ready for the change that is
+        happening in state and national level to give our students the best through technical, non technical,
+        general knowledge and ethical to make future responsible citizens of country.
 
-          Once again welcome to the peace environment towards building better future.
-        </p>
-        <h6>
-          <hr>Dr. A.G. Nataraj
-        </h6>
-        <p class="principal-degree">B.E, M.Tech, Ph.D</p>
-      </div>
+        The young minds are nurtured towards competing world class changes. With the vision of reaching higher
+        education through professional curriculum to the needy minds to succeed their life with greater ambitions.
+
+        The dedicated staff will inspire towards learning from basic concepts to industry requirements. The Industry
+        and Institute interaction will provide couple of opportunities to adapt the upcoming technologies with
+        agility. Complete your journey of four years with passion to reach destiny. The human life is a journey with
+        holistic development such as ethical, cultural, Sports along with Academics.
+
+        Once again welcome to the peace environment towards building better future.
+      </p>
+      <h6>
+        <hr>Dr. A.G. Nataraj
+      </h6>
+      <p class="principal-degree">B.E, M.Tech, Ph.D</p>
     </div>
+  </div>
 
-    <!-- Events and achievements -->
+  <!-- Events and achievements -->
 
-    <!-- <script>
+  <!-- <script>
       $(".hover").mouseleave(
         function () {
           $(this).removeClass("hover");
         }
       );
     </script> -->
-    <!-- <div class="container">
+  <!-- <div class="container">
 
       <h1 style="margin-top: 6rem; font-size: 1.5rem;"><i class="fa-solid fa-trophy"
           style="margin-right: 1rem; font-size: 1.5rem;"></i>Events and Achievements
@@ -1126,100 +1147,85 @@
         </div>
       </div>
     </div> -->
-    <div class="container">
-      <section class="map">
-        <h1 style="margin-top: 6rem; font-size: 2rem;"><i class="fa-solid fa-street-view"
-            style="margin-right: 1rem; font-size: 1.8rem;"></i>360 View
-          <hr>
-        </h1>
-        <iframe src="app-files/index.html" width="1200" height="450" style="border:0;" allowfullscreen=""
-          loading="lazy"></iframe>
-
-      </section>
-    </div>
-
-    <!--footer-->
-    <div id="footer-placeholder"></div>
-    <div id="back-to-top"></div>
-
-    <a href="contact/public/contactform.html" class="float">
-      <p>Contact Now</p>
-    </a>
-    <a href="/Placements/index.html" class="float" style="bottom: 140px;">
-      <p>Placements</p>
-    </a>
-    <!-- JavaScript functions -->
-
-    <script>
-      var leftButton = document.getElementById('eventAndNotif');
-      var rightButton = document.getElementById('eventAndNotif2');
-      var notiflist = document.getElementById('list');
-      var eventlist = document.getElementById('eventlist');
-      function eventColors() {
 
 
-        rightButton.classList.add("activeColor");
-        leftButton.classList.remove('activeColor')
-        notiflist.style.visibility = 'hidden'
-        eventlist.style.visibility = 'visible'
-
-      }
-
-      function notifColors() {
+  <!--footer-->
+  <div id="footer-placeholder"></div>
+  <div id="back-to-top"></div>
 
 
-        leftButton.classList.add("activeColor");
-        rightButton.classList.remove('activeColor')
-        eventlist.style.visibility = 'hidden'
-        notiflist.style.visibility = 'visible'
-      }
-    </script>
+  <!-- JavaScript functions -->
+
+  <script>
+    var leftButton = document.getElementById('eventAndNotif');
+    var rightButton = document.getElementById('eventAndNotif2');
+    var notiflist = document.getElementById('list');
+    var eventlist = document.getElementById('eventlist');
+    function eventColors() {
 
 
-    <script>
-      var navlink = document.getElementById("navlink");
+      rightButton.classList.add("activeColor");
+      leftButton.classList.remove('activeColor')
+      notiflist.style.visibility = 'hidden'
+      eventlist.style.visibility = 'visible'
 
-      function showmenu() {
-        navlink.style.right = "0";
-      }
-      function hidemenu() {
-        navlink.style.right = "-600px";
-      }
-    </script>
+    }
 
-    <script>
-      $(document).ready(function () {
-
-        $('.modal').modal('show');
-
-      });
-    </script>
-
-    <script>
+    function notifColors() {
 
 
-      var preloader = document.getElementById('loadscreen');
-      function myfunction() {
-        preloader.style.display = 'none';
-      }
-    </script>
+      leftButton.classList.add("activeColor");
+      rightButton.classList.remove('activeColor')
+      eventlist.style.visibility = 'hidden'
+      notiflist.style.visibility = 'visible'
+    }
+  </script>
 
-    <script>
-      $(function () {
-        $("#nav-placeholder").load("/navbar.html");
-      });
 
-      $(function () {
-        $("#footer-placeholder").load("/footer.html");
-      });
+  <script>
+    var navlink = document.getElementById("navlink");
 
-      $(function () {
-        $("#back-to-top").load("/backtotop.html");
-      });
-      $(function () {
-        $("#load").load("./preloader/index.html");
-      });
-    </script>
+    function showmenu() {
+      navlink.style.right = "0";
+    }
+    function hidemenu() {
+      navlink.style.right = "-600px";
+    }
+  </script>
+
+  <script>
+    $(document).ready(function () {
+
+      $('.modal').modal('show');
+
+    });
+  </script>
+
+  <script>
+
+
+    var preloader = document.getElementById('loadscreen');
+    function myfunction() {
+      preloader.style.display = 'none';
+    }
+  </script>
+
+  <script>
+    $(function () {
+      $("#nav-placeholder").load("/navbar.html");
+    });
+
+    $(function () {
+      $("#footer-placeholder").load("/footer.html");
+    });
+
+    $(function () {
+      $("#back-to-top").load("/backtotop.html");
+    });
+    $(function () {
+      $("#load").load("./preloader/index.html");
+    });
+  </script>
 
 
 </body>
