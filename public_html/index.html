@@ -18,6 +18,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
     integrity="sha512-YFENbnqHbCRmJt5d+9lHimyEMt8LKSNTMLSaHjvsclnZGICeY/0KYEeiHwD1Ux4Tcao0h60tdcMv+0GljvWyHg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
   <script src="https://kit.fontawesome.com/c4d40c1d88.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
   <script src="jquery.autoscroll.js"></script>
@@ -27,9 +28,8 @@
 
 
 <body onload="myfunction()">
-  <div id="load"></div>
+  <!-- <div id="load"></div> -->
   <div id="nav-placeholder">
-
   </div>
   <nav class="ukn">
     <ul style="list-style: none; text-decoration: none;">
@@ -399,6 +399,79 @@
   </div>
 
 
+  <div class="container">
+    <h9 style="font-size: 1.5rem;"><i class="fa-solid fa-trophy"
+        style="margin-right: 1rem; margin-top: 6rem; font-size: 1.5rem;"></i>Events and Updates
+      <hr>
+    </h9>
+    <div class="ncrd">
+      <a href="#" class="card">
+        <div class="card__head">
+          <div class="card__image"></div>
+          <div class="card__author">
+            <div class="author">
+              <img src="/images/horilogo.png" alt="" class="author__image">
+              <div class="author__content">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card__body">
+          <h2 class="card__headline">Hover me</h2>
+          <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore.</p>
+        </div>
+        <div class="card__foot">
+          <span class="card__link">Read more</span>
+        </div>
+        <div class="card__border"></div>
+      </a>
+      <a href="#" class="card">
+        <div class="card__head">
+          <div class="card__image"></div>
+          <div class="card__author">
+            <div class="author">
+              <img src="/images/horilogo.png" alt="" class="author__image">
+              <div class="author__content">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card__body">
+          <h2 class="card__headline" style="transition-delay: 0;">Hover me</h2>
+          <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore.</p>
+        </div>
+        <div class="card__foot">
+          <span class="card__link">Read more</span>
+        </div>
+        <div class="card__border"></div>
+      </a>
+      <a href="#" class="card">
+        <div class="card__head">
+          <div class="card__image"></div>
+          <div class="card__author">
+            <div class="author">
+              <img src="/images/horilogo.png" alt="" class="author__image">
+              <div class="author__content">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card__body">
+          <h2 class="card__headline">Hover me</h2>
+          <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore.</p>
+        </div>
+        <div class="card__foot">
+          <span class="card__link">Read more</span>
+        </div>
+        <div class="card__border"></div>
+      </a>
+    </div>
+  </div>
   <section class="campus">
     <div class="campuscontent">
       <h1 style="margin-top: 6rem; margin-left: 4rem; font-size: 1.5rem;"><i class="fa-solid fa-building-columns"
@@ -561,52 +634,69 @@
       </div>
     </div>
 
-    <div class="principal-message">
-      <img src="/departments/Civil/Dr.AGNataraj.jpg">
-      <div class="principal-content">
+    <script>
+      const height = elem => {
 
-        <h6 style="color: #383838;"><b> <i class="bi bi-envelope-paper-fill" style="margin-right: 1rem;"></i>Principal'
-            s Message
-            <hr>
-          </b>
-        </h6>
-        <p>
+        return elem.getBoundingClientRect().height;
 
-          Hearty Welcome to Green Campus.
+      };
 
-          Change is the only constant that is happening in the world. World is changing fast due to fast advancement
-          of technology as such we should be on our toes for the change expected in these modern days.
+      const distance = (elemA, elemB, prop) => {
 
-          Government of India at the center and Government of Karnataka are adopting latest curriculum in engineering
-          colleges. National Education Policy-2020(NEP) is one such program happening to bring lot of changes in the
-          field education in general and engineering in particular. Our Institution is ready for the change that is
-          happening in state and national level to give our students the best through technical, non technical,
-          general knowledge and ethical to make future responsible citizens of country.
+        const sizeA = elemA.getBoundingClientRect()[prop];
+        const sizeB = elemB.getBoundingClientRect()[prop];
 
-          The young minds are nurtured towards competing world class changes. With the vision of reaching higher
-          education through professional curriculum to the needy minds to succeed their life with greater ambitions.
+        return sizeB - sizeA;
 
-          The dedicated staff will inspire towards learning from basic concepts to industry requirements. The Industry
-          and Institute interaction will provide couple of opportunities to adapt the upcoming technologies with
-          agility. Complete your journey of four years with passion to reach destiny. The human life is a journey with
-          holistic development such as ethical, cultural, Sports along with Academics.
+      };
 
-          Once again welcome to the peace environment towards building better future.
-        </p>
-        <h6>
-          <hr>Dr. A.G. Nataraj
-        </h6>
-        <p class="principal-degree">B.E, M.Tech, Ph.D</p>
-      </div>
-    </div>
+      const factor = (elemA, elemB, prop) => {
 
+        const sizeA = elemA.getBoundingClientRect()[prop];
+        const sizeB = elemB.getBoundingClientRect()[prop];
 
-    <!-- Events and achievements -->
-    <div class="container">
-      <h9 style="margin-top: 6rem; font-size: 1.5rem;"><i class="fa-solid fa-trophy"
-          style="margin-right: 1rem; font-size: 1.5rem;"></i>Events and Updates
-        <hr>
-      </h9>
+        return sizeB / sizeA;
+
+      };
+
+      document.querySelectorAll('.card').forEach(elem => {
+
+        const head = elem.querySelector('.card__head');
+        const image = elem.querySelector('.card__image');
+        const author = elem.querySelector('.card__author');
+        const body = elem.querySelector('.card__body');
+        const foot = elem.querySelector('.card__foot');
+
+        elem.onmouseenter = () => {
+
+          elem.classList.add('hover');
+
+          const imageScale = 1 + factor(head, body, 'height');
+          image.style.transform = `scale(${imageScale})`;
+
+          const bodyDistance = height(foot) * -1;
+          body.style.transform = `translateY(${bodyDistance}px)`;
+
+          const authorDistance = distance(head, author, 'height');
+          author.style.transform = `translateY(${authorDistance}px)`;
+
+        };
+
+        elem.onmouseleave = () => {
+
+          elem.classList.remove('hover');
+
+          image.style.transform = `none`;
+          body.style.transform = `none`;
+          author.style.transform = `none`;
+
+        };
+
+      });
+    </script>
+
+    <!-- <div class="container">
+     
       <div class="snip">
         <figure class="snip1529">
           <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/pr-sample13.jpg" alt="pr-sample13" />
@@ -649,7 +739,234 @@
           <a href="#"></a>
         </figure>
       </div>
+    </div> -->
+
+    <!-- <div class="row1">
+      <div class="blog-slider">
+        <div class="blog-slider__wrp swiper-wrapper">
+          <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+              <img src="/departments/Civil/Dr.AGNataraj.jpg" alt="" />
+            </div>
+            <div class="blog-slider__content">
+              <span class="blog-slider__code">23 February 1905</span>
+              <div class="blog-slider__title">ROTRACT INTERNATIONAL </div>
+              <div class="blog-slider__text">
+                Rotary International is a humanitarian service organization that brings together business and
+                professional
+                leaders in order to provide community service, promote integrity, and advance goodwill, peace, and
+                understanding in the world.
+
+              </div>
+              <a href="https://www.rotary.org/en/get-involved/rotaract-clubs" class="blog-slider__button"
+                target="_blank">READ MORE</a>
+            </div>
+          </div>
+        </div>
+        <div class="blog-slider__pagination"></div>
+      </div>
     </div>
+    <style>
+      .blog-slider__img {
+        background-color: rgb(228, 228, 228);
+        padding: 1rem;
+        width: 60rem;
+        height: 30rem;
+        border-radius: 8px;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        effect: "fade",
+        loop: true,
+        speed: 300,
+        mousewheel: {
+          invert: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets: true,
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      var swiper = new Swiper(".blog-slider", {
+        spaceBetween: 30,
+        effect: "fade",
+        loop: true,
+        mousewheel: {
+          invert: false,
+        },
+        // autoHeight: true,
+        pagination: {
+          el: ".blog-slider__pagination",
+          clickable: true,
+        },
+      });
+
+      let resizeReset = function () {
+        w = canvasBody.width = window.innerWidth;
+        h = canvasBody.height = window.innerHeight;
+      };
+
+      const opts = {
+        particleColor: "rgb(128,128,128)",
+        lineColor: "rgb(128,128,128)",
+        particleAmount: 80,
+        defaultSpeed: 1,
+        variantSpeed: 1,
+        defaultRadius: 2,
+        variantRadius: 2,
+        linkRadius: 200,
+      };
+
+      window.addEventListener("resize", function () {
+        deBouncer();
+      });
+
+      let deBouncer = function () {
+        clearTimeout(tid);
+        tid = setTimeout(function () {
+          resizeReset();
+        }, delay);
+      };
+
+      let checkDistance = function (x1, y1, x2, y2) {
+        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+      };
+
+      let linkPoints = function (point1, hubs) {
+        for (let i = 0; i < hubs.length; i++) {
+          let distance = checkDistance(point1.x, point1.y, hubs[i].x, hubs[i].y);
+          let opacity = 1 - distance / opts.linkRadius;
+          if (opacity > 0) {
+            drawArea.lineWidth = 0.5;
+            drawArea.strokeStyle = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${opacity})`;
+            drawArea.beginPath();
+            drawArea.moveTo(point1.x, point1.y);
+            drawArea.lineTo(hubs[i].x, hubs[i].y);
+            drawArea.closePath();
+            drawArea.stroke();
+          }
+        }
+      };
+
+      Particle = function (xPos, yPos) {
+        this.x = Math.random() * w;
+        this.y = Math.random() * h;
+        this.speed = opts.defaultSpeed + Math.random() * opts.variantSpeed;
+        this.directionAngle = Math.floor(Math.random() * 360);
+        this.color = opts.particleColor;
+        this.radius = opts.defaultRadius + Math.random() * opts.variantRadius;
+        this.vector = {
+          x: Math.cos(this.directionAngle) * this.speed,
+          y: Math.sin(this.directionAngle) * this.speed,
+        };
+        this.update = function () {
+          this.border();
+          this.x += this.vector.x;
+          this.y += this.vector.y;
+        };
+        this.border = function () {
+          if (this.x >= w || this.x <= 0) {
+            this.vector.x *= -1;
+          }
+          if (this.y >= h || this.y <= 0) {
+            this.vector.y *= -1;
+          }
+          if (this.x > w) this.x = w;
+          if (this.y > h) this.y = h;
+          if (this.x < 0) this.x = 0;
+          if (this.y < 0) this.y = 0;
+        };
+        this.draw = function () {
+          drawArea.beginPath();
+          drawArea.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          drawArea.closePath();
+          drawArea.fillStyle = this.color;
+          drawArea.fill();
+        };
+      };
+
+      function setup() {
+        particles = [];
+        resizeReset();
+        for (let i = 0; i < opts.particleAmount; i++) {
+          particles.push(new Particle());
+        }
+        window.requestAnimationFrame(loop);
+      }
+
+      function loop() {
+        window.requestAnimationFrame(loop);
+        drawArea.clearRect(0, 0, w, h);
+        for (let i = 0; i < particles.length; i++) {
+          particles[i].update();
+          particles[i].draw();
+        }
+        for (let i = 0; i < particles.length; i++) {
+          linkPoints(particles[i], particles);
+        }
+      }
+
+      const canvasBody = document.getElementById("canvas"),
+        drawArea = canvasBody.getContext("2d");
+      let delay = 200,
+        tid,
+        rgb = opts.lineColor.match(/\d+/g);
+      resizeReset();
+      setup();
+
+    </script> -->
+    <div class="principal-message">
+      <img src="/departments/Civil/Dr.AGNataraj.jpg">
+      <div class="principal-content">
+
+        <h6 style="color: #383838;"><b> <i class="bi bi-envelope-paper-fill" style="margin-right: 1rem;"></i>Principal'
+            s Message
+            <hr>
+          </b>
+        </h6>
+        <p>
+
+          Hearty Welcome to Green Campus.
+
+          Change is the only constant that is happening in the world. World is changing fast due to fast advancement
+          of technology as such we should be on our toes for the change expected in these modern days.
+
+          Government of India at the center and Government of Karnataka are adopting latest curriculum in engineering
+          colleges. National Education Policy-2020(NEP) is one such program happening to bring lot of changes in the
+          field education in general and engineering in particular. Our Institution is ready for the change that is
+          happening in state and national level to give our students the best through technical, non technical,
+          general knowledge and ethical to make future responsible citizens of country.
+
+          The young minds are nurtured towards competing world class changes. With the vision of reaching higher
+          education through professional curriculum to the needy minds to succeed their life with greater ambitions.
+
+          The dedicated staff will inspire towards learning from basic concepts to industry requirements. The Industry
+          and Institute interaction will provide couple of opportunities to adapt the upcoming technologies with
+          agility. Complete your journey of four years with passion to reach destiny. The human life is a journey with
+          holistic development such as ethical, cultural, Sports along with Academics.
+
+          Once again welcome to the peace environment towards building better future.
+        </p>
+        <h6>
+          <hr>Dr. A.G. Nataraj
+        </h6>
+        <p class="principal-degree">B.E, M.Tech, Ph.D</p>
+      </div>
+    </div>
+
+    <!-- Events and achievements -->
+
     <!-- <script>
       $(".hover").mouseleave(
         function () {
