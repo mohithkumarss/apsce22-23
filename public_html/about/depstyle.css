@@ -387,7 +387,7 @@
   }
 
   .trustrow{
-	  display: flex;
+	  /* display: flex; */
 	  justify-content: space-evenly;
 	  text-align: center;
 	  margin-bottom: 4rem;
@@ -517,7 +517,7 @@
 }
 
 .tabs img{
-	margin: 5px 10px 0px;
+	margin: 25px 10px 0px;
 }
 
 .carde {
