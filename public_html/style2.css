@@ -702,6 +702,12 @@ footer {
 .nae {
   display: flex;
 }
+@media screen and (max-width:570px) {
+  .nae {
+    display: grid;
+  }
+  
+}
 .nae1 ul {
   list-style-type: none;
 }
@@ -845,6 +851,22 @@ a:hover {
   margin-bottom: 15px;
   border-radius: 8px;
   box-shadow: 8px 8px 10px 0px rgba(41, 53, 108, 0.25);
+}
+@media screen and (max-width:570px) {
+  .scroll-list {
+    margin-top: 19px;
+  }
+  .scroll-list__wrp {
+    width: 19rem;
+    height: 27rem;
+    overflow: auto;
+    padding: 2rem;
+    background: linear-gradient(140deg, #1a1a1a, #00093c);
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 8px 8px 10px 0px rgba(41, 53, 108, 0.25);
+  }
+  
 }
 .scroll-list__wrp .scrollbar-track {
   display: none !important;
@@ -1688,4 +1710,11 @@ button:focus {
 .ncrd a {
   transition-delay: 0;
   color: #000;
+}
+@media screen and (max-width:570px) {
+  .ncrd {
+    display: grid;
+    justify-content: center;
+  }
+  
 }
