@@ -10,10 +10,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="icon" type="image/png" href="/tit.png">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.css"
+    integrity="sha512-c9N/Xq0n4rQdyCXF4RgrRYAAOSnNJDp8NWILsSUx+33zWyaMbXXvqajgO0UXybRdTGVpxq3FBrcGwabkWsT8OA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
-  <script src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.js"
+    integrity="sha512-/1h344Ogu39f2lMl2yIJn3mPjySuB0+m3EzDvFSWlxo6HaJO/3jdzGOy8V6ZgdkTkddKH+ZWma1mqOQZHmjo1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
     integrity="sha512-YFENbnqHbCRmJt5d+9lHimyEMt8LKSNTMLSaHjvsclnZGICeY/0KYEeiHwD1Ux4Tcao0h60tdcMv+0GljvWyHg=="
@@ -21,8 +25,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
   <script src="https://kit.fontawesome.com/c4d40c1d88.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
-  <script src="jquery.autoscroll.js"></script>
-  <link rel="stylesheet" href="style2.css" />
+  <script src="public_html/js/jquery.autoscroll.js"></script>
+  <link rel="stylesheet" href="./css/style2.css" />
 </head>
 
 
@@ -100,15 +104,15 @@
       < </button>
         <button id="nav-right" class="nav-right"> > </button>
         <div class="item-ativo1">
-          <div class="item"><img src="./Untitled-2.png"></div>
+          <div class="item"><img src="./images/Untitled-2.png"></div>
 
-          <div class="item"><img src="./Untitled-2.png"></div>
+          <div class="item"><img src="./images/Untitled-2.png"></div>
 
-          <div class="item"><img src="./Untitled-2.png"></div>
+          <div class="item"><img src="./images/Untitled-2.png"></div>
 
-          <div class="item"><img src="./Untitled-2.png"></div>
+          <div class="item"><img src="./images/Untitled-2.png"></div>
 
-          <div class="item"><img src="./Untitled-2.png"></div>
+          <div class="item"><img src="./images/Untitled-2.png"></div>
         </div>
         <ul id="navs" class="navigation">
         </ul>
@@ -120,18 +124,20 @@
       width: auto;
       height: 65vh;
     }
-   @media screen and (min-width: 1600px) {
+
+    @media screen and (min-width: 1600px) {
       .item-ativo1 img {
-    width: auto;
-    height: 55.3vh;
-}
-   }
-@media screen and (max-width: 1920px) {
+        width: auto;
+        height: 55.3vh;
+      }
+    }
+
+    @media screen and (max-width: 1920px) {
       .item-ativo1 img {
-    width: auto;
-    height: 66.3vh;
-}
-      
+        width: auto;
+        height: 66.3vh;
+      }
+
     }
 
     .wrap {
@@ -170,15 +176,15 @@
       top: 25rem;
 
     }
-    
+
     @media screen and (max-width:570px) {
       .navigation {
-      position: absolute;
-      top: 10px;
-      left: 77%;
-    }
-       
-      
+        position: absolute;
+        top: 10px;
+        left: 77%;
+      }
+
+
     }
 
     .nav-left {
@@ -194,26 +200,28 @@
       top: 10px;
       left: 90%;
     }
+
     @media screen and (max-width:570px) {
       .navigation {
-      position: absolute;
-      top: 10px;
-      left: 77%;
+        position: absolute;
+        top: 10px;
+        left: 77%;
+      }
+
+
     }
-       
-      
-    }
+
     @media screen and (min-width:1600px) {
       .navbar-nav::after {
-    position: absolute;
-    content: '';
-    left: 20%;
-    top: 0;
-    border-style: solid;
-    border-color: #00093c transparent #00093c transparent;
-    border-width: 3.5rem 0 0 3.5rem;
-}
-      
+        position: absolute;
+        content: '';
+        left: 20%;
+        top: 0;
+        border-style: solid;
+        border-color: #00093c transparent #00093c transparent;
+        border-width: 3.5rem 0 0 3.5rem;
+      }
+
     }
 
     .navigation li {
@@ -449,7 +457,7 @@
           <div class="card__image"></div>
           <div class="card__author">
             <div class="author">
-              <img src="/images/horilogo.png" alt="" class="author__image">
+              <img src="./images/horilogo.png" alt="" class="author__image">
               <div class="author__content">
 
               </div>
@@ -471,7 +479,7 @@
           <div class="card__image"></div>
           <div class="card__author">
             <div class="author">
-              <img src="/images/horilogo.png" alt="" class="author__image">
+              <img src="./images/horilogo.png" alt="" class="author__image">
               <div class="author__content">
 
               </div>
@@ -493,7 +501,7 @@
           <div class="card__image"></div>
           <div class="card__author">
             <div class="author">
-              <img src="/images/horilogo.png" alt="" class="author__image">
+              <img src="./images/horilogo.png" alt="" class="author__image">
               <div class="author__content">
               </div>
             </div>
@@ -522,14 +530,14 @@
           <div class="nae1">
             <ul>
               <li>
-                <a href=""> <img src="2jan1.png" alt=""></a>
-                <a href=""> <img src="2jan1.png" alt=""></a>
+                <a href=""> <img src="./images/2jan1.png" alt=""></a>
+                <a href=""> <img src="./images/2jan1.png" alt=""></a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href=""> <img src="2jan1.png" alt=""></a>
-                <a href=""> <img src="2jan1.png" alt=""></a>
+                <a href=""> <img src="./images/2jan1.png" alt=""></a>
+                <a href=""> <img src="./images/2jan1.png" alt=""></a>
               </li>
             </ul>
           </div>
@@ -600,7 +608,6 @@
             <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
             <script src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/smooth-scrollbar.js'></script>
             <script src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/plugins/overscroll.js'></script>
-            <script src="./script.js"></script>
 
             <script>
               $(document).ready(function () {
@@ -737,264 +744,19 @@
     });
   </script>
 
-  <!-- Boxes -->
-  <div class="box">
-    <div class="fbox">
-
-    </div>
-    <div class="sbox">
-
-    </div>
-    <div class="tbox">
-
-    </div>
-  </div>
-
-  <!-- <div class="container">
-     
-      <div class="snip">
-        <figure class="snip1529">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/pr-sample13.jpg" alt="pr-sample13" />
-          <div class="date"><span class="day">28</span><span class="month">Apr</span></div>
-          <figcaption>
-            <h4>An Abstract Post Heading</h4>
-            <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
-          </figcaption>
-          <div class="hover"><i class="bi bi-box-arrow-up-right"></i></div>
-          <a href="#"></a>
-        </figure>
-        <figure class="snip1529"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/pr-sample21.jpg"
-            alt="pr-sample21" />
-          <div class="date"><span class="day">17</span><span class="month">May</span></div>
-          <figcaption>
-            <h4>Down with this sort of thing</h4>
-            <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
-          </figcaption>
-          <div class="hover"><i class="bi bi-box-arrow-up-right"></i></div>
-          <a href="#"></a>
-        </figure>
-        <figure class="snip1529"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/pr-sample21.jpg"
-            alt="pr-sample21" />
-          <div class="date"><span class="day">17</span><span class="month">May</span></div>
-          <figcaption>
-            <h4>Down with this sort of thing</h4>
-            <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
-          </figcaption>
-          <div class="hover"><i class="bi bi-box-arrow-up-right"></i></div>
-          <a href="#"></a>
-        </figure>
-        <figure class="snip1529"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/pr-sample23.jpg"
-            alt="pr-sample23" />
-          <div class="date"><span class="day">08</span><span class="month">June</span></div>
-          <figcaption>
-            <h4>The World Ended Yesterday</h4>
-            <p>The only skills I have the patience to learn are those that have no real application in life. </p>
-          </figcaption>
-          <div class="hover"><i class="bi bi-box-arrow-up-right"></i></div>
-          <a href="#"></a>
-        </figure>
-      </div>
-    </div> -->
-
-  <!-- <div class="row1">
-      <div class="blog-slider">
-        <div class="blog-slider__wrp swiper-wrapper">
-          <div class="blog-slider__item swiper-slide">
-            <div class="blog-slider__img">
-              <img src="/departments/Civil/Dr.AGNataraj.jpg" alt="" />
-            </div>
-            <div class="blog-slider__content">
-              <span class="blog-slider__code">23 February 1905</span>
-              <div class="blog-slider__title">ROTRACT INTERNATIONAL </div>
-              <div class="blog-slider__text">
-                Rotary International is a humanitarian service organization that brings together business and
-                professional
-                leaders in order to provide community service, promote integrity, and advance goodwill, peace, and
-                understanding in the world.
-
-              </div>
-              <a href="https://www.rotary.org/en/get-involved/rotaract-clubs" class="blog-slider__button"
-                target="_blank">READ MORE</a>
-            </div>
-          </div>
-        </div>
-        <div class="blog-slider__pagination"></div>
-      </div>
-    </div>
-    <style>
-      .blog-slider__img {
-        background-color: rgb(228, 228, 228);
-        padding: 1rem;
-        width: 60rem;
-        height: 30rem;
-        border-radius: 8px;
-      }
-    </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".swiper-container", {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        effect: "fade",
-        loop: true,
-        speed: 300,
-        mousewheel: {
-          invert: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          dynamicBullets: true,
-        },
-        // Navigation arrows
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-
-      var swiper = new Swiper(".blog-slider", {
-        spaceBetween: 30,
-        effect: "fade",
-        loop: true,
-        mousewheel: {
-          invert: false,
-        },
-        // autoHeight: true,
-        pagination: {
-          el: ".blog-slider__pagination",
-          clickable: true,
-        },
-      });
-
-      let resizeReset = function () {
-        w = canvasBody.width = window.innerWidth;
-        h = canvasBody.height = window.innerHeight;
-      };
-
-      const opts = {
-        particleColor: "rgb(128,128,128)",
-        lineColor: "rgb(128,128,128)",
-        particleAmount: 80,
-        defaultSpeed: 1,
-        variantSpeed: 1,
-        defaultRadius: 2,
-        variantRadius: 2,
-        linkRadius: 200,
-      };
-
-      window.addEventListener("resize", function () {
-        deBouncer();
-      });
-
-      let deBouncer = function () {
-        clearTimeout(tid);
-        tid = setTimeout(function () {
-          resizeReset();
-        }, delay);
-      };
-
-      let checkDistance = function (x1, y1, x2, y2) {
-        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-      };
-
-      let linkPoints = function (point1, hubs) {
-        for (let i = 0; i < hubs.length; i++) {
-          let distance = checkDistance(point1.x, point1.y, hubs[i].x, hubs[i].y);
-          let opacity = 1 - distance / opts.linkRadius;
-          if (opacity > 0) {
-            drawArea.lineWidth = 0.5;
-            drawArea.strokeStyle = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${opacity})`;
-            drawArea.beginPath();
-            drawArea.moveTo(point1.x, point1.y);
-            drawArea.lineTo(hubs[i].x, hubs[i].y);
-            drawArea.closePath();
-            drawArea.stroke();
-          }
-        }
-      };
-
-      Particle = function (xPos, yPos) {
-        this.x = Math.random() * w;
-        this.y = Math.random() * h;
-        this.speed = opts.defaultSpeed + Math.random() * opts.variantSpeed;
-        this.directionAngle = Math.floor(Math.random() * 360);
-        this.color = opts.particleColor;
-        this.radius = opts.defaultRadius + Math.random() * opts.variantRadius;
-        this.vector = {
-          x: Math.cos(this.directionAngle) * this.speed,
-          y: Math.sin(this.directionAngle) * this.speed,
-        };
-        this.update = function () {
-          this.border();
-          this.x += this.vector.x;
-          this.y += this.vector.y;
-        };
-        this.border = function () {
-          if (this.x >= w || this.x <= 0) {
-            this.vector.x *= -1;
-          }
-          if (this.y >= h || this.y <= 0) {
-            this.vector.y *= -1;
-          }
-          if (this.x > w) this.x = w;
-          if (this.y > h) this.y = h;
-          if (this.x < 0) this.x = 0;
-          if (this.y < 0) this.y = 0;
-        };
-        this.draw = function () {
-          drawArea.beginPath();
-          drawArea.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-          drawArea.closePath();
-          drawArea.fillStyle = this.color;
-          drawArea.fill();
-        };
-      };
-
-      function setup() {
-        particles = [];
-        resizeReset();
-        for (let i = 0; i < opts.particleAmount; i++) {
-          particles.push(new Particle());
-        }
-        window.requestAnimationFrame(loop);
-      }
-
-      function loop() {
-        window.requestAnimationFrame(loop);
-        drawArea.clearRect(0, 0, w, h);
-        for (let i = 0; i < particles.length; i++) {
-          particles[i].update();
-          particles[i].draw();
-        }
-        for (let i = 0; i < particles.length; i++) {
-          linkPoints(particles[i], particles);
-        }
-      }
-
-      const canvasBody = document.getElementById("canvas"),
-        drawArea = canvasBody.getContext("2d");
-      let delay = 200,
-        tid,
-        rgb = opts.lineColor.match(/\d+/g);
-      resizeReset();
-      setup();
-
-    </script> -->
-
   <div class="container">
     <section class="map">
       <h1 style="margin-top: 6rem; font-size: 2rem;"><i class="fa-solid fa-street-view"
           style="margin-right: 1rem; font-size: 1.8rem;"></i>360 View
         <hr>
       </h1>
-      <iframe src="app-files/index.html" width="1200" height="450" style="border:0;" allowfullscreen=""
+      <iframe src="360-view/index.html" width="1200" height="450" style="border:0;" allowfullscreen=""
         loading="lazy"></iframe>
 
     </section>
   </div>
   <div class="principal-message">
-    <img src="/departments/Civil/Dr.AGNataraj2.jpg">
+    <img src="./departments/Civil/images/Dr.AGNataraj2.jpg">
     <div class="principal-content">
 
       <h6 style="color: #383838;"><b> <i class="bi bi-envelope-paper-fill" style="margin-right: 1rem;"></i>Principal'
@@ -1031,169 +793,6 @@
       <p class="principal-degree">B.E, M.Tech, Ph.D</p>
     </div>
   </div>
-
-  <!-- Events and achievements -->
-
-  <!-- <script>
-      $(".hover").mouseleave(
-        function () {
-          $(this).removeClass("hover");
-        }
-      );
-    </script> -->
-  <!-- <div class="container">
-
-      <h1 style="margin-top: 6rem; font-size: 1.5rem;"><i class="fa-solid fa-trophy"
-          style="margin-right: 1rem; font-size: 1.5rem;"></i>Events and Achievements
-        <hr>
-      </h1>
-      <div class="events">
-        <div class="row">
-          <div class="col-md-3 mb-3">
-            <div class="carde h-100">
-              <div class="card-mediae">
-                <img src="images/princ.jpg" />
-              </div>
-              <div class="card-contente">
-                <header class="card-headere">
-                  <span class="card-datee">December 29, 2021</span>
-                  <h4>
-                    <a href="https://www.facebook.com/apscebluru/photos/1942888162557813" target="_blank">MoU with
-                      Industries</a>
-                  </h3>
-                </header>
-
-                <footer class="card-footere">
-                  <a href="https://www.facebook.com/apscebluru/photos/1942888162557813" class="read-more-linke"
-                    target="_blank">Read more
-                    <svg fill="none" viewBox="0 0 16 8">
-                      <path
-                        d="M15.354 4.354a.5.5 0 000-.708L12.172.464a.5.5 0 10-.708.708L14.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM0 4.5h15v-1H0v1z"
-                        fill="currentColor" />
-                    </svg>
-                  </a>
-                </footer>
-              </div>
-              <div class="card-bordere">
-                <span class="top"></span>
-                <span class="right"></span>
-                <span class="bottom"></span>
-                <span class="left"></span>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-md-3 mb-3">
-            <div class="carde h-100">
-              <div class="card-mediae">
-                <img src="images/grad.jpg" />
-              </div>
-              <div class="card-contente">
-                <header class="card-headere">
-                  <span class="card-datee">August 19,2021</span>
-                  <h3>
-                    <a href="https://www.facebook.com/apscebluru/photos/1846701568843140" target="_blank">Graduation
-                      Day</a>
-                  </h3>
-                </header>
-
-                <footer class="card-footere">
-                  <a href="https://www.facebook.com/apscebluru/photos/1846701568843140" target="_blank"
-                    class="read-more-linke">Read more
-                    <svg fill="none" viewBox="0 0 16 8">
-                      <path
-                        d="M15.354 4.354a.5.5 0 000-.708L12.172.464a.5.5 0 10-.708.708L14.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM0 4.5h15v-1H0v1z"
-                        fill="currentColor" />
-                    </svg>
-                  </a>
-                </footer>
-              </div>
-              <div class="card-bordere">
-                <span class="top"></span>
-                <span class="right"></span>
-                <span class="bottom"></span>
-                <span class="left"></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3 mb-3">
-            <div class="carde h-100">
-              <div class="card-mediae">
-                <img src="images/recognize.jpg" />
-              </div>
-              <div class="card-contente">
-                <header class="card-headere">
-                  <span class="card-datee">October 30, 2021</span>
-                  <h3>
-                    <a href="https://www.facebook.com/apscebluru/photos/1899613753551921" target="_blank">Education
-                      alliance by UIpath</a>
-                  </h3>
-                </header>
-
-                <footer class="card-footere">
-                  <a href="https://www.facebook.com/apscebluru/photos/1899613753551921" target="_blank"
-                    class="read-more-linke">Read more
-                    <svg fill="none" viewBox="0 0 16 8">
-                      <path
-                        d="M15.354 4.354a.5.5 0 000-.708L12.172.464a.5.5 0 10-.708.708L14.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM0 4.5h15v-1H0v1z"
-                        fill="currentColor" />
-                    </svg>
-                  </a>
-                </footer>
-              </div>
-              <div class="card-bordere">
-                <span class="top"></span>
-                <span class="right"></span>
-                <span class="bottom"></span>
-                <span class="left"></span>
-              </div>
-            </div>
-
-
-
-          </div>
-          <div class="col-md-3 mb-3 ">
-            <div class="carde h-100">
-              <div class="card-mediae">
-                <img src="images/boys.jpg" />
-              </div>
-              <div class="card-contente">
-                <header class="card-headere">
-                  <span class="card-datee">December 03, 2021</span>
-                  <h3>
-                    <a href="https://www.facebook.com/apscebluru/photos/pcb.1924292057750757/1924291764417453/"
-                      target="_blank"> Green Vehicle Expo Event </a>
-                  </h3>
-                </header>
-
-                <footer class="card-footere">
-                  <a href="https://www.facebook.com/apscebluru/photos/pcb.1924292057750757/1924291764417453/"
-                    target="_blank" class="read-more-linke">Read more
-                    <svg fill="none" viewBox="0 0 16 8">
-                      <path
-                        d="M15.354 4.354a.5.5 0 000-.708L12.172.464a.5.5 0 10-.708.708L14.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM0 4.5h15v-1H0v1z"
-                        fill="currentColor" />
-                    </svg>
-                  </a>
-                </footer>
-              </div>
-              <div class="card-bordere">
-                <span class="top"></span>
-                <span class="right"></span>
-                <span class="bottom"></span>
-                <span class="left"></span>
-              </div>
-            </div>
-          </div>
-
-
-
-        </div>
-      </div>
-    </div> -->
-
 
   <!--footer-->
   <div id="footer-placeholder"></div>
