@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" type="image/png" href="tit.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.css"
+    integrity="sha512-c9N/Xq0n4rQdyCXF4RgrRYAAOSnNJDp8NWILsSUx+33zWyaMbXXvqajgO0UXybRdTGVpxq3FBrcGwabkWsT8OA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.js"
+    integrity="sha512-/1h344Ogu39f2lMl2yIJn3mPjySuB0+m3EzDvFSWlxo6HaJO/3jdzGOy8V6ZgdkTkddKH+ZWma1mqOQZHmjo1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+    integrity="sha512-YFENbnqHbCRmJt5d+9lHimyEMt8LKSNTMLSaHjvsclnZGICeY/0KYEeiHwD1Ux4Tcao0h60tdcMv+0GljvWyHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/c4d40c1d88.js" crossorigin="anonymous"></script>
+  <script src="./js/jquery.autoscroll.js"></script>
+
+</head>
+
+<body>
+
+  <a href="/public_html/index.html"><img class="headimg" src="/public_html/images/try2.png" /></a>
+  <a href="/public_html/index.html"><img class="headimg" id="hi1" src="/public_html/images/25yrs.png"
+      style="left: 250px; width: auto; height: 80px;" /></a>
+
+  <!-- Gradient Navbar -->
+  <div class="sub">
+    <nav class="navbar navbar-custom navbar-expand-lg ">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item" style="pointer-events: none;">
+              <a class="nav-link px-3 menucontact" href="#" style="color: #fff; cursor: pointer;"><i
+                  class="fa-solid fa-phone"></i>
+                +91-9448452508
+              </a>
+            </li>
+            <li class="nav-item" style="pointer-events: none;">
+              <a class="nav-link px-3" href="#" style="color: #fff;  cursor: pointer;"><i class="fa-solid fa-envelope"
+                  style="color: #fff;"></i>
+                principal@apsce.ac.in
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link px-3" aria-current="page" href="./pdf/AICTEApprovalsLetters.pdf"
+                target="_blank">AICTE</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link px-3" aria-current="page" href="./pdf/SSR-NAAC.pdf" target="_blank">NAAC</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#">NBA Status</a>
+
+            </li>
+
+            <!-- <li class="nav-item">
+              <a class="nav-link px-3" aria-current="page" href="/pdf/IQAC_Committee.pdf" target="_blank">IQAC</a>
+            </li> -->
+
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                IQAC
+              </a>
+
+
+
+              <!-- <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">Calendar of Events</a> -->
+              <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="./pdf/IQAC_Committee.pdf" target="_blank">IQAC
+                    Committee</a>
+                  <ul class="submenu dropdown-menu">
+                    <li><a class="dropdown-item" href="">DropDown 1</a></li>
+                    <li><a class="dropdown-item" href="">DropDown 2</a></li>
+                    <li><a class="dropdown-item" href="">DropDown 3</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="./pdf/AcademicCalendar21-22.pdf" target="_blank">Calendar
+                    of
+                    Events
+                    2021-22</a>
+                  <ul class="submenu dropdown-menu">
+                    <li><a class="dropdown-item" href="">DropDown 4</a></li>
+                    <li><a class="dropdown-item" href="">DropDown 5</a></li>
+                    <li><a class="dropdown-item" href="">DropDown 6</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="./pdf/AcademicCalendar22-23.pdf" target="_blank">Calendar
+                    of
+                    Events
+                    2022-23</a></li>
+              </ul>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link px-3" href="./pdf/AICTE-Mandatory-22-23.pdf" target="_blank">Mandatory Disclosure</a>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Circulars
+              </a>
+              <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="./pdf/AcademicCalender2020-21.pdf" target="_blank">2019-20</a>
+                  <ul class="submenu dropdown-menu">
+                    <li><a class="dropdown-item" href="">DropDown 1</a></li>
+                    <li><a class="dropdown-item" href="">DropDown 2</a></li>
+                    <li><a class="dropdown-item" href="">DropDown 3</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="./pdf/AcademicCalender2020-21.pdf" target="_blank">2020-21</a>
+                  <ul class="submenu dropdown-menu">
+                    <li><a class="dropdown-item" href="">DropDown 4</a></li>
+                    <li><a class="dropdown-item" href="">DropDown 5</a></li>
+                    <li><a class="dropdown-item" href="">DropDown 6</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="./pdf/6067.pdf" target="_blank">2021-22</a></li>
+
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                E-Library
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="http://apsce.easylib.net" target="_blank">Eazy Lib</a></li>
+                <li><a class="dropdown-item" href="http://www.interlinepublishing.com/store-66/books.php?allbook=all"
+                    target="_blank">D-Book Store</a></li>
+                <li><a class=" dropdown-item" href="https://192.168.4.97/LocalGuru/" target="_blank">NPTEL</a>
+                </li>
+                <li><a class="dropdown-item" href="https://ieeexplore.ieee.org/" target="_blank">IEEE</a></li>
+              </ul>
+            </li>
+            <!-- <li class="nav-item">
+                          <a class="nav-link px-3 effectsmall" href="#" >Student Corner</a>
+  
+                      </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <nav>
+    <div class="wrapper">
+      <input type="radio" name="slider" id="menu-btn">
+      <input type="radio" name="slider" id="close-btn">
+      <ul class="nav-links">
+        <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+        <li><a href="index.html"><i class="bi bi-house-fill" style="font-size: 1.4rem;"></i></a></li>
+        <li>
+          <a href="#" class="desktop-item"><i class="bi bi-bar-chart-line-fill"
+              style="margin-right: 0.5rem;"></i>About</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="mobile-item">About</label>
+          <div class="mega-box">
+            <div class="content">
+              <div class="row">
+                <header>ABOUT</header>
+                <ul class="mega-links">
+                  <li><a href="/public_html/about/about.html">APS TRUST </a></li>
+                  <li><a href="/public_html/about/gc.html">Governing Council</a></li>
+                  <li><a href="/public_html/about/committees.html">Committees</a></li>
+                  <li><a href="/public_html/about/codeofconduct.html">Code of Conduct</a></li>
+                  <li><a href="/public_html/about/auditstatement.html">Audit Statement</a></li>
+
+                </ul>
+              </div>
+
+              <div class="row">
+                <h5>Vision & Mission</h5>
+                <a class="img-link" href="/public_html/about/about.html">
+                  <img class="rowimg" src="/public_html/images/vision mission.jpg" alt="">
+                </a>
+
+              </div>
+              <div class="row">
+                <h5>Organogram</h5>
+                <a class="img-link" href="/public_html/about/gc.html">
+                  <img class="rowimg" src="/public_html/images/menuorganogram.jpg" alt="">
+                </a>
+              </div>
+              <div class="row">
+                <h5>Committees</h5>
+                <a class="img-link" href="/public_html/about/committees.html">
+                  <img class="rowimg" src="/public_html/images/antiragging.jpeg" alt="">
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#" class="desktop-item"><i class="bi bi-book-half" style="margin-right: 0.5rem;"></i>Academics</a>
+          <input type="checkbox" id="showMegaacademics">
+          <label for="showMegaacademics" class="mobile-item">Academics</label>
+          <div class="mega-box">
+            <div class="content">
+              <div class="row">
+                <header>UNDERGRADUATE COURSES</header>
+                <ul class="mega-links">
+                  <li><a href="/public_html/departments/cse/index.html">Computer Science & Engg.</a></li>
+                  <li><a href="/public_html/departments/Ele/index.html">Electronics & Comm. Engg.</a></li>
+                  <li><a href="/public_html/departments/ise/index.html">Information Science & Engg.</a></li>
+                  <li><a href="/public_html/departments/Civil/index.html">Civil Engg.</a></li>
+                  <li><a href="/public_html/departments/Mechanical/index.html">Mechanical Engg.</a></li>
+                  <li><a href="/public_html/departments/bs/index.html">Basic Science</a></li>
+                </ul>
+              </div>
+
+              <div class="row">
+                <h5>Megahertz</h5>
+                <a class="img-link" href="http://instagram.com/megahertz01?utm_source=qr">
+
+                  <!-- </a>https://www.facebook.com/apsce.megahertz/"> -->
+                  <img class="rowimg" src="/public_html/images/megahertz.jpg" alt="">
+                </a>
+              </div>
+
+              <div class="row">
+                <h5>TechSpark</h5>
+                <a class="img-link" href="https://www.facebook.com/techspark.apsce/">
+                  <img class="rowimg" src="/public_html/images/techspark.jpg" alt="">
+                </a>
+              </div>
+              <div class="row">
+                <h5>Electronika</h5>
+                <a class="img-link" href="">
+                  <img class="rowimg" src="/public_html/images/electronika.jpg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <a href="#" class="desktop-item"><i class="bi bi-bank2" style="margin-right: 0.5rem;"></i>Campus Life</a>
+          <input type="checkbox" id="showMegacampus">
+          <label for="showMegacampus" class="mobile-item">Campus Life</label>
+          <div class="mega-box">
+            <div class="content">
+              <div class="row">
+                <header>FACILITIES <br></header>
+                <ul class="mega-links">
+                  <li><a href="/public_html/facilities/library.html">Library </a></li>
+                  <li><a href="/public_html/facilities/hostel.html">Hostel</a></li>
+                  <li><a href="/public_html/facilities/sports.html">Sports</a></li>
+                  <li><a href="/public_html/facilities/hospitality.html">Hospitality</a></li>
+                  <li><a href="/public_html/facilities/transportation.html">Transportation</a></li>
+                  <li><a href="/public_html/student clubs/index.html">Student Clubs</a></li>
+                  <li><a href="/public_html/facilities/cocurricular.html">Co-curricular</a></li>
+                </ul>
+              </div>
+
+
+              <div class="row">
+                <h5>Rotaract Club</h5>
+                <a href="/public_html/facilities/Rotaract/index.html" class="img-link">
+                  <img class="rowimg" src="/public_html/facilities/Rotaract/images/logo+abhi.png" alt="">
+                </a>
+              </div>
+              <div class="row">
+                <h5>Leo Club</h5>
+                <a href="/public_html/facilities/leoclub/index.html" class="img-link">
+                  <img class="rowimg" src="/public_html/images/leoclub.jpeg" alt="">
+                </a>
+              </div>
+              <div class="row">
+                <h5>Red Cross</h5>
+                <a href="https://www.indianredcross.org" class="img-link">
+                  <img class="rowimg" src="/public_html/images/redcross.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li> <a href="/public_html/Placements/index.html"><i class="bi bi-briefcase-fill"
+              style="margin-right: 0.5rem;"></i>Placements</a> </li>
+        <li><a href="/public_html/research/index.html"><i class="bi bi-search" style="margin-right: 0.5rem;"></i>Research</a></li>
+        <li><a href="/public_html/gallery/index.html"><i class="bi bi-images" style="margin-right: 0.5rem;"></i>Gallery</a></li>
+        <li><a href="/public_html/alumini/public/index.html"><i class="bi bi-box-fill" style="margin-right: 0.5rem;"></i>Alumni</a>
+        </li>
+
+      </ul>
+      <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+    </div>
+  </nav>
+
+
+  <style>
+    body {
+      font-family: 'Poppins';
+    }
+
+    .headimg {
+      /* Aps logo on top */
+      margin-top: 0.75rem;
+      margin-left: 1.5rem;
+      position: absolute;
+      height: 5rem;
+      width: auto;
+      z-index: 999;
+    }
+
+    .navbar-nav {
+      display: flex;
+      height: 1.75rem;
+    }
+
+    .navbar-nav::after {
+      position: absolute;
+      content: '';
+      left: 25.2%;
+      top: 0;
+      border-style: solid;
+      border-color: #00093c transparent #00093c transparent;
+      border-width: 2.9rem 0 0 2.9rem;
+
+    }
+
+    .navbar {
+      background: linear-gradient(to left, #00093c 71.75%, #fff 100px);
+      padding-right: 3.8rem;
+    }
+
+    .navbar-custom .navbar-nav .nav-link {
+      color: rgb(255, 255, 255);
+      padding-bottom: 1rem;
+      margin-bottom: -1rem;
+    }
+
+    .navbar-custom .navbar-nav .nav-link:hover {
+      color: rgb(0, 166, 166);
+      display: flex;
+    }
+
+    .dropdown-menu {
+      z-index: 1000;
+
+    }
+
+    /* .navbar-custom .navbar-nav .nav-link:hover  .dropdown-menu{
+      display: block;
+    } */
+
+    .nav-item {
+      display: block;
+      align-items: center;
+      font-size: 11.5px;
+
+    }
+
+
+    .nav-item:hover .dropdown-menu {
+      display: block;
+      visibility: visible;
+      font-size: 12px;
+    }
+
+    .dropdown-item {
+      display: block;
+    }
+
+    .submenu {
+      margin-left: -9.5rem;
+      margin-top: -2.5rem;
+      opacity: 0;
+    }
+
+    .dropdown-menu li:hover>.submenu {
+      opacity: 1;
+    }
+
+
+
+    nav {
+      position: relative;
+      /* z-index: 5; */
+      width: 100%;
+      background: #fff;
+    }
+
+    nav .wrapper {
+      position: relative;
+      max-width: 100%;
+      padding: 1rem 2rem 1rem;
+      height: 60px;
+      line-height: 80px;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      z-index: 99;
+    }
+
+    .wrapper .nav-links {
+      display: inline-flex;
+      margin-top: 0.75rem;
+    }
+
+    .nav-links li {
+      list-style: none;
+    }
+
+    .nav-links li a {
+      color: #000;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 0 1rem;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+      font-family: "Poppins";
+
+    }
+
+    .nav-links li a:hover {
+      background: #fff;
+      color: red;
+    }
+
+    .nav-links .mobile-item {
+      display: none;
+    }
+
+    .nav-links li:hover .mega-box {
+      top: 60px;
+      /* Distance between mega box and nav links */
+      opacity: 1;
+      visibility: visible;
+    }
+
+
+    .mega-box {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding: 0 30px;
+      top: 0px;
+      opacity: 0;
+      visibility: hidden;
+
+    }
+
+    .mega-box .content {
+      background: rgba(255, 255, 255, 0.92);
+      padding: 25px 3rem;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      font-family: 'Poppins';
+
+    }
+
+    .img-link {
+      position: absolute;
+    }
+
+    .mega-box .content .row {
+      width: calc(30% - 5px);
+      line-height: 45px;
+    }
+
+    .content .row img {
+      margin-top: 3.5rem;
+      width: 19rem;
+      height: auto;
+      position: absolute;
+      border-radius: 5px;
+      box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+      /* object-fit: cover; */
+    }
+
+    .content .row header {
+      color: rgb(0, 0, 0);
+      ;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .content .row .mega-links {
+      margin-left: -40px;
+      border-right: 1px solid rgba(255, 255, 255, 0.09);
+
+    }
+
+    .row h5 {
+      color: #000;
+      text-align: center;
+    }
+
+    .row .mega-links li {
+      padding: 0 1rem;
+
+    }
+
+    .row .mega-links li a {
+      padding: 0px;
+      padding: 0 30px;
+      color: rgb(107, 107, 107);
+      font-size: 13px;
+      text-align: left;
+      font-weight: bold;
+      display: block;
+      /* width: 100%;
+	height: 100%; */
+    }
+
+    .row .mega-links li a:hover {
+      color: #000;
+    }
+
+    .wrapper .btn {
+      color: #000;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .wrapper .btn.close-btn {
+      position: absolute;
+      right: 30px;
+      top: 10px;
+    }
+
+    nav input {
+      display: none;
+    }
+
+
+    @media screen and (min-width: 1600px) {
+      .navbar {
+        background: linear-gradient(to left, #00093c 92rem, #fff 300px);
+        padding-right: 3.8rem;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      .headimg {
+        height: 3.5rem;
+        width: auto;
+        margin-bottom: 1rem;
+      }
+
+      .sub {
+        display: none;
+      }
+
+      .carousel-controls {
+        display: none;
+      }
+
+      .wrapper .btn {
+        display: block;
+      }
+
+      .wrapper .nav-links {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        top: 0;
+        left: -100%;
+        background: rgb(255, 255, 255);
+        display: block;
+        padding: 50px 10px;
+        line-height: 50px;
+        overflow-y: auto;
+        box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+        transition: all 0.3s ease;
+
+      }
+
+      /* custom scroll bar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #242526;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #3a3b3c;
+      }
+
+      #menu-btn:checked~.nav-links {
+        left: 0%;
+      }
+
+      #menu-btn:checked~.btn.menu-btn {
+        display: none;
+      }
+
+      #close-btn:checked~.btn.menu-btn {
+        display: block;
+
+      }
+
+      header {
+        font-size: 1rem;
+      }
+
+      .nav-links li {
+        margin: 15px 10px;
+      }
+
+      .nav-links li a {
+        margin-top: 1rem;
+        padding: 0 20px;
+        display: block;
+        font-size: 20px;
+      }
+
+      .nav-links .drop-menu {
+        position: static;
+        opacity: 1;
+        top: 65px;
+        visibility: visible;
+        padding-left: 20px;
+        width: 100%;
+        max-height: 0px;
+        overflow: hidden;
+        box-shadow: none;
+        transition: all 0.3s ease;
+      }
+
+      #homepage-slider img {
+        padding-top: 1rem;
+        height: 50vh;
+      }
+
+      #showMegaacademics:checked~.mega-box,
+      #showMega:checked~.mega-box,
+      #showMegacampus:checked~.mega-box {
+        max-height: 100%;
+      }
+
+      .nav-links .desktop-item {
+        display: none;
+      }
+
+      .nav-links .mobile-item {
+        display: block;
+        color: black;
+        font-size: 20px;
+        font-weight: 500;
+        padding-left: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.1s ease;
+      }
+
+      .row h5 {
+
+        padding: 0 20px;
+        color: rgb(107, 107, 107);
+        font-size: 15px;
+        text-align: left;
+        font-weight: bold;
+        display: block;
+        position: absolute;
+        right: 50%;
+      }
+
+      .row img {
+        display: none;
+      }
+
+      .nav-links .mobile-item:hover {
+        background: #d3d3d3;
+      }
+
+      .drop-menu li {
+        margin: 0;
+      }
+
+      .drop-menu li a {
+        border-radius: 5px;
+        font-size: 18px;
+      }
+
+      .mega-box {
+        position: static;
+        top: 65px;
+        opacity: 1;
+        visibility: visible;
+        padding: 0 20px;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .mega-box .content {
+        box-shadow: none;
+        flex-direction: column;
+        padding: 20px 20px 0 20px;
+      }
+
+
+      .mega-box .content .row {
+        width: 150%;
+        margin-bottom: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .mega-box .content .row:nth-child(1),
+      .mega-box .content .row:nth-child(2) {
+        border-top: 0px;
+      }
+
+      .content .row .mega-links {
+        border-left: 0px;
+        padding-left: 15px;
+      }
+
+      .row .mega-links li {
+        margin: 0;
+      }
+
+      .content .row header {
+        font-size: 19px;
+      }
+
+      .fa-bars {
+        margin-top: 1.5rem;
+      }
+    }
+  </style>
+
+</body>
+
+</html>

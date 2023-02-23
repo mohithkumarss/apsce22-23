@@ -1511,28 +1511,19 @@
 /* footer */
 footer {
 	bottom: 0px;
-	width: 100%;
-	background: linear-gradient(to right, #2d0b00, #00093c);
-	color: #fff;
-	border-top-right-radius: 4rem;
   }
   #rightbox img {
 	width: 22vw;
 	height: auto;
   }
-  #centerbox .content {
-	  font-family: 'Poppins',serif;
-	color: white;
-  }
+  
   .maincontent {
 	display: flex;
-	padding-bottom: 4rem;
-	padding-top: 3rem;
+	margin: 2rem 1rem 2rem;
 	justify-content: space-around;
   }
-  .maincontent #leftbox {
-	  font-family: 'Poppins',serif;
-	 text-align: left;
+  .maincontent .leftbox {
+	flex-basis: 50%;
 	padding: 10px 20px;
   }
   .maincontent .box a {
@@ -1543,56 +1534,48 @@ footer {
 	font-size: 1.5rem;
 	font-weight: 600;
 	text-transform: uppercase;
-	color: white;
-	margin: 1rem 2rem 1rem;
+	color: rgb(44, 44, 44);
+	margin: 1rem;
   }
   .box .content {
-	margin: 1rem 2rem 1rem;
+	margin: 1rem;
   }
   .right .social {
+	justify-content: center;
 	display: flex;
-	flex-direction: row;
-	margin: 20px 0 0 0;
-	padding-top: 2rem;
-	padding-left: 0.7rem;
+	margin-top: 2rem;
   }
-  .right .social a {
-	padding: 0 0.5rem;
-  }
+  
   .right .social a i {
-	height: 40px;
-	width: 45px;
-	color: rgb(204, 204, 204);
-	line-height: 40px;
-	text-align: center;
-	font-size: 28px;
+	padding: 10px;
+	color: rgb(44, 44, 44);
+	font-size: 1.5rem;
 	transition: 0.3s;
   }
   .right .social a i:hover {
-	padding-top: 5px;
+	border-radius: 5px;
+	background-color: rgb(200, 200, 200);
   }
+  
   #centerbox .content .place .text {
 	color: rgb(204, 204, 204);
-	line-height: 55px;
   }
   #centerbox .content .phone .text {
 	color: rgb(204, 204, 204);
-	line-height: 40px;
   }
   #centerbox .content .mail .text {
 	color: rgb(204, 204, 204);
-	line-height: 40px;
   }
   #centerbox .content .place i {
-	padding-right: 10px;
+	padding-right: 5px;
   }
   #centerbox .content .phone i {
-	padding-right: 10px;
+	padding-right: 5px;
   }
   #centerbox .content .mail i {
-	padding-right: 10px;
+	padding-right: 5px;
   }
-  #centerbox .content i {
+  /* #centerbox .content i {
 	height: 40px;
 	width: 40px;
 	color: rgb(204, 204, 204);
@@ -1604,24 +1587,56 @@ footer {
   #centerbox .content i:hover {
 	text-align: center;
 	padding: 0 0.5rem 0px;
-  }
+  } */
   #leftbox .content a {
-	font-size: 1rem;
-	color: whitesmoke;
-	line-height: 44px;
+	font-size: 0.8rem;
+	color: rgb(44, 44, 44);
+	line-height: 30px;
 	transition: 0.3s ease;
   }
   #leftbox .content a:hover {
-	padding-left: 8px;
+	padding-left: 2px;
   }
-
-  .heading5 hr{
-	  width: 25%;
+  
+  .map {
+	text-align: center;
+  }
+  .map h2 {
+	padding-left: 5rem;
+  }
+  .map iframe {
+	border-radius: 1em;
+	margin: 2rem;
+  }
+  
+  .mapfooter iframe {
+	border-radius: 1rem;
+  }
+  
+  .copyrights {
+	display: flex;
+	justify-content: space-between;
+	margin: 2rem;
+  }
+  
+  @media screen and (max-width: 1200px) {
+	.copyrights {
+	  text-align: center;
+	}
+	#rightbox img {
 	  margin: auto;
-	  margin-top: 0.5rem;
-	  border: 3px solid rgb(255, 0, 0);
-	  border-radius: 1rem;
-  }
+	  margin-bottom: 3rem;
+	}
+	#rightbox .social {
+	  display: none;
+	}
+  
+	.map {
+	  margin: 0 14px 0;
+	}
+	.mapfooter {
+	  margin: auto;
+	}
 
 
   
@@ -1727,4 +1742,4 @@ footer {
 	  transform: translateY(-2000px);
 	}
   }
-  
+}
