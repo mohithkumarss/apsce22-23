@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@&display=swap");
 
 * {
   margin: 0;
@@ -19,8 +20,8 @@
 }
 
 body {
+  font-family: "Poppins";
   overflow-x: hidden;
-  font-family: Poppins;
 }
 
 #homepage-slider img {
@@ -393,116 +394,6 @@ h2 {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* footer */
-footer {
-  bottom: 0px;
-}
-#rightbox img {
-  width: 22vw;
-  height: auto;
-}
-
-.maincontent {
-  display: flex;
-  margin: 2rem 1rem 2rem;
-  justify-content: space-around;
-}
-.maincontent .leftbox {
-  flex-basis: 50%;
-  padding: 10px 20px;
-}
-.maincontent .box a {
-  display: flex;
-  flex-direction: column;
-}
-.box h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: rgb(44, 44, 44);
-  margin: 1rem;
-}
-.box .content {
-  margin: 1rem;
-}
-.right .social {
-  justify-content: center;
-  display: flex;
-  margin-top: 2rem;
-}
-
-.right .social a i {
-  padding: 10px;
-  color: rgb(44, 44, 44);
-  font-size: 1.5rem;
-  transition: 0.3s;
-}
-.right .social a i:hover {
-  border-radius: 5px;
-  background-color: rgb(200, 200, 200);
-}
-
-#centerbox .content .place .text {
-  color: rgb(204, 204, 204);
-}
-#centerbox .content .phone .text {
-  color: rgb(204, 204, 204);
-}
-#centerbox .content .mail .text {
-  color: rgb(204, 204, 204);
-}
-#centerbox .content .place i {
-  padding-right: 5px;
-}
-#centerbox .content .phone i {
-  padding-right: 5px;
-}
-#centerbox .content .mail i {
-  padding-right: 5px;
-}
-/* #centerbox .content i {
-  height: 40px;
-  width: 40px;
-  color: rgb(204, 204, 204);
-  line-height: 55px;
-  font-size: 22px;
-  border-radius: 50%;
-  transition: 0.3s ease;
-}
-#centerbox .content i:hover {
-  text-align: center;
-  padding: 0 0.5rem 0px;
-} */
-#leftbox .content a {
-  font-size: 0.8rem;
-  color: rgb(44, 44, 44);
-  line-height: 30px;
-  transition: 0.3s ease;
-}
-#leftbox .content a:hover {
-  padding-left: 2px;
-}
-
-.map {
-  text-align: center;
-}
-.map h2 {
-  padding-left: 5rem;
-}
-.map iframe {
-  border-radius: 1em;
-  margin: 2rem;
-}
-
-.mapfooter iframe {
-  border-radius: 1rem;
-}
-
-.copyrights {
-  display: flex;
-  justify-content: space-between;
-  margin: 2rem;
-}
 
 @media screen and (max-width: 1200px) {
   .copyrights {
