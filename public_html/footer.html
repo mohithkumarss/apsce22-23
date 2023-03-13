@@ -11,12 +11,12 @@
 
 <body>
     <div class="bod">
-        <hr>
+        <hr class="fhr">
         <div class="life">
             <div class="left box" id="leftbox">
                 <h2>Links</h2>
                 <hr>
-                <div class="content">
+                <div class="content1">
                     <a href="/public_html/about/about.html" style="text-decoration:none">Student Clubs</a>
                     <a href="/public_html/Admissions/index.html" style="text-decoration:none">Transportation</a>
                     <a href="/public_html/Placements/index.html" style="text-decoration:none">Library</a>
@@ -26,8 +26,8 @@
             </div>
             <div class="left box" id="leftbox">
                 <h2>About us</h2>
-                <hr>
-                <div class="content">
+                <hr class="fhr">
+                <div class="content1">
                     <a href="/public_html/about/about.html" style="text-decoration:none">APSCE Trust</a>
                     <a href="/public_html/Admissions/index.html" style="text-decoration:none">Governing Council</a>
                     <a href="/public_html/Placements/index.html" style="text-decoration:none">Commitee</a>
@@ -49,8 +49,8 @@
             </div>
             <div class="left box" id="leftbox">
                 <h2>Information</h2>
-                <hr>
-                <div class="content">
+                <hr class="fhr">
+                <div class="content1">
                     <a href="/public_html/about/about.html" style="text-decoration:none">Placements</a>
                     <a href="/public_html/Admissions/index.html" style="text-decoration:none">Admissions</a>
                     <a href="/public_html/Placements/index.html" style="text-decoration:none">Research</a>
@@ -109,7 +109,7 @@
         background-color: rgb(0, 0, 0);
     }
 
-    hr {
+    fhr {
         color: rgb(255, 255, 255);
     }
 
@@ -253,11 +253,11 @@
         margin: 1rem;
     }
 
-    .box .content {
+    .box .content1 {
         margin: 1rem;
     }
 
-    #leftbox .content a {
+    #leftbox .content1 a {
         text-transform: uppercase;
         font-size: 0.8rem;
         color: rgb(183, 183, 183);
@@ -265,7 +265,7 @@
         transition: 0.3s ease;
     }
 
-    #leftbox .content a:hover {
+    #leftbox .content1 a:hover {
         transform: scale(1.1);
     }
 
@@ -324,10 +324,11 @@
         padding: 2rem;
     }
 
-    .content {
+    .content1 {
         text-align: center;
         display: flex;
         flex-direction: column;
+        
     }
 
     .mail {
