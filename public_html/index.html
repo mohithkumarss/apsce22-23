@@ -528,12 +528,18 @@
         </h1>
         <div class="nae">
           <div class="nae1">
-            <ul>
-              <li>
-                <a href=""> <img src="/public_html/images/2jan1.png" alt=""></a>
-                <a href=""> <img src="/public_html/images/2jan1.png" alt=""></a>
-              </li>
-            </ul>
+            <div class="video-container">
+              <div class="video-overlay">
+                  <i class="fas fa-play-circle"></i>
+              </div>
+              <video class="video" loop>
+                  <source
+                      src="/public_html/ak/New Project 8 [37E340D].mp4"
+                      type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+          
             <ul>
               <li>
                 <a href=""> <img src="/public_html/images/2jan1.png" alt=""></a>
@@ -870,6 +876,24 @@
     $(function () {
       $("#load").load("preloader/index.html");
     });
+    
+              const video = document.querySelector('.video');
+              const playButton = document.querySelector('.fa-play-circle');
+      
+              video.addEventListener('mouseenter', () => {
+                  video.play();
+                  playButton.style.display = 'none';
+              });
+      
+              video.addEventListener('mouseleave', () => {
+                  video.pause();
+                  video.currentTime = 0;
+                  playButton.style.display = 'block';
+              });
+      
+             
+      
+         
   </script>
 
 
