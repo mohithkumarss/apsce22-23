@@ -329,3 +329,4 @@ video.addEventListener("mouseleave", () => {
   video.currentTime = 0;
   playButton.style.display = "block";
 });
+
