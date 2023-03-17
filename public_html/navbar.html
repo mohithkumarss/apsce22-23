@@ -33,8 +33,7 @@
 <body>
 
   <a href="/public_html/index.html"><img class="headimg" src="/public_html/images/try2.png" /></a>
-  <a href="/public_html/index.html"><img class="headimg" id="hi1" src="/public_html/images/25yrs.png"
-      style="left: 250px; width: auto; height: 80px;" /></a>
+  <a href="/public_html/index.html"><img class="headimg" id="hi1" src="/public_html/images/25yrs.png" /></a>
 
   <!-- Gradient Navbar -->
   <div class="sub">
@@ -110,7 +109,8 @@
 
 
             <li class="nav-item">
-              <a class="nav-link px-3" href="/public_html/pdf/AICTE-Mandatory-22-23.pdf" target="_blank">Mandatory Disclosure</a>
+              <a class="nav-link px-3" href="/public_html/pdf/AICTE-Mandatory-22-23.pdf" target="_blank">Mandatory
+                Disclosure</a>
             </li>
 
 
@@ -120,14 +120,16 @@
                 Circulars
               </a>
               <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="/public_html/pdf/AcademicCalender2020-21.pdf" target="_blank">2019-20</a>
+                <li><a class="dropdown-item" href="/public_html/pdf/AcademicCalender2020-21.pdf"
+                    target="_blank">2019-20</a>
                   <ul class="submenu dropdown-menu">
                     <li><a class="dropdown-item" href="">DropDown 1</a></li>
                     <li><a class="dropdown-item" href="">DropDown 2</a></li>
                     <li><a class="dropdown-item" href="">DropDown 3</a></li>
                   </ul>
                 </li>
-                <li><a class="dropdown-item" href="/public_html/pdf/AcademicCalender2020-21.pdf" target="_blank">2020-21</a>
+                <li><a class="dropdown-item" href="/public_html/pdf/AcademicCalender2020-21.pdf"
+                    target="_blank">2020-21</a>
                   <ul class="submenu dropdown-menu">
                     <li><a class="dropdown-item" href="">DropDown 4</a></li>
                     <li><a class="dropdown-item" href="">DropDown 5</a></li>
@@ -162,14 +164,18 @@
       </div>
     </nav>
   </div>
+
+
+  <!-- bottom nav -->
   <nav>
     <div class="wrapper">
       <input type="radio" name="slider" id="menu-btn">
       <input type="radio" name="slider" id="close-btn">
       <ul class="nav-links">
-        <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-        <li><a href="/public_html/index.html"><i class="bi bi-house-fill" style="font-size: 1.4rem;"></i></a></li>
-        <li>
+        <label for="close-btn" class="btn close-btn" id="close-btn"><i class="bi bi-x-lg"></i></label>
+        <li id="first"><a href="/public_html/index.html"><i class="bi bi-house-fill" style="font-size: 1.4rem;"></i></a>
+        </li>
+        <li id="second">
           <a href="#" class="desktop-item"><i class="bi bi-bar-chart-line-fill"
               style="margin-right: 0.5rem;"></i>About</a>
           <input type="checkbox" id="showMega">
@@ -211,7 +217,7 @@
             </div>
           </div>
         </li>
-        <li>
+        <li id="third">
           <a href="#" class="desktop-item"><i class="bi bi-book-half" style="margin-right: 0.5rem;"></i>Academics</a>
           <input type="checkbox" id="showMegaacademics">
           <label for="showMegaacademics" class="mobile-item">Academics</label>
@@ -297,17 +303,23 @@
         </li>
         <li> <a href="/public_html/Placements/index.html"><i class="bi bi-briefcase-fill"
               style="margin-right: 0.5rem;"></i>Placements</a> </li>
-              <li><a href="/public_html/Admissions/index.html"><i class="bi bi-person-lines-fill" style="margin-right: 0.5rem;"></i>Admissions</a></li>      
-        <li><a href="/public_html/research/index.html"><i class="bi bi-search" style="margin-right: 0.5rem;"></i>Research</a></li>
+        <li><a href="/public_html/Admissions/index.html"><i class="bi bi-person-lines-fill"
+              style="margin-right: 0.5rem;"></i>Admissions</a></li>
+        <li><a href="/public_html/research/index.html"><i class="bi bi-search"
+              style="margin-right: 0.5rem;"></i>Research</a></li>
         <!-- <li><a href="/public_html/gallery/index.html"><i class="bi bi-images" style="margin-right: 0.5rem;"></i>Gallery</a></li> -->
-        <li><a href="/public_html/alumini/public/index.html"><i class="bi bi-box-fill" style="margin-right: 0.5rem;"></i>Alumni</a>
+        <li><a href="/public_html/alumini/public/index.html"><i class="bi bi-box-fill"
+              style="margin-right: 0.5rem;"></i>Alumni</a>
         </li>
-
       </ul>
-      <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+      <label for="menu-btn" class="btn menu-btn"><i class="bi bi-list"></i></label>
     </div>
   </nav>
-
+  <script>
+    $(function () {
+      $("#menu-btn").load("/public_html/menu-btn/index.html");
+    });
+  </script>
 
   <style>
     body {
@@ -324,6 +336,12 @@
       z-index: 999;
     }
 
+    #hi1 {
+      left: 250px;
+      width: auto;
+      height: 80px;
+    }
+
     .navbar-nav {
       display: flex;
       height: 1.75rem;
@@ -332,13 +350,14 @@
     .navbar-nav::after {
       position: absolute;
       content: '';
-      left: 25.2%;
+      left: 30%;
       top: 0;
       border-style: solid;
       border-color: #00093c transparent #00093c transparent;
       border-width: 2.9rem 0 0 2.9rem;
 
     }
+
     @media screen and (min-width:1600px) {
       .navbar-nav::after {
         position: absolute;
@@ -554,8 +573,14 @@
 
     .wrapper .btn.close-btn {
       position: absolute;
-      right: 30px;
-      top: 10px;
+      right: 36px;
+      top: 16px;
+    }
+
+    .wrapper .btn.menu-btn {
+      position: absolute;
+      right: 36px;
+      top: 25px;
     }
 
     nav input {
@@ -593,7 +618,7 @@
         position: fixed;
         height: 100vh;
         width: 100%;
-        max-width: 400px;
+        max-width: calc(100% - 30px);
         top: 0;
         left: -100%;
         background: rgb(255, 255, 255);
@@ -759,6 +784,59 @@
 
       .fa-bars {
         margin-top: 1.5rem;
+      }
+    }
+
+    /* for mobiles media query */
+    @media only screen and (max-width: 768px) {
+      .headimg {
+        height: 4rem;
+        width: auto;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+      }
+
+      .sub {
+        display: none;
+      }
+
+      .carousel-controls {
+        display: none;
+      }
+
+      .wrapper .btn {
+        display: block;
+      }
+
+      .wrapper .nav-links {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: calc(50% - 25rem);
+        top: 0;
+        left: -100%;
+        display: block;
+        line-height: 50px;
+        overflow-y: auto;
+        transition: all 0.3s ease;
+      }
+
+      .listen {
+        margin-top: 6rem;
+        margin-left: 3rem;
+      }
+
+      #close-btn {
+        margin-top: 0;
+      }
+
+      nav .wrapper {
+        margin-bottom: 2.5rem;
+      }
+
+      #hi1 {
+        left: 200px;
+        height: 4rem;
       }
     }
   </style>

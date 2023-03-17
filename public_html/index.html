@@ -51,54 +51,6 @@
             Youtube</span></a></li>
     </ul>
   </nav>
-  <!-- <div class="modal fade justify-content-center" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content"> -->
-
-  <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
-  <!-- <style>
-          .modal-content {
-            width: 700px;
-          }
-
-          .modal-body img {
-            width: 42rem;
-          }
-
-          .modal-dialog {
-            margin: 2rem;
-          }
-
-          @media screen and (max-width: 1200px) {
-            .modal-dialog {
-              margin: 10px;
-            }
-
-            .modal-content {
-              width: 390px;
-            }
-
-            .modal-body img {
-              width: 23rem;
-            }
-          }
-        </style>
-
-        <div class="modal-body">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-            style="position: absolute;"></button>
-          <img src="bannerapsce.png" alt="">
-        </div>
-
-        <a href="contact/public/contactform.html" class="btn justify-content-center"
-          style="color: white; text-decoration: none; background-color: #00093c; font-size: 12px; padding: 0.9rem;">
-          Contact Now : +91 9448452508 | pricipal@apsce.ac.in</a>
-
-        <!-- </div> -->
-  <!-- </div>
-    </div>
-  </div> -->
   <section id="slider" class="wrap">
     <button id="nav-left" class="nav-left">
       < </button>
@@ -118,303 +70,6 @@
         </ul>
         <div class="slider-timer"></div>
   </section>
-  <!-- style slider -->
-  <style>
-    .item-ativo1 img {
-      width: auto;
-      height: 65vh;
-    }
-
-    @media screen and (min-width: 1600px) {
-      .item-ativo1 img {
-        width: auto;
-        height: 55.3vh;
-      }
-    }
-
-    @media screen and (max-width: 1920px) {
-      .item-ativo1 img {
-        width: auto;
-        height: 66.3vh;
-      }
-
-    }
-
-    .wrap {
-      width: auto;
-      height: 440px;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    .item {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: none;
-    }
-
-    .nav,
-    .nav-left,
-    .nav-right {
-      position: absolute;
-      top: 0;
-      height: 10%;
-      width: 45px;
-      background: rgba(0, 0, 0, 0.1);
-      border-radius: 50%;
-      z-index: 100;
-      border: 0;
-      color: #fff;
-      cursor: pointer;
-      top: 10rem;
-      margin: 1rem;
-    }
-
-    #navs {
-      font-size: 10px;
-      top: 25rem;
-
-    }
-
-    @media screen and (max-width:570px) {
-      .navigation {
-        position: absolute;
-        top: 10px;
-        left: 77%;
-      }
-
-
-    }
-
-    .nav-left {
-      left: 0;
-    }
-
-    .nav-right {
-      right: 0;
-    }
-
-    .navigation {
-      position: absolute;
-      top: 10px;
-      left: 90%;
-    }
-
-    @media screen and (max-width:570px) {
-      .navigation {
-        position: absolute;
-        top: 10px;
-        left: 77%;
-      }
-
-
-    }
-
-    @media screen and (min-width:1600px) {
-      .navbar-nav::after {
-        position: absolute;
-        content: '';
-        left: 20%;
-        top: 0;
-        border-style: solid;
-        border-color: #00093c transparent #00093c transparent;
-        border-width: 3.5rem 0 0 3.5rem;
-      }
-
-    }
-
-    .navigation li {
-      list-style: none;
-      height: 6px;
-      width: 6px;
-      float: left;
-      color: #fff;
-      padding: 4px;
-      background: rgba(187, 187, 187, 0.1);
-      border-radius: 50%;
-      cursor: pointer;
-      margin-right: 1px;
-    }
-
-    .nav-li-marcado {
-      background: grey !important;
-    }
-
-    .slider-timer {
-      position: absolute;
-      z-index: 500;
-      top: 0;
-      left: 0;
-      background: teal;
-      height: 5px;
-    }
-  </style>
-  <script>
-    $(document).ready(function () {
-
-      var slider_quant = $("#slider .item").length;
-      var quant = slider_quant - 1;
-      var tempoAutomatico = 10000;
-
-      function timer() {
-        $(".slider-timer").clearQueue().finish();
-        $(".slider-timer").animate({ "width": "0" }, 0);
-        $(".slider-timer").animate({ "width": "100%" }, tempoAutomatico);
-      }
-
-      function automatic() {
-        timer();
-        var posicao = $(".item").index($('.item-ativo'));
-        if (posicao < quant) {
-          var atual = $(".item").eq(posicao);
-          $(".nav-li").eq(posicao).removeClass("nav-li-marcado");
-          atual.fadeOut(500, function () {
-            atual.removeClass("item-ativo");
-          });
-
-          posicao++;
-
-          var atual2 = $(".item").eq(posicao);
-          $(".nav-li").eq(posicao).addClass("nav-li-marcado");
-          atual2.fadeIn(400, function () {
-            atual2.addClass("item-ativo");
-          });
-        }
-        else {
-          var atual = $(".item").eq(posicao);
-          $(".nav-li").eq(posicao).removeClass("nav-li-marcado");
-          atual.fadeOut(500, function () {
-            atual.removeClass("item-ativo");
-          });
-
-          posicao = 0;
-
-          var atual2 = $(".item").eq(posicao);
-          $(".nav-li").eq(posicao).addClass("nav-li-marcado");
-          atual2.fadeIn(400, function () {
-            atual2.addClass("item-ativo");
-          });
-        }
-      }
-
-      var tempoSlide = window.setInterval(automatic, tempoAutomatico);
-      function endAndStartTimer() {
-        window.clearTimeout(tempoSlide);
-        tempoSlide = window.setInterval(automatic, tempoAutomatico);
-      }
-
-      function navigation() {
-        for (var i = 1; i <= slider_quant; i++) {
-          $("#navs").append("<li class='nav-li'>" + "</li>");
-        }
-
-        $(".nav-li").on("click", function () {
-          endAndStartTimer();
-          timer();
-          var posicao = $(this).index();
-          $(".nav-li").removeClass("nav-li-marcado");
-          var atual = $(".item-ativo");
-          atual.fadeOut(500, function () {
-            atual.removeClass("item-ativo");
-          });
-
-          var atual2 = $(".item").eq(posicao);
-          $(this).addClass("nav-li-marcado");
-          atual2.fadeIn(400, function () {
-            atual2.addClass("item-ativo");
-          });
-        });
-      }
-
-      function direction() {
-
-        var marcado = $(".item").index($('.item-ativo'));
-        $(".nav-li").eq(marcado).addClass("nav-li-marcado");
-
-        var dirLeft = $("#nav-left");
-        var dirRight = $("#nav-right");
-
-        dirRight.on('click', function () {
-          timer();
-          endAndStartTimer();
-          var posicao = $(".item").index($('.item-ativo'));
-          if (posicao < quant) {
-            var atual = $(".item").eq(posicao);
-            $(".nav-li").eq(posicao).removeClass("nav-li-marcado");
-            atual.fadeOut(500, function () {
-              atual.removeClass("item-ativo");
-            });
-
-            posicao++;
-
-            var atual2 = $(".item").eq(posicao);
-            $(".nav-li").eq(posicao).addClass("nav-li-marcado");
-            atual2.fadeIn(400, function () {
-              atual2.addClass("item-ativo");
-            });
-          }
-          else {
-            var atual = $(".item").eq(posicao);
-            $(".nav-li").eq(posicao).removeClass("nav-li-marcado");
-            atual.fadeOut(500, function () {
-              atual.removeClass("item-ativo");
-            });
-
-            posicao = 0;
-
-            var atual2 = $(".item").eq(posicao);
-            $(".nav-li").eq(posicao).addClass("nav-li-marcado");
-            atual2.fadeIn(400, function () {
-              atual2.addClass("item-ativo");
-            });
-          }
-        });
-
-        dirLeft.on('click', function () {
-          timer();
-          endAndStartTimer();
-          var posicao = $(".item").index($('.item-ativo'));
-          if (posicao > 0) // Se a  posição for menor, executa a parada
-          {
-            var atual = $(".item").eq(posicao);
-            $(".nav-li").eq(posicao).removeClass("nav-li-marcado");
-            atual.fadeOut(500, function () {
-              atual.removeClass("item-ativo");
-            });
-
-            posicao--;
-
-            var atual2 = $(".item").eq(posicao);
-            $(".nav-li").eq(posicao).addClass("nav-li-marcado");
-            atual2.fadeIn(400, function () {
-              atual2.addClass("item-ativo");
-            });
-          }
-          else {
-            var atual = $(".item").eq(posicao);
-            $(".nav-li").eq(posicao).removeClass("nav-li-marcado");
-            atual.fadeOut(500, function () {
-              atual.removeClass("item-ativo");
-            });
-
-            posicao = quant;
-
-            var atual2 = $(".item").eq(posicao);
-            $(".nav-li").eq(posicao).addClass("nav-li-marcado");
-            atual2.fadeIn(400, function () {
-              atual2.addClass("item-ativo");
-            });
-          }
-        });
-      }
-
-      timer();
-      navigation();
-      direction();
-
-    });
-  </script>
 
   <!-- Campus and schedule -->
   <div class="gradient-box">
@@ -431,7 +86,7 @@
       </div>
     </div>
     <div class="line"></div>
-    <div class="right1" style="color: white; padding: 3rem;">
+    <div class="right1">
       <h5>NAAC Accredited Institution for 5 years from 2022
         <br>
         <p style="font-size: 14px; margin-top: 0.5rem;">[Affiliated to VTU Belagavi &amp; AICTE New Delhi]</p>
@@ -439,86 +94,90 @@
       <h6 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1.6rem;"><i class="bi bi-search"
           style="margin-right: 1rem;"></i>For
         enquiry: </h6>
-      <h6><i class="bi bi-telephone-fill" style="margin-right: 1rem; margin-left: 3rem;"></i>+91-9448452508 </h6>
-      <h6><i class="bi bi-whatsapp" style="margin-right: 1rem; margin-left: 3rem;"></i>+91-8105975980</h6>
-      <h6><i class="bi bi-envelope-fill" style="margin-right: 1rem; margin-left: 3rem;"></i>admissions@apsce.ac.in</h6>
+      <h6><i class="bi bi-telephone-fill" style="margin-right: 1rem; margin-left: 2rem;"></i>+91-9448452508 </h6>
+      <h6><i class="bi bi-whatsapp" style="margin-right: 1rem; margin-left: 2rem;"></i>+91-8105975980</h6>
+      <h6><i class="bi bi-envelope-fill" style="margin-right: 1rem; margin-left: 2rem;"></i>admissions@apsce.ac.in</h6>
     </div>
   </div>
 
 
   <div class="container">
-    <h9 style="font-size: 1.5rem;"><i class="fa-solid fa-trophy"
-        style="margin-right: 1rem; margin-top: 6rem; font-size: 1.5rem;"></i>Events and Updates
-      <hr>
-    </h9>
-    <div class="ncrd">
-      <a href="#" class="card">
-        <div class="card__head">
-          <div class="card__image"></div>
-          <div class="card__author">
-            <div class="author">
-              <img src="/public_html/images/horilogo.png" alt="" class="author__image">
-              <div class="author__content">
+    <div class="eventandupdates">
+      <h9 style="font-size: 1.5rem;"><i class="fa-solid fa-trophy"
+          style="margin-right: 1rem; margin-top: 6rem; font-size: 1.5rem;"></i>Events and Updates
+        <hr>
+      </h9>
+      <div class="ncrd">
+        <a href="#" class="card">
+          <div class="card__head">
+            <div class="card__image"></div>
+            <div class="card__author">
+              <div class="author">
+                <img src="/public_html/images/horilogo.png" alt="" class="author__image">
+                <div class="author__content">
 
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card__body">
-          <h2 class="card__headline">Hover me</h2>
-          <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-            invidunt ut labore et dolore.</p>
-        </div>
-        <div class="card__foot">
-          <span class="card__link">Read more</span>
-        </div>
-        <div class="card__border"></div>
-      </a>
-      <a href="#" class="card">
-        <div class="card__head">
-          <div class="card__image"></div>
-          <div class="card__author">
-            <div class="author">
-              <img src="/public_html/images/horilogo.png" alt="" class="author__image">
-              <div class="author__content">
+          <div class="card__body">
+            <h2 class="card__headline">Hover me</h2>
+            <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore.</p>
+          </div>
+          <div class="card__foot">
+            <span class="card__link">Read more</span>
+          </div>
+          <div class="card__border"></div>
+        </a>
+        <a href="#" class="card">
+          <div class="card__head">
+            <div class="card__image"></div>
+            <div class="card__author">
+              <div class="author">
+                <img src="/public_html/images/horilogo.png" alt="" class="author__image">
+                <div class="author__content">
 
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card__body">
-          <h2 class="card__headline" style="transition-delay: 0;">Hover me</h2>
-          <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-            invidunt ut labore et dolore.</p>
-        </div>
-        <div class="card__foot">
-          <span class="card__link">Read more</span>
-        </div>
-        <div class="card__border"></div>
-      </a>
-      <a href="#" class="card">
-        <div class="card__head">
-          <div class="card__image"></div>
-          <div class="card__author">
-            <div class="author">
-              <img src="/public_html/images/horilogo.png" alt="" class="author__image">
-              <div class="author__content">
+          <div class="card__body">
+            <h2 class="card__headline" style="transition-delay: 0;">Hover me</h2>
+            <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore.</p>
+          </div>
+          <div class="card__foot">
+            <span class="card__link">Read more</span>
+          </div>
+          <div class="card__border"></div>
+        </a>
+        <a href="#" class="card">
+          <div class="card__head">
+            <div class="card__image"></div>
+            <div class="card__author">
+              <div class="author">
+                <img src="/public_html/images/horilogo.png" alt="" class="author__image">
+                <div class="author__content">
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card__body">
-          <h2 class="card__headline">Hover me</h2>
-          <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-            invidunt ut labore et dolore.</p>
-        </div>
-        <div class="card__foot">
-          <span class="card__link">Read more</span>
-        </div>
-        <div class="card__border"></div>
-      </a>
+          <div class="card__body">
+            <h2 class="card__headline">Hover me</h2>
+            <p class="card__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore.</p>
+          </div>
+          <div class="card__foot">
+            <span class="card__link">Read more</span>
+          </div>
+          <div class="card__border"></div>
+        </a>
+      </div>
     </div>
   </div>
+
+  <!-- our campus -->
   <section class="campus">
     <div class="campuscontent">
       <div class="container">
@@ -530,17 +189,15 @@
           <div class="nae1">
             <div class="video-container">
               <div class="video-overlay">
-                  <i class="fas fa-play-circle"></i>
+                <i class="fas fa-play-circle"></i>
               </div>
               <video class="video" loop>
-                  <source
-                      src="/public_html/ak/New Project 8 [37E340D].mp4"
-                      type="video/mp4">
-                  Your browser does not support the video tag.
+                <source src="/public_html/ak/New Project 8 [37E340D].mp4" type="video/mp4">
+                Your browser does not support the video tag.
               </video>
-          </div>
-          
-            <ul>
+            </div>
+
+            <ul id="naepost">
               <li>
                 <a href=""> <img src="/public_html/images/2jan1.png" alt=""></a>
                 <a href=""> <img src="/public_html/images/2jan1.png" alt=""></a>
@@ -615,141 +272,13 @@
             <script src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/smooth-scrollbar.js'></script>
             <script src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/plugins/overscroll.js'></script>
 
-            <script>
-              $(document).ready(function () {
-                var Scrollbar = window.Scrollbar;
-
-                Scrollbar.use(window.OverscrollPlugin);
-
-                var customScroll = Scrollbar.init(document.querySelector('.js-scroll-list'), {
-                  plugins: {
-                    overscroll: true
-                  }
-                });
-
-                var listItem = $('.js-scroll-list-item');
-
-                listItem.eq(0).addClass('item-focus');
-                listItem.eq(1).addClass('item-next');
-
-                customScroll.addListener(function (status) {
-
-                  var $content = $('.js-scroll-content');
-
-                  var viewportScrollDistance = 0;
-
-
-                  viewportScrollDistance = status.offset.y;
-                  var viewportHeight = $content.height();
-                  var listHeight = 0;
-                  var $listItems = $content.find('.js-scroll-list-item');
-                  for (var i = 0; i < $listItems.length; i++) {
-                    listHeight += $($listItems[i]).height();
-                  }
-
-                  var top = status.offset.y;
-                  // console.log(top);
-                  var visibleCenterVertical = 0;
-                  visibleCenterVertical = top;
-
-                  var parentTop = 1;
-                  var $lis = $('.js-scroll-list-item');
-                  var $focusLi;
-                  for (var i = 0; i < $lis.length; i++) {
-                    var $li = $($lis[i]);
-                    var liTop = $li.position().top;
-                    var liRelTop = liTop - parentTop;
-
-                    var distance = 0;
-                    var distance = Math.abs(top - liRelTop);
-                    var maxDistance = $('.js-scroll-content').height() / 2;
-                    var distancePercent = distance / (maxDistance / 100);
-
-
-                    if (liRelTop + $li.parent().scrollTop() > top) {
-                      if (!$li.hasClass('item-focus')) {
-                        $li.prev().addClass('item-hide');
-                        $lis.removeClass('item-focus');
-                        $lis.removeClass('item-next');
-                      }
-                      $li.removeClass('item-hide');
-                      $li.addClass('item-focus');
-                      $li.next().addClass('item-next');
-                      break;
-                    }
-                  }
-                });
-
-              });
-            </script>
-
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <script>
-    const height = elem => {
-
-      return elem.getBoundingClientRect().height;
-
-    };
-
-    const distance = (elemA, elemB, prop) => {
-
-      const sizeA = elemA.getBoundingClientRect()[prop];
-      const sizeB = elemB.getBoundingClientRect()[prop];
-
-      return sizeB - sizeA;
-
-    };
-
-    const factor = (elemA, elemB, prop) => {
-
-      const sizeA = elemA.getBoundingClientRect()[prop];
-      const sizeB = elemB.getBoundingClientRect()[prop];
-
-      return sizeB / sizeA;
-
-    };
-
-    document.querySelectorAll('.card').forEach(elem => {
-
-      const head = elem.querySelector('.card__head');
-      const image = elem.querySelector('.card__image');
-      const author = elem.querySelector('.card__author');
-      const body = elem.querySelector('.card__body');
-      const foot = elem.querySelector('.card__foot');
-
-      elem.onmouseenter = () => {
-
-        elem.classList.add('hover');
-
-        const imageScale = 1 + factor(head, body, 'height');
-        image.style.transform = `scale(${imageScale})`;
-
-        const bodyDistance = height(foot) * -1;
-        body.style.transform = `translateY(${bodyDistance}px)`;
-
-        const authorDistance = distance(head, author, 'height');
-        author.style.transform = `translateY(${authorDistance}px)`;
-
-      };
-
-      elem.onmouseleave = () => {
-
-        elem.classList.remove('hover');
-
-        image.style.transform = `none`;
-        body.style.transform = `none`;
-        author.style.transform = `none`;
-
-      };
-
-    });
-  </script>
-   <div class="principal-message">
+  <div class="principal-message">
     <img src="/public_html/departments/Civil/images/Dr.AGNataraj2.jpg">
     <div class="principal-content">
 
@@ -803,100 +332,7 @@
   <!--footer-->
   <div id="footer-placeholder"></div>
   <div id="back-to-top"></div>
-
-
-  <!-- JavaScript functions -->
-
-  <script>
-    var leftButton = document.getElementById('eventAndNotif');
-    var rightButton = document.getElementById('eventAndNotif2');
-    var notiflist = document.getElementById('list');
-    var eventlist = document.getElementById('eventlist');
-    function eventColors() {
-
-
-      rightButton.classList.add("activeColor");
-      leftButton.classList.remove('activeColor')
-      notiflist.style.visibility = 'hidden'
-      eventlist.style.visibility = 'visible'
-
-    }
-
-    function notifColors() {
-
-
-      leftButton.classList.add("activeColor");
-      rightButton.classList.remove('activeColor')
-      eventlist.style.visibility = 'hidden'
-      notiflist.style.visibility = 'visible'
-    }
-  </script>
-
-
-  <script>
-    var navlink = document.getElementById("navlink");
-
-    function showmenu() {
-      navlink.style.right = "0";
-    }
-    function hidemenu() {
-      navlink.style.right = "-600px";
-    }
-  </script>
-
-  <script>
-    $(document).ready(function () {
-
-      $('.modal').modal('show');
-
-    });
-  </script>
-
-  <script>
-
-
-    var preloader = document.getElementById('loadscreen');
-    function myfunction() {
-      preloader.style.display = 'none';
-    }
-  </script>
-
-  <script>
-    $(function () {
-      $("#nav-placeholder").load("navbar.html");
-    });
-
-    $(function () {
-      $("#footer-placeholder").load("footer.html");
-    });
-
-    $(function () {
-      $("#back-to-top").load("/public_html/backtotop/index.html");
-    });
-    $(function () {
-      $("#load").load("preloader/index.html");
-    });
-    
-              const video = document.querySelector('.video');
-              const playButton = document.querySelector('.fa-play-circle');
-      
-              video.addEventListener('mouseenter', () => {
-                  video.play();
-                  playButton.style.display = 'none';
-              });
-      
-              video.addEventListener('mouseleave', () => {
-                  video.pause();
-                  video.currentTime = 0;
-                  playButton.style.display = 'block';
-              });
-      
-             
-      
-         
-  </script>
-
-
+  <script src="/public_html/js/mainindex.js"></script>
 </body>
 
 </html>
