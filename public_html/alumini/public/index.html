@@ -73,9 +73,11 @@
               </div>-->
             </div>
             <div class="sec2">
+             
+              <div class="allco" style="color: #fff;">
+               <form id="contact-form" method="post">
+                <h1 style="font-size: 2.2rem;">ALUMNI REGISTRATION FORM</h1>
               
-              <form id="contact-form" method="post">
-                <h1>Alumni Registration Form</h1>
                 <label for="name" style="padding-top: 2rem;">Full name</label>
                 <input
                   type="text"
@@ -137,14 +139,15 @@
                   required
                 />
                 
-                <!--<a href="javascript:void(0)">--><button
+                <a href="javascript:void(0)"><button
                   type="submit"
                   id="submit"
                   name="submit"
                 >
-                  Send</button
-                ><!--</a>-->
-              </form>
+                  SUBMIT</button>
+                </a>
+               </form> 
+              </div>
 
             </div>
             </div>
@@ -185,6 +188,8 @@
             </div>
 
             <div id="footer-placeholder"></div>
+            <div id="back-to-top"></div>
+
         
 
       <script src="app.js"></script>
@@ -196,6 +201,9 @@
         $(function(){
           $("#footer-placeholder").load("/public_html/footer.html");
         });
+        $(function () {
+      $("#back-to-top").load("/public_html/backtotop/index.html");
+    });
         </script>
             
 </body>

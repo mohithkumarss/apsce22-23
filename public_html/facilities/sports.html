@@ -140,7 +140,7 @@
 
       
   <div id="footer-placeholder"></div>
-    
+  <div id="back-to-top"></div>
 
     <script>
       $('.card5').hover(function(){
@@ -168,6 +168,9 @@
       function myfunction(){
           preloader.style.display = 'none';
       }
+      $(function () {
+      $("#back-to-top").load("/public_html/backtotop/index.html");
+    });
   </script>
 </body>
 </html>
