@@ -1358,14 +1358,13 @@ a:hover {
 }
 
 @media (min-width: 1200px) and (max-width: 1920px) {
-  .item-ativo1 img {
-    width: auto;
-    height: 66.3vh;
+  .gradient-box{
+    height: 35vh;
   }
 
   .item-ativo1 img {
-    width: auto;
-    height: 55.3vh;
+    width: 100vw;
+    height: 50vh;
   }
   .navbar-nav::after {
     position: absolute;
