@@ -1080,6 +1080,10 @@ a:hover {
   border-radius: 5px;
 }
 
+.overflow .qq #qtitle {
+  color: teal;
+}
+
 .overflow .qq #qdate {
   margin: 1rem 0 1rem;
   font-weight: 600;
@@ -1108,6 +1112,11 @@ a:hover {
   top: 50%;
   margin-left: 2rem;
   border-top: 2px solid rgb(0, 0, 0);
+}
+
+#btns {
+  display: flex;
+  margin-top: 8rem;
 }
 
 #leftBtn {
