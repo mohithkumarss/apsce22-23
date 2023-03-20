@@ -446,6 +446,7 @@ h2 {
 }
 .nae {
   display: flex;
+  margin-top: 4rem;
 }
 
 .nae1 ul {
@@ -1087,6 +1088,26 @@ a:hover {
   font-size: 12px;
 }
 
+.line-after {
+  margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.line-after span h6 {
+  vertical-align: baseline;
+  display: block;
+  position: relative;
+}
+.line-after span h6:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-left: 2rem;
+  border-top: 2px solid rgb(0, 0, 0);
+}
+
 /* media queries */
 
 @media only screen and (max-width: 768px) {
@@ -1358,7 +1379,7 @@ a:hover {
 }
 
 @media (min-width: 1200px) and (max-width: 1920px) {
-  .gradient-box{
+  .gradient-box {
     height: 35vh;
   }
 
