@@ -885,12 +885,12 @@ a:hover {
 
 .video-container {
   position: relative;
-  width: 622px;
+  width: 45vw;
   height: 332px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.5s ease-in-out;
   border-radius: 20px;
-  left: 40px;
+  margin-left: 2rem;
 }
 
 .video-container:hover {
@@ -1111,6 +1111,12 @@ a:hover {
 /* media queries */
 
 @media only screen and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+  .item-ativo1 img {
+    width: 26rem;
+  }
   .nae {
     display: grid;
   }
@@ -1378,7 +1384,7 @@ a:hover {
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1920px) {
+@media (min-width: 1450px) and (max-width: 1920px) {
   .gradient-box {
     height: 35vh;
   }
@@ -1386,14 +1392,5 @@ a:hover {
   .item-ativo1 img {
     width: 100vw;
     height: 50vh;
-  }
-  .navbar-nav::after {
-    position: absolute;
-    content: "";
-    left: 20%;
-    top: 0;
-    border-style: solid;
-    border-color: #00093c transparent #00093c transparent;
-    border-width: 3.5rem 0 0 3.5rem;
   }
 }
