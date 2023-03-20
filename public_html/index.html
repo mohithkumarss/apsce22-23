@@ -286,21 +286,15 @@
       <p id="naevents">News & Events</p>
       <h5 id="namonths">March & April</h5>
       <div class="buttons" style="display:flex; margin-top:
-      2rem;"> 
-      <div class="leftBtn"  style="background-color:red;  border-radius: 50%;  height: 3rem ; width: 3rem; margin: auto;" >
-        <i class="fas fa-angle-left" style="display: flex; justify-content: center; align-items: center; margin-top: 1rem;"></i>
-      </div>
-
-
-      <div class="rightBtn"  style="background-color:red;  border-radius: 50%;  height: 3rem ; width: 3rem; margin: auto 0; " >
-        <i class="fas fa-angle-right" style="display: flex; justify-content: center; align-items: center; margin-top: 1rem; "></i>
+      2rem;">
+        <div class="leftBtn" id="leftBtn">
+          <i class="fas fa-angle-left"></i>
+        </div>
+        <div class="rightBtn" id="rightBtn">
+          <i class="fas fa-angle-right"></i>
+        </div>
       </div>
     </div>
-      
-    </div>
-    
-    
-    
     <div class="overflow">
       <div class="qq" id="ov1">
         <p id="q">News</p>
@@ -348,7 +342,7 @@
         <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
       </div>
     </div>
-    
+
   </div>
 
   <!-- principal content -->
@@ -414,15 +408,17 @@
 
 <script>
   var position = 500;
-  $(".leftBtn").click(function() {
-       $('.overflow').animate({
-        scrollLeft: '-='+position },'slow');
-       
+  $(".leftBtn").click(function () {
+    $('.overflow').animate({
+      scrollLeft: '-=' + position
+    }, 'slow');
+
   });
 
-  $(".rightBtn").click(function() {
+  $(".rightBtn").click(function () {
     $('div').animate({
-        scrollLeft: '+='+position },'slow');
+      scrollLeft: '+=' + position
+    }, 'slow');
   });
 </script>
 

@@ -9,7 +9,6 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
-  
 }
 
 #loadscreen {
@@ -1052,7 +1051,7 @@ a:hover {
 .overflow {
   display: flex;
   overflow-x: auto;
-  -ms-overflow-style: none;  /* IE and Edge */
+  -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
 }
 
@@ -1098,7 +1097,7 @@ a:hover {
   display: block;
 }
 .line-after span h6 {
-  vertical-align: baseline;
+  /* vertical-align: baseline; */
   display: block;
   position: relative;
 }
@@ -1109,6 +1108,40 @@ a:hover {
   top: 50%;
   margin-left: 2rem;
   border-top: 2px solid rgb(0, 0, 0);
+}
+
+#leftBtn {
+  background-color: rgb(237, 237, 237);
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  margin: auto;
+}
+
+#leftBtn i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  color: black;
+  cursor: pointer;
+}
+
+#rightBtn {
+  background-color: rgb(237, 237, 237);
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  margin: auto 0;
+}
+
+#rightBtn i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  color: black;
+  cursor: pointer;
 }
 
 /* media queries */
