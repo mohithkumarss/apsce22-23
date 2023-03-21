@@ -1,20 +1,20 @@
-$(".images img").click(function(){
-  $("#full-image").attr("src", $(this).attr("src"));
-  $('#image-viewer').show();
-  $('#nav , #sub , #headimg').hide();
-  
+// portfolio
+$(".gallery ul li a").click(function () {
+  var itemID = $(this).attr("href");
+  $(".gallery ul").addClass("item_open");
+  $(itemID).addClass("item_open");
+  return false;
+});
+$(".close").click(function () {
+  $(".port, .gallery ul").removeClass("item_open");
+  return false;
 });
 
-$("#image-viewer .close").click(function(){
-  $('#image-viewer').hide();
-  $('#nav, #sub, #headimg').show();
-  
-});
-
-$('#prev').click(function() {
-  $('#image-viewer').prev();
-});
-
-$('#next').click(function() {
-
+$(".gallery ul li a").click(function () {
+  $("html, body").animate(
+    {
+      scrollTop: parseInt($("#top").offset().top),
+    },
+    400
+  );
 });
