@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap);
+@imort url(https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@&display=swap);
 .effect,
 .effectsmall {
@@ -53,7 +53,14 @@ a:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
+  /* -webkit-tap-highlight-color: transparent; */
+}
+#title1
+{
+  background: linear-gradient(200deg, #a875ec 50%, #ff6b7c 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: 600;
 }
 #loadscreen {
   position: fixed;

@@ -1626,6 +1626,7 @@ nav input {
 }
 
 #title1 {
+  
   position: absolute;
   left: 0;
   right: 0;
@@ -1634,11 +1635,14 @@ nav input {
   font-size: 55px;
   margin: 5rem 0 5rem;
   font-family: "Geomanist" !important;
+  
 }
 #title span {
+  
   background: -webkit-linear-gradient(white, #38495a);
 
   -webkit-text-fill-color: transparent;
+  
 }
 
 @keyframes animStar {

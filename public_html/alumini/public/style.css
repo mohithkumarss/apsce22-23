@@ -59,16 +59,13 @@ textarea {
 }
 
 button {
-  text-transform: uppercase;
-  font-weight: 300;
-  background:#000;
+
+  background:#000000;
   color: #fff;
+  font-weight: 500;
   width: 8rem;
   height: 3.25rem;
-  border: none;
-  border-radius: 2px;
-  outline: none;
-  cursor: pointer;
+
 }
 
 input:hover, textarea:hover, button:hover {
@@ -170,7 +167,14 @@ form {
   flex-direction: column;
   align-items: flex-start;
   padding: 30px;
-  background-color: #0a58ca;
+  /* background-color: #4d79bd; */
+
+  background: linear-gradient(200deg, #a875ec 50%, #ff6b7c 100%);
+	/* -webkit-background-clip: ; */
+	/* -webkit-text-fill-color: transparent; */
+	font-weight: 600;
+
+  
   border-radius: 10px;
   margin: 4rem 2rem 4rem;
 }
@@ -185,18 +189,18 @@ input[type=text], input[type=password], input[type=email] {
 }
 
 input[type=submit] {
-  background-color: #008726;
+  /* background-color: #008726;
   color: white;
   padding: 10px;
   border: none;
-  border-radius: 3px;
+
   cursor: pointer;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 10px; */
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  /* background-color: #45a049; */
 }
 
 label {

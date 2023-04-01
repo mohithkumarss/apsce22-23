@@ -28,18 +28,25 @@
 
   .part1{
 	 height: 16rem;
-	 background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+	 background: radial-gradient(ellipse at bottom, #000000 0%, #090a0f 100%);
 	overflow: hidden;
 	 
   }
+
+ 
   
   #title1 {
+
+	background: linear-gradient(200deg, #a875ec 50%, #ff6b7c 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: 600;
 	position: absolute;
-	left: 0;
+	left: 200px;
 	right: 0;
 	color: #FFF;
-	text-align: center;
-	font-weight: 300;
+	text-align: left;
+	
 	font-size: 50px;
 	margin: 5rem 0;
 	font-family: 'Geomanist', sans-serif;
