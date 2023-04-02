@@ -29,7 +29,7 @@
   
   
 	
-  }
+  
   /* .desktop-item::after {
 	content: "";
 	width: 100%;
@@ -260,23 +260,9 @@
 	display: none;
   }
 
- .part1{
-	  display: flex;
-	  justify-content: space-around;
-	  background-color: rgb(223, 241, 255);
-  }
+ 
 
-  .part1 h1{
-	  font-size: 2rem;
-	  color: #000;
-	  margin-top: 2.5em;
-  }
-  .part1 img{
-	  height: auto;
-	  width: 50%;
-	  border-radius: 0.38em;
-	  margin: 2rem 0 1rem;
-  }
+  
 
 /*.part1{
 	height: 20rem;
