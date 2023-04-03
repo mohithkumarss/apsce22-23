@@ -22,12 +22,12 @@ body {
 }
 
 .part1 {
-  height: 18rem;
+  height: 24rem;
   display: flex;
   align-items: center;
   font-size: 2.5vw;
   padding: 2rem 12rem 6rem;
-  background-image: url(../images/Untitled\ design\ \(1\).png);
+  background-color: black;
   color: white;
   font-weight: 600;
 }
@@ -384,9 +384,9 @@ body {
 
   #title1 span {
     background: linear-gradient(200deg, #a875ec 50%, #ff6b7c 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-weight: 600;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
     font-size: 30px;
   }
 
