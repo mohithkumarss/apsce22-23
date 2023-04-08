@@ -1,8 +1,7 @@
 $(document).ready(function () {
   var slider_quant = $("#slider .item").length;
-  var quant = slider_quant -1;
+  var quant = slider_quant - 1;
   var tempoAutomatico = 10000;
-  
 
   function timer() {
     $(".slider-timer").clearQueue().finish();
@@ -15,13 +14,11 @@ $(document).ready(function () {
     var posicao = $(".item").index($(".item-ativo"));
     // console.log(posicao);
     if (posicao < quant) {
-      
       var atual = $(".item").eq(posicao);
       $(".nav-li").eq(posicao).removeClass("nav-li-marcado");
       atual.fadeOut(500, function () {
         atual.removeClass("item-ativo");
       });
-    
 
       posicao++;
 
@@ -159,7 +156,7 @@ $(document).ready(function () {
 
   navigation();
   timer();
-  
+
   direction();
 });
 
@@ -303,7 +300,7 @@ $(document).ready(function () {
   $(".modal").modal("show");
 });
 
-var preloader = document.getElementById("loadscreen");
+var preloader = document.getElementById("loader");
 function myfunction() {
   preloader.style.display = "none";
 }
@@ -318,9 +315,6 @@ $(function () {
 
 $(function () {
   $("#back-to-top").load("/public_html/backtotop/index.html");
-});
-$(function () {
-  $("#load").load("preloader/index.html");
 });
 
 const video = document.querySelector(".video");

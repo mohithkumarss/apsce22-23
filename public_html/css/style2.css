@@ -9,13 +9,7 @@
   box-sizing: border-box;
   /* -webkit-tap-highlight-color: transparent; */
 }
-#loadscreen {
-  position: fixed;
-  width: 80%;
-  height: auto;
-  background: url(loading.gif) center no-repeat #fafafa;
-  z-index: 99999;
-}
+
 body {
   font-family: Poppins;
   overflow-x: hidden;
