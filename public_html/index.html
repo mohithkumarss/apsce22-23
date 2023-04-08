@@ -34,8 +34,10 @@
 
 
 
-<body onload="myfunction()">
+<body>
+  
   <div id="loadscreen">
+    <iframe src="./preloader/index.html"  frameborder="0"></iframe>
   </div>
  
   <div id="nav-placeholder">
@@ -62,13 +64,13 @@
         <button id="nav-right" class="nav-right"> > </button>
         <div class="item-ativo1">
 
-          <div class="item"><img src="/public_html/images/light.png">
+          <div class="item "><img src="/public_html/images/light.png">
 
 
           </div>
 
           <div class="item"><img src="/public_html/images/megahertz-be-sl.png"></div>
-          <div class="item"><img src="/public_html/images/b2.png"></div>
+          <div class="item "><img src="/public_html/images/b2.png"></div>
 
           <div class="item"><img src="/public_html/images/Untitled-2.png"></div>
 
@@ -427,5 +429,16 @@
     }, 'slow');
   });
 </script>
+
+<script>
+  
+  $(window).on('load',function(){
+ 
+ $('#loadscreen').fadeOut();
+});
+
+</script>
+
+
 
 </html>

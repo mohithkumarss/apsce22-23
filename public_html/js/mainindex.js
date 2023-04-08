@@ -12,42 +12,52 @@ $(document).ready(function () {
   function automatic() {
     timer();
     var posicao = $(".item").index($(".item-ativo"));
-    // console.log(posicao);
-    if (posicao < quant) {
-      var atual = $(".item").eq(posicao);
-      $(".nav-li").eq(posicao).removeClass("nav-li-marcado");
-      atual.fadeOut(500, function () {
-        atual.removeClass("item-ativo");
-      });
+    var atual = $(".item").eq(posicao);
+    atual.addClass("item-ativo");
+    atual.css("display","block")
+    setTimeout(()=>{
+      $("#nav-right").css("background-color","green")
+      
+    },10000)
+    
+    
+    
+    // if (posicao < quant) {
+    //   var atual = $(".item").eq(posicao);
+    //   $(".nav-li").eq(posicao).removeClass("nav-li-marcado");
+    //   atual.fadeOut(500, function () {
+    //     atual.removeClass("item-ativo");
+    //   });
 
-      posicao++;
+    //   posicao++;
 
-      var atual2 = $(".item").eq(posicao);
-      $(".nav-li").eq(posicao).addClass("nav-li-marcado");
-      atual2.fadeIn(400, function () {
-        atual2.addClass("item-ativo");
-      });
-    } else {
-      var atual = $(".item").eq(posicao);
-      $(".nav-li").eq(posicao).removeClass("nav-li-marcado");
-      atual.fadeOut(500, function () {
-        atual.removeClass("item-ativo");
-      });
+    //   var atual2 = $(".item").eq(posicao);
+    //   $(".nav-li").eq(posicao).addClass("nav-li-marcado");
+    //   atual2.fadeIn(400, function () {
+    //     atual2.addClass("item-ativo");
+    //   });
+    // } else {
+    //   var atual = $(".item").eq(posicao);
+    //   $(".nav-li").eq(posicao).removeClass("nav-li-marcado");
+    //   atual.fadeOut(500, function () {
+    //     atual.removeClass("item-ativo");
+    //   });
 
-      posicao = 0;
+    //   posicao = 0;
 
-      var atual2 = $(".item").eq(posicao);
-      $(".nav-li").eq(posicao).addClass("nav-li-marcado");
-      atual2.fadeIn(400, function () {
-        atual2.addClass("item-ativo");
-      });
-    }
+    //   var atual2 = $(".item").eq(posicao);
+    //   $(".nav-li").eq(posicao).addClass("nav-li-marcado");
+    //   atual2.fadeIn(400, function () {
+    //     atual2.addClass("item-ativo");
+    //   });
+    // }
   }
 
   var tempoSlide = window.setInterval(automatic, tempoAutomatico);
   function endAndStartTimer() {
     window.clearTimeout(tempoSlide);
     tempoSlide = window.setInterval(automatic, tempoAutomatico);
+    // $(".nav-right").css("background-color","none")
   }
 
   function navigation() {
@@ -58,6 +68,7 @@ $(document).ready(function () {
     $(".nav-li").on("click", function () {
       endAndStartTimer();
       timer();
+      
       var posicao = $(this).index();
       $(".nav-li").removeClass("nav-li-marcado");
       var atual = $(".item-ativo");
@@ -83,6 +94,7 @@ $(document).ready(function () {
     dirRight.on("click", function () {
       timer();
       endAndStartTimer();
+      $("#nav-right").css("background","rgba(0,0,0,0.1)")
       var posicao = $(".item").index($(".item-ativo"));
       if (posicao < quant) {
         var atual = $(".item").eq(posicao);
@@ -118,6 +130,7 @@ $(document).ready(function () {
     dirLeft.on("click", function () {
       timer();
       endAndStartTimer();
+      $("#nav-right").css("background","rgba(0,0,0,0.1)")
       var posicao = $(".item").index($(".item-ativo"));
       if (posicao > 0) {
         // Se a  posição for menor, executa a parada
