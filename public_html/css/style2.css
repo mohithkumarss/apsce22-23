@@ -15,19 +15,17 @@ body {
   overflow-x: hidden;
 }
 
-#loadscreen{
+#loadscreen {
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
-.focusButton{
+.focusButton {
   /* background-color: green; */
   background: rgb(22, 80, 33);
-  
 }
 
 .effect,
@@ -411,7 +409,7 @@ h2 {
 .ukn {
   z-index: 999;
   width: 36px;
-  top: 470px;
+  top: 580px;
   transition: 0.2s linear;
   background-color: rgba(0, 0, 0, 0.7);
   border-bottom-right-radius: 8px;
@@ -880,7 +878,7 @@ h2 {
   z-index: 2;
   top: 0;
   left: 0;
-  background: teal;
+  background: #00093c;
   height: 5px;
 }
 .right1 {
@@ -1182,4 +1180,11 @@ h2 {
     width: 100vw;
     height: 50vh;
   }
+}
+
+/* animation */
+
+#item1 embed {
+  width: 100vw;
+  height: 50vh;
 }

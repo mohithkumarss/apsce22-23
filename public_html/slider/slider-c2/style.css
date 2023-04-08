@@ -1,0 +1,143 @@
+svg {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  left: -800px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.double-ground {
+  animation: moving-ground 3s infinite;
+}
+
+@keyframes moving-ground {
+  0% {
+    transform: translate(-10px, 0px);
+  }
+  50% {
+    transform: initial;
+  }
+  100% {
+    transform: translate(-10px, 0px);
+  }
+}
+
+.staircase,
+.staircase-man,
+.mini-ground-elements {
+  animation: upward-motion 3s infinite;
+}
+
+.circle-graph-shadow {
+  animation: scale-up-motion 2s infinite;
+  transform-origin: 50% 80%;
+}
+
+.mini-ground-shadow {
+  animation: scale-up-motion 3s infinite;
+  transform-origin: 70% 60%;
+}
+
+@keyframes scale-up-motion {
+  0% {
+    transform: scale(1.1, 1.1);
+  }
+  50% {
+    transform: initial;
+  }
+  100% {
+    transform: scale(1.1, 1.1);
+  }
+}
+
+.red-portion,
+.red-bar-3-d {
+  animation: upward-motion 1.9s infinite;
+}
+
+.yellow-portion,
+.yellow-bar-3-d {
+  animation: upward-motion 2.5s infinite;
+}
+
+.green-portion,
+.green-bar-3-d {
+  animation: upward-motion 2s infinite;
+}
+
+@keyframes upward-motion {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: initial;
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.dark-blue-portion,
+.dark-blue-bar-3-d {
+  animation: upward-motion 2.2s infinite;
+}
+
+.white-portion,
+.blue-bar-3-d {
+  animation: upward-motion 2.7s infinite;
+}
+
+.circle-graph {
+  transform: scale(0.8, 0.8);
+  transform-origin: 60% 80%;
+}
+
+.red-button-front,
+.button-man-hand {
+  animation: button-press 3s infinite;
+}
+
+@keyframes button-press {
+  0% {
+    transform: translate(-4px, -2px);
+  }
+  50% {
+    transform: initial;
+  }
+  100% {
+    transform: translate(-4px, -2px);
+  }
+}
+
+.yellow-arrow-1 {
+  animation: yellow-arrow-1 3s infinite;
+}
+
+@keyframes yellow-arrow-1 {
+  0% {
+    transform: initial;
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+}
+
+.yellow-arrow-2 {
+  animation: yellow-arrow-2 3s infinite;
+}
+
+@keyframes yellow-arrow-2 {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: initial;
+    opacity: 1;
+  }
+}

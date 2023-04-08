@@ -14,14 +14,11 @@ $(document).ready(function () {
     var posicao = $(".item").index($(".item-ativo"));
     var atual = $(".item").eq(posicao);
     atual.addClass("item-ativo");
-    atual.css("display","block")
-    setTimeout(()=>{
-      $("#nav-right").css("background-color","green")
-      
-    },10000)
-    
-    
-    
+    atual.css("display", "block");
+    setTimeout(() => {
+      $("#nav-right").css("background-color", "red");
+    }, 10000);
+
     // if (posicao < quant) {
     //   var atual = $(".item").eq(posicao);
     //   $(".nav-li").eq(posicao).removeClass("nav-li-marcado");
@@ -68,7 +65,7 @@ $(document).ready(function () {
     $(".nav-li").on("click", function () {
       endAndStartTimer();
       timer();
-      
+
       var posicao = $(this).index();
       $(".nav-li").removeClass("nav-li-marcado");
       var atual = $(".item-ativo");
@@ -94,7 +91,7 @@ $(document).ready(function () {
     dirRight.on("click", function () {
       timer();
       endAndStartTimer();
-      $("#nav-right").css("background","rgba(0,0,0,0.1)")
+      $("#nav-right").css("background", "rgba(0,0,0,0.1)");
       var posicao = $(".item").index($(".item-ativo"));
       if (posicao < quant) {
         var atual = $(".item").eq(posicao);
@@ -130,7 +127,7 @@ $(document).ready(function () {
     dirLeft.on("click", function () {
       timer();
       endAndStartTimer();
-      $("#nav-right").css("background","rgba(0,0,0,0.1)")
+      $("#nav-right").css("background", "rgba(0,0,0,0.1)");
       var posicao = $(".item").index($(".item-ativo"));
       if (posicao > 0) {
         // Se a  posição for menor, executa a parada
