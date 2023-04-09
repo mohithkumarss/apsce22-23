@@ -1,5 +1,5 @@
-$(function () {
-  $("#btn").click(function () {
+$(function() {
+  $("#btn").click(function() {
     $("#frame").toggleClass("down-150");
     $("#esc").toggleClass("down-100");
     $("#bot-spacer").toggleClass("down-100");
@@ -15,6 +15,6 @@ $(function () {
     $("#gopro").toggleClass("up-150");
     $("#vtx").toggleClass("up-100");
 
-    $("#btn").html($("#btn").html() == "EXPAND" ? "COLLAPSE" : "EXPAND");
+    $("#btn").html($("#btn").html() == "EXPLODE" ? "COLLAPSE" : "EXPLODE");
   });
 });

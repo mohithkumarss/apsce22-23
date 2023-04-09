@@ -1,22 +1,28 @@
 body {
   margin: 0;
+  display: flex;
 }
 
 svg {
   width: 100%;
-  height: 100vh;
+  height: auto;
 }
 
 .section {
   height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  padding: 0 3rem 0;
 }
 
 #sec-1 {
-  background-color: rgb(20, 20, 20);
+  background-color: #1a1a1a;
+}
+
+.ctn {
+  transform: scale(0.375);
+  margin-left: -50%;
 }
 
 .down-50 {
@@ -118,28 +124,27 @@ svg {
 }
 
 #btn {
-  width: 160px;
-  height: 50px;
-  font-size: 16px;
-  border: 1px solid white;
-  background: transparent;
-  color: white;
-  transition: 1s;
-  position: absolute;
-  top: 85%;
-  left: 18%;
+  position: fixed;
+  display: block;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 14px;
+  line-height: 36px;
+  border: 2px solid white;
   border-radius: 4px;
+  background-color: transparent;
+  color: white;
+  transition: all 0.2s;
+  top: 85%;
+  left: 20%;
 }
-
 #btn:hover {
-  background: white;
-  color: black;
-  cursor: pointer;
+  background-color: white;
+  color: #9b2d30;
 }
 
-/*____________________________________________________________
-### Developer Info
-____________________________________________________________*/
 .developerInfo {
   position: absolute;
   right: 0;
@@ -152,44 +157,47 @@ ____________________________________________________________*/
   font-family: "Montserrat";
   color: white;
   font-weight: 600;
-  font-size: 44px;
 }
 
 .developerInfo__title {
   margin-bottom: 10px;
+  font-size: 44px;
 }
 
 .developerInfo__subtitle {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-size: 16px;
 }
 
 .developerInfo__name {
-  color: teal;
+  color: #2a333c;
 }
 
 .developerInfo__paragraph {
-  margin-bottom: 20px;
-  font-family: "Poppins";
+  margin-bottom: 30px;
   font-size: 14px;
+  line-height: 24px;
+  font-family: "Poppins";
   color: white;
   max-width: 80%;
 }
 
 .developerInfo__link {
+  float: right;
   display: block;
-  width: 100px;
-  height: 30px;
+  width: 120px;
+  height: 40px;
   text-align: center;
   font-family: "Poppins";
-  line-height: 30px;
   font-size: 14px;
+  line-height: 36px;
   border: 2px solid white;
   border-radius: 4px;
   background-color: transparent;
   color: white;
   transition: all 0.2s;
   text-decoration: none;
+  margin-right: 25%;
 }
 .developerInfo__link:hover {
   background-color: white;
