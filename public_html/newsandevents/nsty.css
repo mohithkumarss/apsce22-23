@@ -30,15 +30,16 @@ body {
 }
 .leftside {
   max-width: 70%;
+  width: 60%;
   background: white;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .rightside {
-  max-width: 30%;
+  max-width: 40%;
+  width: 40%;
   background: white;
-  display: flex;
   margin-left: 2rem;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -46,13 +47,116 @@ body {
 
 .sfull {
   display: flex;
+  margin-top: 1rem;
 }
 
-.sf {
-  float: inline-start;
-  font-size: 32px;
+.tsty {
+  padding: 2rem;
+}
+
+.wholecontainer {
+  height: 75vh;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+.nwscrd {
+  display: flex;
+  background: ghostwhite;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.nwscrd img {
+  width: 40%;
+  height: auto;
+}
+.nwsr {
+  margin: 1rem 1rem 1rem 0;
+}
+
+.nwsr h5 {
+  font-size: 15px;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  text-decoration: none;
+  background: transparent;
+  padding: 0px;
+}
+
+button.learn-more {
+  width: 10rem;
+  height: auto;
   margin-top: 1rem;
-  margin-left: 5rem;
+}
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 0.9rem;
+  height: 0.125rem;
+  background: none;
+}
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+button:hover .circle {
+  width: 100%;
+}
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+button:hover .button-text {
+  color: #fff;
 }
 
 /* Responsive typography */
@@ -151,4 +255,18 @@ body {
   .show-search {
     width: 24rem;
   }
+}
+
+.cbo {
+  margin-top: 2rem;
+}
+.cbo img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cbo p{
+  font-size: 14px;
+  margin-top: 2rem;
 }
