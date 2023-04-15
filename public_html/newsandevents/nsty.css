@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(222, 80%, 58%);
+  --dark-color: hsl(222, 24%, 8%);
+  --title-color: hsl(222, 8%, 8%);
+  --text-color-light: hsl(222, 8%, 65%);
+  --white-color: #fff;
+  --body-color: hsl(222, 100%, 99%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --small-font-size: 0.813rem;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+.bodyy {
+  background: #d3d1e0;
+  padding: 4rem 2rem 2rem;
+  display: flex;
+}
+.leftside {
+  max-width: 70%;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.rightside {
+  max-width: 30%;
+  background: white;
+  display: flex;
+  margin-left: 2rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.sfull {
+  display: flex;
+}
+
+.sf {
+  float: inline-start;
+  font-size: 32px;
+  margin-top: 1rem;
+  margin-left: 5rem;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 968px) {
+  :root {
+    --small-font-size: 0.875rem;
+  }
+}
+
+.search {
+  transform: scale(0.8);
+  position: relative;
+  width: 76px;
+  height: 76px;
+  background-color: var(--white-color);
+  box-shadow: 0 4px 24px hsla(222, 68%, 12%, 0.1);
+  border-radius: 4rem;
+  padding: 10px;
+  overflow: hidden;
+  transition: width 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
+  z-index: 999;
+}
+
+.searchinput {
+  border: none;
+  outline: none;
+  width: calc(100% - 74px);
+  height: 100%;
+  border-radius: 4rem;
+  padding-left: 14px;
+  font-family: var(--body-font);
+  font-weight: var(--small-font-size);
+  font-weight: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.5s;
+}
+
+.searchinput:-webkit-autofill {
+  box-shadow: white;
+}
+
+.searchbutton {
+  width: 56px;
+  height: 56px;
+  background-color: var(--dark-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(-9, 0, 0.3, 0.9);
+}
+
+.searchicon,
+.searchclose {
+  color: var(--white-color);
+  font-size: 1.5rem;
+  position: absolute;
+  transition: opacity 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
+}
+
+.searchclose {
+  opacity: 0;
+}
+/* Search animated */
+
+.show-search {
+  width: 100%;
+}
+
+.show-search .searchinput {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.show-search .searchbutton {
+  transform: rotate(90deg);
+}
+
+.show-search .searchicon {
+  opacity: 0;
+}
+
+.show-search .searchclose {
+  opacity: 1;
+}
+/*=============== BREAKPOINTS ===============*/
+/* For medium devices */
+
+@media screen and (min-width: 576px) {
+  .show-search {
+    width: 24rem;
+  }
+}

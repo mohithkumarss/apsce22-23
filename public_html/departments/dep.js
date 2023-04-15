@@ -30,3 +30,8 @@ $(".rightBtn").click(function () {
     "slow"
   );
 });
+
+window.onload = function () {
+  //hide the preloader
+  document.querySelector(".preload-bg").style.display = "none";
+};

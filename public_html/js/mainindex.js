@@ -310,11 +310,6 @@ $(document).ready(function () {
   $(".modal").modal("show");
 });
 
-var preloader = document.getElementById("loader");
-function myfunction() {
-  preloader.style.display = "none";
-}
-
 $(function () {
   $("#nav-placeholder").load("navbar.html");
 });
@@ -340,3 +335,8 @@ video.addEventListener("mouseleave", () => {
   video.currentTime = 0;
   playButton.style.display = "block";
 });
+
+window.onload = function () {
+  //hide the preloader
+  document.querySelector(".preload-bg").style.display = "none";
+};

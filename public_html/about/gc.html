@@ -17,10 +17,93 @@
   <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
   <script src="https://kit.fontawesome.com/c4d40c1d88.js" crossorigin="anonymous"></script>
   <title>Governing Council - APSCE</title>
-
+  <script src="/public_html/js/mainindex.js"></script>
 </head>
 
-<body onload="myfunction()">
+<body>
+  <div class="preload-bg">
+    <div class="preload">
+      <div class="" id="shadow"></div>
+      <div class="" id="box"></div>
+    </div>
+  </div>
+  <style>
+    .preload-bg {
+      position: fixed;
+      background: #6997db;
+      width: 100%;
+      height: 100%;
+      z-index: 9999999;
+    }
+
+    .preload {
+      position: absolute;
+      top: calc(50% - 20px);
+      left: calc(50% - 20px);
+    }
+
+    @keyframes preload {
+      0% {
+        left: -100px;
+      }
+
+      100% {
+        left: 110%;
+      }
+    }
+
+    #box {
+      width: 50px;
+      height: 50px;
+      background: #fff;
+      animation: animate 0.5s linear infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 3px;
+    }
+
+    @keyframes animate {
+      17% {
+        border-bottom-right-radius: 3px;
+      }
+
+      25% {
+        transform: translateY(9px) rotate(22.5deg);
+      }
+
+      50% {
+        transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+        border-bottom-right-radius: 40px;
+      }
+
+      75% {
+        transform: translateY(9px) rotate(67.5deg);
+      }
+
+      100% {
+        transform: translateY(0) rotate(90deg);
+      }
+    }
+
+    #shadow {
+      width: 50px;
+      height: 5px;
+      background: #000;
+      opacity: 0.1;
+      position: absolute;
+      top: 59px;
+      left: 0;
+      border-radius: 50%;
+      animation: shadow 0.5s linear infinite;
+    }
+
+    @keyframes shadow {
+      50% {
+        transform: scale(1.2, 1);
+      }
+    }
+  </style>
   <!-- <div id="loadscreen"></div> -->
   <div id="nav-placeholder"></div>
 
@@ -37,14 +120,14 @@
     <input type="radio" id="tab3" name="tab-control">
     <input type="radio" id="tab4" name="tab-control">
     <ul>
-      <li title="Features"><label for="tab1" role="button"><img
-        src="1x/outline_computer_black_24dp.png"><br><span>APSCE Governing Council</span></label></li>
+      <li title="Features"><label for="tab1" role="button"><img src="1x/outline_computer_black_24dp.png"><br><span>APSCE
+            Governing Council</span></label></li>
       <li title="Delivery Contents"><label for="tab2" role="button"><img
-        src="1x/outline_apartment_black_24dp.png"><br><span>Organogram</span></label></li>
+            src="1x/outline_apartment_black_24dp.png"><br><span>Organogram</span></label></li>
       <li title="Shipping"><label for="tab3" role="button"><img
-        src="1x/outline_emoji_events_black_24dp.png"><br><span>GC Recommendations</span></label></li>
+            src="1x/outline_emoji_events_black_24dp.png"><br><span>GC Recommendations</span></label></li>
       <li title="Returns"><label for="tab4" role="button"><img
-        src="1x/outline_travel_explore_black_24dp.png"><br><span>Amendments</span></label></li>
+            src="1x/outline_travel_explore_black_24dp.png"><br><span>Amendments</span></label></li>
     </ul>
 
 
@@ -76,27 +159,27 @@
           </style>
         </div>
 
-          <div class="trustrow">
-            <div class="trustcard">
-              <img src="images/Prof.K-P-NaraSimha-Murthy-Honorable-General-Secretary-APS-Educational-Trust-modified.png"
-                alt="">
-              <h4>Prof K P Narasimha Murthy</h4>
-              <h5>Hon. President, APSET</h5>
-            </div>
-
-            <div class="trustcard">
-              <img src="images/CA-Dr.-Vishnu-Bharath-A-S-Hon.-Vice-President-APS-Educational-Trust-modified.png" alt="">
-              <h4>Dr. Vishnu Bharath</h4>
-              <h5>Hon. Vice President, APSET</h5>
-            </div>
-
-            <div class="trustcard">
-              <img src="images/image-modified(1).png" alt="">
-              <h4>Sri. K S Akhilesh Babu</h4>
-              <h5>Hon. Treasurer, APSET</h5>
-            </div>
+        <div class="trustrow">
+          <div class="trustcard">
+            <img src="images/Prof.K-P-NaraSimha-Murthy-Honorable-General-Secretary-APS-Educational-Trust-modified.png"
+              alt="">
+            <h4>Prof K P Narasimha Murthy</h4>
+            <h5>Hon. President, APSET</h5>
           </div>
-        
+
+          <div class="trustcard">
+            <img src="images/CA-Dr.-Vishnu-Bharath-A-S-Hon.-Vice-President-APS-Educational-Trust-modified.png" alt="">
+            <h4>Dr. Vishnu Bharath</h4>
+            <h5>Hon. Vice President, APSET</h5>
+          </div>
+
+          <div class="trustcard">
+            <img src="images/image-modified(1).png" alt="">
+            <h4>Sri. K S Akhilesh Babu</h4>
+            <h5>Hon. Treasurer, APSET</h5>
+          </div>
+        </div>
+
 
 
 
@@ -128,12 +211,12 @@
             <div class="table-wrapper">
               <table>
                 <thead>
-                <tr>
+                  <tr>
                     <td> <b>1</b></td>
                     <td> <b>Chair Person</b></td>
                     <td> <b>Prof. K. P. Narasimha Murthy</b></td>
                     <td> <b>Hon. Vice president, APSET</b></td>
-                    
+
                   </tr>
                 </thead>
                 <tbody>
@@ -142,106 +225,117 @@
                     <td>
                       <b>Members</b>
                     </td>
-                    <td>  <b>Sri. S. Anantha<br>
-                      Sri. N. Bhaskar Manay<br>
-                      Prof. Dr. A Ramprasad<br>
-                      Sri. Manuswath. K. B<br>
-                      Sri. Praveen Prabhakar<br>
-                      Sri. Nikhil Acharya Prakash<br>
-                      Sri. V. Murali</b>
-                      </td>
-                    <td>	 <b>Menbers, APSET</b></td>
-                  
+                    <td> <b>Sri. S. Anantha<br>
+                        Sri. N. Bhaskar Manay<br>
+                        Prof. Dr. A Ramprasad<br>
+                        Sri. Manuswath. K. B<br>
+                        Sri. Praveen Prabhakar<br>
+                        Sri. Nikhil Acharya Prakash<br>
+                        Sri. V. Murali</b>
+                    </td>
+                    <td> <b>Menbers, APSET</b></td>
+
                   </tr>
                   <tr>
                     <td> <b>3</b></td>
-                    <td>	 <b>Ex-Officio Member</b>
-                     
+                    <td> <b>Ex-Officio Member</b>
+
                     </td>
-                    <td>	 <b>Sri. A. R. Acharya</b> </td>
+                    <td> <b>Sri. A. R. Acharya</b> </td>
                     <td> <b>Hon. General Secretary, APSET</b></td>
-                    
+
                   </tr>
                   <tr>
                     <td> <b>4</b></td>
-                      <td>	 <b>Convener</b></td>
-                      <td> <b>Dr. B. M. Satish</b>	</td>
-                      <td>	 <b>Principal, APSCE</b></td>
-                      </tr>
-                      <tr>
-                      <td> <b>5</b></td>
-                      <td>
-                         <b>Staff Representatives</b>
-                      </td>
-                      <td>	 <b>Prof. K. R. Sridhara, Dept. of Maths<br>
+                    <td> <b>Convener</b></td>
+                    <td> <b>Dr. B. M. Satish</b> </td>
+                    <td> <b>Principal, APSCE</b></td>
+                  </tr>
+                  <tr>
+                    <td> <b>5</b></td>
+                    <td>
+                      <b>Staff Representatives</b>
+                    </td>
+                    <td> <b>Prof. K. R. Sridhara, Dept. of Maths<br>
                         Prof. Asha N, Dept. of CSE</b></td>
-                      <td>	<b>Two Staff Members duly nominated by the Principal
-                        </b>
-                      </td>
-                      </tr>
-                      <tr>
-                      <td> <b>6</b></td>
-                      <td> <b>Government Nominees</b></td>
-                      <td>  <b>Dr. Abdul Sharief, VTU Nominee GC & Academic Senate Member & Principal, P A College of Engineering</b></td>
-                      <td> <b>The Regional Officer, AICTE, Bangalore Members Nominated by University/UGC/Government</b></td>
-                      </tr>
-                      <tr>
-                        <td> <b>7</b></td>
-                        <td> <b>Permanent Invitees</b></td>
-                        <td>	 <b>Office Bearers</b></td>
-                        <td>	 <b>APSET</b></td>
-                        </tr>
-                        <td> <b>8</b></td>
-                        <td> <b>Special Invitees</b></td>
-                        <td>	 <b>Sri. S. Sethu Rao
-                          <br>Sri. D.S. Rama Krishna</b>
-                        </td>
-                        <td> <b>Former Principal APS
-                        Polytechnic Former princi APSCE</b>	</td>
-                        </tr></b>
-                      </tbody>
-                      </table>
-                      </div>
-          </div><style>
-          .table-wrapper {
-            margin: 50px auto;
-            max-width: 100%;
-            font-family: Arial, sans-serif;
-          }
-          table {
-                border-collapse: inherit;
-                width: 100%;
-                 margin: 0px;
-                  padding: 0px;
-                background-color: white;
-                box-shadow: 0 0 62px rgb(0 0 0);
-                border-radius: 0px;
-                overflow: hidden;
+                    <td> <b>Two Staff Members duly nominated by the Principal
+                      </b>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td> <b>6</b></td>
+                    <td> <b>Government Nominees</b></td>
+                    <td> <b>Dr. Abdul Sharief, VTU Nominee GC & Academic Senate Member & Principal, P A College of
+                        Engineering</b></td>
+                    <td> <b>The Regional Officer, AICTE, Bangalore Members Nominated by University/UGC/Government</b>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td> <b>7</b></td>
+                    <td> <b>Permanent Invitees</b></td>
+                    <td> <b>Office Bearers</b></td>
+                    <td> <b>APSET</b></td>
+                  </tr>
+                  <td> <b>8</b></td>
+                  <td> <b>Special Invitees</b></td>
+                  <td> <b>Sri. S. Sethu Rao
+                      <br>Sri. D.S. Rama Krishna</b>
+                  </td>
+                  <td> <b>Former Principal APS
+                      Polytechnic Former princi APSCE</b> </td>
+                  </tr></b>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <style>
+            .table-wrapper {
+              margin: 50px auto;
+              max-width: 100%;
+              font-family: Arial, sans-serif;
+            }
+
+            table {
+              border-collapse: inherit;
+              width: 100%;
+              margin: 0px;
+              padding: 0px;
+              background-color: white;
+              box-shadow: 0 0 62px rgb(0 0 0);
+              border-radius: 0px;
+              overflow: hidden;
               text-align: left;
             }
-          th, td {
-            padding: 15px 20px;
-            font-weight: 500;
-            border-bottom: 1px solid white;
-          }
-          th {
+
+            th,
+            td {
+              padding: 15px 20px;
+              font-weight: 500;
+              border-bottom: 1px solid white;
+            }
+
+            th {
               background-color: black;
-                color: #fff;
+              color: #fff;
               text-transform: uppercase;
               letter-spacing: 1px;
               font-size: 14px;
               border-top: 0px solid white;
             }
-          td {
-            color: rgb(6, 6, 6);
-            font-size: 14px;
-          }
-          tr:nth-child(even) {
-            background-color: white;
-          }
-          tr:hover {
-            background-color: white;
-          }</style>
+
+            td {
+              color: rgb(6, 6, 6);
+              font-size: 14px;
+            }
+
+            tr:nth-child(even) {
+              background-color: white;
+            }
+
+            tr:hover {
+              background-color: white;
+            }
+          </style>
 
 
 
@@ -310,47 +404,47 @@
       </section>
       <section>
         <h2>GC Recommendations</h2>
-          The institution is practicing decentralization and participative management in all its activities. The
-          Governing Council, where Principal of the institution is a Member Convener, approves the quality policies
-          and provides necessary support for the overall development of the institution. The institution has a policy
-          of participative management as a form of democratic governance and this is achieved by involving faculty,
-          staff and students in all its academic issues.<br/><br/>
-          In implementing all its quality policies and plans, the institution adheres to rules and regulations specified
-          by affiliating university and Governing Council. The Principal is the representative to look in to the
-          functioning of the college. The Principal is the Head of the Institution and is empowered with sufficient
-          authority and powers, delegated from the management for smooth functioning of day-to-day activities. All
-          the departments of the college function under the direct supervision of Principal. Heads Of the
-          Departments (HODs) look after the day-to-day activities of various departments.<br/><br/> 
-          The Principal, as a
-          representative of the college, guides all HODs, faculty members and other staff in all academic matters. He
-          encourages and supports the HODs and faculty members in ensuring a proper academic environment in the
-          college.
+        The institution is practicing decentralization and participative management in all its activities. The
+        Governing Council, where Principal of the institution is a Member Convener, approves the quality policies
+        and provides necessary support for the overall development of the institution. The institution has a policy
+        of participative management as a form of democratic governance and this is achieved by involving faculty,
+        staff and students in all its academic issues.<br /><br />
+        In implementing all its quality policies and plans, the institution adheres to rules and regulations specified
+        by affiliating university and Governing Council. The Principal is the representative to look in to the
+        functioning of the college. The Principal is the Head of the Institution and is empowered with sufficient
+        authority and powers, delegated from the management for smooth functioning of day-to-day activities. All
+        the departments of the college function under the direct supervision of Principal. Heads Of the
+        Departments (HODs) look after the day-to-day activities of various departments.<br /><br />
+        The Principal, as a
+        representative of the college, guides all HODs, faculty members and other staff in all academic matters. He
+        encourages and supports the HODs and faculty members in ensuring a proper academic environment in the
+        college.
       </section>
 
 
 
       <section>
         <h2>Amendments</h2>
-          A P S College of Engineering has various strategic plans for implementation and to achieve excellence in
-          all aspects such as academic, placements and research. The management council has an immediate action
-          plan which includes getting NAAC accreditation and with in another two years NBA accreditation for all
-          the programmes offered in the institution.<br/><br/> 
-          The other strategic plans are strengthening the campus facilities,
-          improving teaching-learning process further, providing Personality Development program for the students,
-          providing more Faculty Development Programs, improvement in industry-institute collaborations.
-          One of the strategic plans deployed in the institution as recommended by IQAC as of now is, to provide
-          Personality Development Program for the students. <br/><br/>
-          The placement cell coordinates and conducts the
-          Personality Development Program (PDP) for all the students in the campus. The PDP is conducted for all
-          students from 1st year to 4th year. Every semester students are divided in to batches and all the batches are
-          trained by professional trainers in various personality development traits like team work, communication
-          skills, vocabulary and attitude besides technical fields. <br/><br/>
-          This PDP gives students an insight in to the corporate world and prepares them to apply the skills they
-          learn during college days in the corporate world. <br/><br/>
-          The training program which they undergo helps the
-          students to overcome communication apprehension and to present any topic confidently during placement
-          drives. It also educates them to manage time and to work as a team. The placement cell also provides
-          guidance for competitive examinations like GATE. GRE,TOEFL etc.,
+        A P S College of Engineering has various strategic plans for implementation and to achieve excellence in
+        all aspects such as academic, placements and research. The management council has an immediate action
+        plan which includes getting NAAC accreditation and with in another two years NBA accreditation for all
+        the programmes offered in the institution.<br /><br />
+        The other strategic plans are strengthening the campus facilities,
+        improving teaching-learning process further, providing Personality Development program for the students,
+        providing more Faculty Development Programs, improvement in industry-institute collaborations.
+        One of the strategic plans deployed in the institution as recommended by IQAC as of now is, to provide
+        Personality Development Program for the students. <br /><br />
+        The placement cell coordinates and conducts the
+        Personality Development Program (PDP) for all the students in the campus. The PDP is conducted for all
+        students from 1st year to 4th year. Every semester students are divided in to batches and all the batches are
+        trained by professional trainers in various personality development traits like team work, communication
+        skills, vocabulary and attitude besides technical fields. <br /><br />
+        This PDP gives students an insight in to the corporate world and prepares them to apply the skills they
+        learn during college days in the corporate world. <br /><br />
+        The training program which they undergo helps the
+        students to overcome communication apprehension and to present any topic confidently during placement
+        drives. It also educates them to manage time and to work as a team. The placement cell also provides
+        guidance for competitive examinations like GATE. GRE,TOEFL etc.,
       </section>
     </div>
   </div>
@@ -531,8 +625,8 @@
         $("#footer-placeholder").load("/public_html/footer.html");
       });
       $(function () {
-      $("#back-to-top").load("/public_html/backtotop/index.html");
-    });
+        $("#back-to-top").load("/public_html/backtotop/index.html");
+      });
     </script>
 </body>
 
