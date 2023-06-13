@@ -203,3 +203,10 @@ svg {
   background-color: white;
   color: #9b2d30;
 }
+
+@media (min-width: 1920px) and (max-width: 2560px){
+  #sec-1 {
+    width: 100vw;
+  }
+  
+}
