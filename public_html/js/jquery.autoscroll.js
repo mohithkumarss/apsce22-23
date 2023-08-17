@@ -15,12 +15,15 @@
 					scrollTop = 0;
 
 				function scrollList() {
-					var itemHeight = 350;
+					var itemHeight = $this.children().eq(0).outerHeight(true);
 					// $this.children().eq(1).outerHeight(true); // 取第二个高度防止第一个没有上间距
 					scrollTop++;
+					//console.log("scrolltop"+scrollTop);
 					if (scrollTop >= itemHeight) {
-						$this.scrollTop(0).children().eq(0).appendTo($this);
-						scrollTop = 0;
+						$this.scrollTop(scrollTop).children().eq(0).appendTo($this);
+						scrollTop =0;
+						
+						
 					} else {
 						$this.scrollTop(scrollTop);
 					}
@@ -48,14 +51,14 @@
 		});
 	}
 	$.fn.autoscroll.defaults = {
-		interval: 50, // 控制速度
-		hideScrollbar: true, // 隐藏滚动条但可以滚动
-		handlerIn: null, // 鼠标悬停
-		handlerOut: null // 鼠标离开
+		interval: 50, 
+		hideScrollbar: true, 
+		handlerIn: null, 
+		handlerOut: null 
 
 	};
 	$(function() {
-		// 需在目标元素上添加data-autoscroll
+		
 		$("[data-autoscroll]").autoscroll();
 	});
 })(jQuery);

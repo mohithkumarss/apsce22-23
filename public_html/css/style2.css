@@ -1190,3 +1190,106 @@ h2 {
   width: 100vw;
   height: 50vh;
 }
+
+.container ul,.container li {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+.container li {
+  padding: 10px;
+  list-style-type: none;
+  margin: 0;
+  
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.moving-list{
+  width:30rem;
+  margin-top: 3rem !important;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+}
+
+.moving-list button{
+  width:10rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.event-button{
+  background-color: pink;
+
+}
+.notif-button{
+  background-color: rgb(192, 198, 255);
+}
+
+.data-list {
+  height: 26rem;
+  
+  /* padding: 5rem; */
+  overflow-y: hidden;
+  background-color: #003f7e;
+  border: 1px solid #7a7a7a;
+  border-radius: 2px;
+}
+
+.data-list li{
+  padding: 3rem 0.25rem ;
+  /* border: 2px solid #7a7a7a; */
+  background-color: white;
+  margin:0.75rem 0.5rem ;
+}
+
+.video-list{
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  justify-content: space-around;
+}
+
+.video-item{
+  display: flex;
+  
+}
+
+.video-item p{
+  margin-left: 2rem;
+  width: 40%;
+  text-align: justify;
+  font-weight: bold;
+  font-size: 13px
+}
+
+.all-dignitaries img{
+  width:10rem; height: 10rem;
+  margin-right: 3rem;
+}
+
+.all-dignitaries{
+  display: flex;
+  
+}
+
+.all-dignitaries h5{
+  margin-top: 2rem;
+}
+
+.dignitary-content{
+  border-radius: 3px;
+  background-color: #e7e7e7;
+  padding:4rem 3rem;
+  display: flex;
+  font-size: 15px;
+  width: 80%;
+  
+  align-items: center;
+}

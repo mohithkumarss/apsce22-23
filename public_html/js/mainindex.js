@@ -19,35 +19,35 @@ $(document).ready(function () {
       $("#nav-right").css("background-color", "red");
     }, 10000);
 
-    // if (posicao < quant) {
-    //   var atual = $(".item").eq(posicao);
-    //   $(".nav-li").eq(posicao).removeClass("nav-li-marcado");
-    //   atual.fadeOut(500, function () {
-    //     atual.removeClass("item-ativo");
-    //   });
+    if (posicao < quant) {
+      var atual = $(".item").eq(posicao);
+      $(".nav-li").eq(posicao).removeClass("nav-li-marcado");
+      atual.fadeOut(500, function () {
+        atual.removeClass("item-ativo");
+      });
 
-    //   posicao++;
+      posicao++;
 
-    //   var atual2 = $(".item").eq(posicao);
-    //   $(".nav-li").eq(posicao).addClass("nav-li-marcado");
-    //   atual2.fadeIn(400, function () {
-    //     atual2.addClass("item-ativo");
-    //   });
-    // } else {
-    //   var atual = $(".item").eq(posicao);
-    //   $(".nav-li").eq(posicao).removeClass("nav-li-marcado");
-    //   atual.fadeOut(500, function () {
-    //     atual.removeClass("item-ativo");
-    //   });
+      var atual2 = $(".item").eq(posicao);
+      $(".nav-li").eq(posicao).addClass("nav-li-marcado");
+      atual2.fadeIn(400, function () {
+        atual2.addClass("item-ativo");
+      });
+    } else {
+      var atual = $(".item").eq(posicao);
+      $(".nav-li").eq(posicao).removeClass("nav-li-marcado");
+      atual.fadeOut(500, function () {
+        atual.removeClass("item-ativo");
+      });
 
-    //   posicao = 0;
+      posicao = 0;
 
-    //   var atual2 = $(".item").eq(posicao);
-    //   $(".nav-li").eq(posicao).addClass("nav-li-marcado");
-    //   atual2.fadeIn(400, function () {
-    //     atual2.addClass("item-ativo");
-    //   });
-    // }
+      var atual2 = $(".item").eq(posicao);
+      $(".nav-li").eq(posicao).addClass("nav-li-marcado");
+      atual2.fadeIn(400, function () {
+        atual2.addClass("item-ativo");
+      });
+    }
   }
 
   var tempoSlide = window.setInterval(automatic, tempoAutomatico);
