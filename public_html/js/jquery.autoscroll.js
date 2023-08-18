@@ -15,7 +15,7 @@
 					scrollTop = 0;
 
 				function scrollList() {
-					var itemHeight = $this.children().eq(0).outerHeight(true);
+					var itemHeight = 700;
 					// $this.children().eq(1).outerHeight(true); // 取第二个高度防止第一个没有上间距
 					scrollTop++;
 					//console.log("scrolltop"+scrollTop);
