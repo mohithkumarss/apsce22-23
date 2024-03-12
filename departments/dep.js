@@ -1,15 +1,12 @@
 $(function () {
-  $("#nav-placeholder").load("/public_html/navbar.html");
+  $("#nav-placeholder").load("/navbar.html");
 });
 
 $(function () {
-  $("#footer-placeholder").load("/public_html/footer.html");
+  $("#footer-placeholder").load("/footer.html");
 });
 $(function () {
-  $("#back-to-top").load("/public_html/backtotop/index.html");
-});
-$(function () {
-  $("#back-to-top").load("/public_html/backtotop/index.html");
+  $("#back-to-top").load("/backtotop/index.html");
 });
 
 var position = 500;

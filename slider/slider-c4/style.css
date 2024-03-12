@@ -10,6 +10,7 @@ svg {
 
 .section {
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,7 +138,7 @@ svg {
   background-color: transparent;
   color: white;
   transition: all 0.2s;
-  top: 85%;
+  top: 70%;
   left: 20%;
 }
 #btn:hover {
@@ -204,9 +205,8 @@ svg {
   color: #9b2d30;
 }
 
-@media (min-width: 1920px) and (max-width: 2560px){
+@media (min-width: 1920px) and (max-width: 2560px) {
   #sec-1 {
     width: 100vw;
   }
-  
 }

@@ -1,569 +1,677 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="apsce-modified.png" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="apsce-modified.png">
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+      integrity="sha512-YFENbnqHbCRmJt5d+9lHimyEMt8LKSNTMLSaHjvsclnZGICeY/0KYEeiHwD1Ux4Tcao0h60tdcMv+0GljvWyHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/c4d40c1d88.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <title>Computer Science & Engineering - APS College of Engineering</title>
+    <link rel="stylesheet" href="/departments/dep.css" />
+    <script src="../dep.js"></script>
+  </head>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.css"
-    integrity="sha512-c9N/Xq0n4rQdyCXF4RgrRYAAOSnNJDp8NWILsSUx+33zWyaMbXXvqajgO0UXybRdTGVpxq3FBrcGwabkWsT8OA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.js"
-    integrity="sha512-/1h344Ogu39f2lMl2yIJn3mPjySuB0+m3EzDvFSWlxo6HaJO/3jdzGOy8V6ZgdkTkddKH+ZWma1mqOQZHmjo1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <title>Computer Science & Engineering - APS College of Engineering</title>
-  <link rel="stylesheet" href="/public_html/departments/dep.css">
-</head>
+  <body>
+    <!-- <div class="preload-bg">
+      <div class="preload">
+        <div class="" id="shadow"></div>
+        <div class="" id="box"></div>
+      </div>
+    </div> -->
+    <style>
+      .preload-bg {
+        position: fixed;
+        background: #6997db;
+        width: 100%;
+        height: 100%;
+        z-index: 9999999;
+      }
 
-<body>
-  <div class="preload-bg">
-    <div class="preload">
-      <div class="" id="shadow"></div>
-      <div class="" id="box"></div>
+      .preload {
+        position: absolute;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+      }
+
+      @keyframes preload {
+        0% {
+          left: -100px;
+        }
+
+        100% {
+          left: 110%;
+        }
+      }
+
+      #box {
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        animation: animate 0.5s linear infinite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 3px;
+      }
+
+      @keyframes animate {
+        17% {
+          border-bottom-right-radius: 3px;
+        }
+
+        25% {
+          transform: translateY(9px) rotate(22.5deg);
+        }
+
+        50% {
+          transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+          border-bottom-right-radius: 40px;
+        }
+
+        75% {
+          transform: translateY(9px) rotate(67.5deg);
+        }
+
+        100% {
+          transform: translateY(0) rotate(90deg);
+        }
+      }
+
+      #shadow {
+        width: 50px;
+        height: 5px;
+        background: #000;
+        opacity: 0.1;
+        position: absolute;
+        top: 59px;
+        left: 0;
+        border-radius: 50%;
+        animation: shadow 0.5s linear infinite;
+      }
+
+      @keyframes shadow {
+        50% {
+          transform: scale(1.2, 1);
+        }
+      }
+    </style>
+    <div id="nav-placeholder"></div>
+
+    <div class="part1">
+      <p>
+        Computer Science <br />
+        & Engineering
+      </p>
+      <div class="pathw">
+        <i class="bi bi-house-fill" style="margin-right: 0.5rem"></i>Home /
+        Academics / Computer Science & Engineering
+      </div>
     </div>
-  </div>
-  <style>
-    .preload-bg {
-      position: fixed;
-      background: #6997db;
-      width: 100%;
-      height: 100%;
-      z-index: 9999999;
-    }
 
-    .preload {
-      position: absolute;
-      top: calc(50% - 20px);
-      left: calc(50% - 20px);
-    }
+    <div class="tabs">
+      <input type="radio" id="tab1" name="tab-control" checked />
+      <input type="radio" id="tab2" name="tab-control" />
+      <input type="radio" id="tab3" name="tab-control" />
+      <input type="radio" id="tab4" name="tab-control" />
+      <ul id="ulicons">
+        <li title="Department">
+          <label for="tab1" role="button">
+            <i class="bi bi-collection-fill"></i>
+            <span>Department</span>
+          </label>
+        </li>
+        <li title="Infrastructure">
+          <label for="tab2" role="button"
+            ><i class="bi bi-bank2"></i><span>Infrastructure</span></label
+          >
+        </li>
+        <li title="Achievements">
+          <label for="tab3" role="button"
+            ><i class="bi bi-trophy-fill"></i
+            ><span>Results & Achievements</span></label
+          >
+        </li>
+        <li title="Activities">
+          <label for="tab4" role="button"
+            ><i class="bi bi-activity"></i><span>Activities</span></label
+          >
+        </li>
+      </ul>
 
-    @keyframes preload {
-      0% {
-        left: -100px;
-      }
-
-      100% {
-        left: 110%;
-      }
-    }
-
-    #box {
-      width: 50px;
-      height: 50px;
-      background: #fff;
-      animation: animate 0.5s linear infinite;
-      position: absolute;
-      top: 0;
-      left: 0;
-      border-radius: 3px;
-    }
-
-    @keyframes animate {
-      17% {
-        border-bottom-right-radius: 3px;
-      }
-
-      25% {
-        transform: translateY(9px) rotate(22.5deg);
-      }
-
-      50% {
-        transform: translateY(18px) scale(1, 0.9) rotate(45deg);
-        border-bottom-right-radius: 40px;
-      }
-
-      75% {
-        transform: translateY(9px) rotate(67.5deg);
-      }
-
-      100% {
-        transform: translateY(0) rotate(90deg);
-      }
-    }
-
-    #shadow {
-      width: 50px;
-      height: 5px;
-      background: #000;
-      opacity: 0.1;
-      position: absolute;
-      top: 59px;
-      left: 0;
-      border-radius: 50%;
-      animation: shadow 0.5s linear infinite;
-    }
-
-    @keyframes shadow {
-      50% {
-        transform: scale(1.2, 1);
-      }
-    }
-  </style>
-  <div id="nav-placeholder"></div>
-
-
-  <div class="part1">
-    <p> Computer Science <br> & Engineering</p>
-    <div class="pathw"><i class="bi bi-house-fill" style="margin-right: 0.5rem;"></i>Home / Academics / Computer Science
-      & Engineering</div>
-  </div>
-
-  <div class="tabs">
-
-    <input type="radio" id="tab1" name="tab-control" checked>
-    <input type="radio" id="tab2" name="tab-control">
-    <input type="radio" id="tab3" name="tab-control">
-    <input type="radio" id="tab4" name="tab-control">
-    <ul id="ulicons">
-      <li title="Department">
-        <label for="tab1" role="button">
-          <i class="bi bi-collection-fill"></i>
-          <span>Department</span>
-        </label>
-      </li>
-      <li title="Infrastructure"><label for="tab2" role="button"><i
-            class="bi bi-bank2"></i><span>Infrastructure</span></label></li>
-      <li title="Achievements"><label for="tab3" role="button"><i class="bi bi-trophy-fill"></i><span>Results &
-            Achievements</span></label></li>
-      <li title="Activities"><label for="tab4" role="button"><i
-            class="bi bi-activity"></i><span>Activities</span></label>
-      </li>
-    </ul>
-
-    <div class="slider">
-      <div class="indicator"></div>
-    </div>
-    <div class="content1" style="color: #000;">
-      <section>
-        <hr style="color: #929daf;">
-        <h2>ABOUT DEPARTMENT</h2>
-        <div class="dep-content">
-          <div class="imgtab">
-            <img src="images/CSE.jpg">
+      <div class="slider">
+        <div class="indicator"></div>
+      </div>
+      <div class="content1" style="color: #000">
+        <section>
+          <hr style="color: #929daf" />
+          <h2>ABOUT DEPARTMENT</h2>
+          <div class="dep-content">
+            <div class="imgtab">
+              <img src="images/CSE.jpg" />
+            </div>
+            <div class="ptab" style="text-align: justify">
+              The Department of Computer Science & Engineering was established
+              in the year 1997 right from the inception of the institution with
+              an objective of imparting quality technical education in IT field.
+              The department offers B E and M.Tech degrees in CSE with an intake
+              of 60 UG students and 20 PG students respectively. The department
+              house state of the art, laboratories, boasts of well trained,
+              committed and experienced teaching faculty who emphasize the
+              theoretical and practical applications of computation and computer
+              systems to the needs of the society using advanced pedagogic
+              methodologies.
+            </div>
           </div>
-          <div class="ptab" style="text-align: justify;">
-            The Department of Computer Science & Engineering was established in the year 1997 right from
-            the inception of the institution with an objective of imparting quality
-            technical education in IT field. The department offers B E and M.Tech degrees
-            in CSE with an intake of 60 UG students and 20 PG students respectively.
-            The department house state of the art, laboratories, boasts of well trained,
-            committed and experienced teaching faculty who emphasize the theoretical and
-            practical applications of computation and computer systems to the needs of the
-            society using advanced pedagogic methodologies.
+          <h2>VISION</h2>
+          <div
+            class="ptab"
+            style="
+              margin-bottom: 1rem;
+              font-family: 'Poppins';
+              text-align: justify;
+            "
+          >
+            To be in the frontier of Computer Science and Engineering and to
+            produce globally competent graduates with moral values committed to
+            build vibrant nation.
+          </div>
+          <h2>MISSION</h2>
+          <div class="ptab" style="margin-bottom: 1rem; font-family: 'Poppins'">
+            <li>
+              To impart quality technical education with an emphasis on basic
+              principles of computer science and engineering.
+            </li>
+            <br />
+            <li>
+              To produce successful graduates with personal and professional
+              responsibilities and commitment towards lifelong learning.
+            </li>
+            <br />
+            <li>
+              To impart moral and ethical values to students and uplift
+              innovative research in Computer Science to serve the needs of
+              Industry and Society.
+            </li>
+          </div>
+          <h2>Program Specific Outcomes (PSO)</h2>
+          <div class="ptab" style="margin-bottom: 1rem; font-family: 'Poppins'">
+            At the end of the program, the graduate will be able to:
+
+            <ul>
+              PSO 1: Understand, analyze develop computer programs in the areas
+              related to algorithms, system software, multimedia, web design,
+              big data analytics, machine learning and networking for efficient
+              design of computer based systems of varying complexity.
+            </ul>
+            <ul>
+              PSO 2: Understand the evolutionary changes in computing, apply
+              standard practices and strategies in software project development
+              using open-ended programming environments to deliver a quality
+              product for business success, real world problems and meet the
+              challenges of the future.
+            </ul>
+            <ul>
+              PSO 3: Employ modern computer languages, environments and
+              platforms in creating innovative career paths to be an
+              entrepreneur, life-long learning and a zest for higher studies and
+              also to act as a good citizen by inculcating moral and ethical
+              values.
+            </ul>
+          </div>
+          <h2>Program Educational Objectives (PEOs)</h2>
+          <div class="ptab" style="margin-bottom: 1rem; font-family: 'Poppins'">
+            The Bachelor of Engineering (B.E.) program specialized in Computer
+            Science and Engineering is designed to achieve the following
+            objectives after four to five years of graduation. They will be able
+            to:
+
+            <ul>
+              PEO 1: Impart strong foundation in basic sciences, mathematics and
+              engineering fundamentals, knowledge and capability.
+            </ul>
+            <ul>
+              PEO 2: Comprehend and provide in depth knowledge to design and
+              develop novel products and innovative solution for real life
+              problems in Computer Science and Engineering field and related
+              domains.
+            </ul>
+            <ul>
+              PEO 3: Inculcate a conviction to believe in self, impart
+              professional and ethical attitude, nurture to be an effective team
+              member, infuse leadership qualities, build proficiency in soft
+              skills and the abilities to relate engineering with the societal
+              issues.
+            </ul>
+            <ul>
+              PEO 4: Impart exhaustive knowledge of computer science and
+              engineering to take up key assignments in industry, undertake and
+              excel in higher studies and Research & Development in computer
+              science, related engineering fields and management.
+            </ul>
+          </div>
+        </section>
+        <section>
+          <h2>Our Infrastructure</h2>
+          <div class="dep-content">
+            <div class="imgtab">
+              <img src="images/cselab.jpg" />
+            </div>
+            <div class="ptab" style="text-align: justify">
+              The department has aesthetically designed, practically
+              architectured airy classrooms and laboratories for students and
+              staff rooms for faculty and administration efficiency with
+              internet enabled systems.Laboratories are equipped with more than
+              120 computers. Faculty uses state of the art audio and visual aids
+              to ensure better content delivery and facilitates greater student
+              interaction. The department has a collection of around 216 titles
+              and 05 volumes. The department has a collection of around 650
+              books. The Major Lab are:
+
+              <li>VGST Research Lab</li>
+              <li>Aryabhatta Advanced Computing Lab</li>
+              <li>Charles Babbage Centre</li>
+              <li>Von Neumann Centre & Chomsky Centre</li>
+              <li>Electronics & Logic Design Lab</li>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Results & Achievements</h2>
+          <div class="dep-content">
+            <div class="imgtab">
+              <img src="images/cseresult.jpg" />
+            </div>
+            <div class="ptab" style="text-align: justify">
+              Vision Group on Science & Technology (VGST) Govt. of Karnataka has
+              sanctioned a grant of Rs.20 lakhs to Dr. Anirban Basu, CSE Dept.
+              under the K-FIST(Level 1) scheme. Most of our faculties have
+              presented papers at National and International
+              conferences/journals. Ms. Ashwini P B(1AP14CS011) secured 11th
+              Rank in 2nd Semester VTU B.E Examination June/July-2015 and scored
+              100 out 100 in Engineering Mathematics-II
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Departmental Activities</h2>
+          <div class="wait3" style="margin-bottom: 1rem">
+            <div class="imgtab3">
+              <img
+                src="images/cseactivity1.jpeg"
+                style="width: 500px; height: 300px"
+              />
+            </div>
+            <div class="ptab3">
+              Department organized A seminar on “Awareness on AICTE Development
+              Schemes” has been arranged for the benefit of all the faculties of
+              all departments. The seminar was presented by Prof. C.P Sameerana,
+              Dept. of CSE.
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <style>
+      #container {
+        width: 90%;
+        overflow: hidden;
+        margin: 50px auto;
+        background: white;
+      }
+
+      /*photobanner*/
+
+      .photobanner {
+        height: 300px;
+        width: 3550px;
+        margin-bottom: -45px;
+      }
+
+      /*keyframe animations*/
+      .first {
+        -webkit-animation: bannermove 30s linear infinite;
+        -moz-animation: bannermove 30s linear infinite;
+        -ms-animation: bannermove 30s linear infinite;
+        -o-animation: bannermove 30s linear infinite;
+        animation: bannermove 30s linear infinite;
+      }
+
+      @keyframes bannermove {
+        0% {
+          margin-left: 0px;
+        }
+
+        100% {
+          margin-left: -2125px;
+        }
+      }
+
+      @-moz-keyframes bannermove {
+        0% {
+          margin-left: 0px;
+        }
+
+        100% {
+          margin-left: -2125px;
+        }
+      }
+
+      @-webkit-keyframes bannermove {
+        0% {
+          margin-left: 0px;
+        }
+
+        100% {
+          margin-left: -2125px;
+        }
+      }
+
+      @-ms-keyframes bannermove {
+        0% {
+          margin-left: 0px;
+        }
+
+        100% {
+          margin-left: -2125px;
+        }
+      }
+
+      @-o-keyframes bannermove {
+        0% {
+          margin-left: 0px;
+        }
+
+        100% {
+          margin-left: -2125px;
+        }
+      }
+
+      .photobanner img {
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+      }
+
+      .photobanner img:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        cursor: pointer;
+
+        -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+
+    <div id="container" style="margin-top: -55px">
+      <div class="photobanner">
+        <img class="first" src="images/lab1.jpg" />
+        <img src="images/lab2.jpg" alt="" />
+        <img src="images/lab3.jpg" alt="" />
+        <img src="images/lab4.jpg" alt="" />
+        <img src="images/ab5.jpg" alt="" />
+        <img src="images/lab6.jpg" alt="" />
+        <img src="images/lab3.jpg" alt="" />
+        <img src="images/lab4.jpg" alt="" />
+        <img src="images/lab5.jpg" alt="" />
+        <img src="images/lab6.jpg" alt="" />
+      </div>
+    </div>
+
+    <div class="news" id="news">
+      <div class="cons">
+        <p id="naevents">Teaching Staff</p>
+        <h5 id="namonths">Computer Science & Engineering</h5>
+        <div class="buttons" id="btns">
+          <div class="leftBtn" id="leftBtn">
+            <i class="fas fa-angle-left"></i>
+          </div>
+          <div class="rightBtn" id="rightBtn">
+            <i class="fas fa-angle-right"></i>
           </div>
         </div>
-        <h2>VISION</h2>
-        <div class="ptab" style="margin-bottom: 1rem; font-family: 'Poppins';text-align:justify;">
-          To be in the frontier of Computer Science and Engineering and to produce globally competent graduates with
-          moral values committed to build vibrant nation.
-
+      </div>
+      <div class="overflow">
+        <div class="qq" id="ov1">
+          <p id="q">CSE</p>
+          <img src="images/Dr.Sridhara.jpg" id="qimg" alt="" />
+          <p id="qdate">Head Of the Department</p>
+          <h3 id="qtitle">Dr. Sridhara.S.B</h3>
+          <p id="qcontent">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            labore ipsa dolorem quo vitae voluptatem laboriosam adipisci harum
+            eos saepe.
+          </p>
+          <a href="">Find out more<i class="bi bi-caret-right-fill"></i></a>
         </div>
-        <h2>MISSION</h2>
-        <div class="ptab" style="margin-bottom: 1rem; font-family: 'Poppins';">
-          <li>To impart quality technical education with an emphasis on basic principles of computer science and
-            engineering. </li> <br>
-          <li>To produce successful graduates with personal and professional responsibilities and commitment towards
-            lifelong learning.</li><br>
-          <li>To impart moral and ethical values to students and uplift innovative research in Computer Science to serve
-            the needs of Industry and Society. </li>
-
+        <div class="qq" id="ov2">
+          <p id="q">CSE</p>
+          <img src="images/SameeranaCP.jpg" id="qimg" alt="" />
+          <p id="qdate">Associate Professor</p>
+          <h3 id="qtitle">Prof. C.P. Sameerana</h3>
+          <p id="qcontent">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            labore ipsa dolorem quo vitae voluptatem laboriosam adipisci harum
+            eos saepe.
+          </p>
+          <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
         </div>
-        <h2>Program Specific Outcomes (PSO)</h2>
-        <div class="ptab" style="margin-bottom: 1rem; font-family: 'Poppins';">
-          At the end of the program, the graduate will be able to:
-
-          <ul>PSO 1: Understand, analyze develop computer programs in the areas related to
-            algorithms, system software, multimedia, web design, big data analytics, machine
-            learning and networking for efficient design of computer based systems of varying
-            complexity.</ul>
-          <ul>PSO 2: Understand the evolutionary changes in computing, apply standard
-            practices and strategies in software project development using open-ended
-            programming environments to deliver a quality product for business success, real
-            world problems and meet the challenges of the future.</ul>
-          <ul>PSO 3: Employ modern computer languages, environments and platforms in
-            creating innovative career paths to be an entrepreneur, life-long learning and a zest
-            for higher studies and also to act as a good citizen by inculcating moral and ethical
-            values.</ul>
+        <div class="qq" id="ov3">
+          <p id="q">CSE</p>
+          <img src="images/br1.jpg" id="qimg" alt="" />
+          <p id="qdate">Assistant professor</p>
+          <h3 id="qtitle">Mrs. Bhagyashree R</h3>
+          <p id="qcontent">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            labore ipsa dolorem quo vitae voluptatem laboriosam adipisci harum
+            eos saepe.
+          </p>
+          <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
         </div>
-        <h2>Program Educational Objectives (PEOs)</h2>
-        <div class="ptab" style="margin-bottom: 1rem; font-family: 'Poppins';">
-          The Bachelor of Engineering (B.E.)
-          program specialized in Computer Science and Engineering is designed to achieve
-          the following objectives after four to five years of graduation. They will be able to:
-
-          <ul>PEO 1: Impart strong foundation in basic sciences, mathematics and engineering
-            fundamentals, knowledge and capability.</ul>
-          <ul>PEO 2: Comprehend and provide in depth knowledge to design and develop novel
-            products and innovative solution for real life problems in Computer Science and
-            Engineering field and related domains.</ul>
-          <ul>PEO 3: Inculcate a conviction to believe in self, impart professional and ethical
-            attitude, nurture to be an effective team member, infuse leadership qualities, build
-            proficiency in soft skills and the abilities to relate engineering with the societal
-            issues.</ul>
-          <ul>PEO 4: Impart exhaustive knowledge of computer science and engineering to take
-            up key assignments in industry, undertake and excel in higher studies and Research
-            & Development in computer science, related engineering fields and management.</ul>
+        <div class="qq" id="ov4">
+          <p id="q">CSE</p>
+          <img src="images/rajashree.jpg" id="qimg" alt="" />
+          <p id="qdate">Assistant Professor</p>
+          <h3 id="qtitle">Prof. Rajashree Byalal</h3>
+          <p id="qcontent">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            labore ipsa dolorem quo vitae voluptatem laboriosam adipisci harum
+            eos saepe.
+          </p>
+          <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
         </div>
-      </section>
-      <section>
-        <h2>Our Infrastructure</h2>
-        <div class="dep-content">
-          <div class="imgtab">
-            <img src="images/cselab.jpg">
+        <div class="qq" id="ov5">
+          <p id="q">CSE</p>
+          <img src="images/AshaN.jpg" id="qimg" alt="" />
+          <p id="qdate">Assistant Professor</p>
+          <h3 id="qtitle">Prof. Asha N</h3>
+          <p id="qcontent">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            labore ipsa dolorem quo vitae voluptatem laboriosam adipisci harum
+            eos saepe.
+          </p>
+          <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
+        </div>
+        <div class="qq" id="ov5">
+          <p id="q">CSE</p>
+          <img src="images/saritha.jpg" id="qimg" alt="" />
+          <p id="qdate">Assistant Professor</p>
+          <h3 id="qtitle">Prof. D. Saritha</h3>
+          <p id="qcontent">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            labore ipsa dolorem quo vitae voluptatem laboriosam adipisci harum
+            eos saepe.
+          </p>
+          <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
+        </div>
+        <div class="qq" id="ov5">
+          <p id="q">CSE</p>
+          <img src="images/shruthi.jpg" id="qimg" alt="" />
+          <p id="qdate">Assistant Professor</p>
+          <h3 id="qtitle">Prof. Shruthi T</h3>
+          <p id="qcontent">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            labore ipsa dolorem quo vitae voluptatem laboriosam adipisci harum
+            eos saepe.
+          </p>
+          <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
+        </div>
+        <div class="qq" id="ov5">
+          <p id="q">CSE</p>
+          <img src="images/rajesh.jpg" id="qimg" alt="" />
+          <p id="qdate">Assistant Professor</p>
+          <h3 id="qtitle">Prof. Rajesh M</h3>
+          <p id="qcontent">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            labore ipsa dolorem quo vitae voluptatem laboriosam adipisci harum
+            eos saepe.
+          </p>
+          <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
+        </div>
+        <div class="qq" id="ov5">
+          <p id="q">CSE</p>
+          <img src="images/bhoomikap.jpg" id="qimg" alt="" />
+          <p id="qdate">Assistant Professor</p>
+          <h3 id="qtitle">Prof. Bhoomika P</h3>
+          <p id="qcontent">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            labore ipsa dolorem quo vitae voluptatem laboriosam adipisci harum
+            eos saepe.
+          </p>
+          <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news" id="news">
+      <div class="overflow">
+        <div class="qq" id="ov1">
+          <p id="q">CSE</p>
+          <img src="images/Mukund BS.jpg" id="qimg" alt="" />
+          <p id="qdate">Lab Instructor</p>
+          <h3 id="qtitle">Mr. Mukund B S</h3>
+          <p id="qcontent">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            labore ipsa dolorem quo vitae voluptatem laboriosam adipisci harum
+            eos saepe.
+          </p>
+        </div>
+        <div class="qq" id="ov2">
+          <p id="q">CSE</p>
+          <img src="images/Manjunath B.jpg" id="qimg" alt="" />
+          <p id="qdate">Asst. Lab Instructor</p>
+          <h3 id="qtitle">Mr. Manjunath B</h3>
+          <p id="qcontent">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            labore ipsa dolorem quo vitae voluptatem laboriosam adipisci harum
+            eos saepe.
+          </p>
+        </div>
+        <div class="qq" id="ov3">
+          <p id="q">CSE</p>
+          <img src="images/N Narayana.jpg" id="qimg" alt="" />
+          <p id="qdate">Lab Attender</p>
+          <h3 id="qtitle">Mr. N Narayana</h3>
+          <p id="qcontent">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            labore ipsa dolorem quo vitae voluptatem laboriosam adipisci harum
+            eos saepe.
+          </p>
+        </div>
+        <div class="qq" id="ov4">
+          <p id="q">CSE</p>
+          <img src="images/Ajjappa N.jpg" id="qimg" alt="" />
+          <p id="qdate">Lab Attender</p>
+          <h3 id="qtitle">Mr. Ajjappa N</h3>
+          <p id="qcontent">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            labore ipsa dolorem quo vitae voluptatem laboriosam adipisci harum
+            eos saepe.
+          </p>
+        </div>
+      </div>
+      <div class="cons" id="cons1">
+        <p id="naevents">Non Teaching Staff</p>
+        <h5 id="namonths">Computer Science & Engineering</h5>
+        <div class="buttons" id="btns">
+          <div class="leftBtn" id="leftBtn">
+            <i class="fas fa-angle-left"></i>
           </div>
-          <div class="ptab" style="text-align: justify;">
-            The department has aesthetically designed, practically architectured airy classrooms and
-            laboratories for students and staff rooms for faculty and administration efficiency with
-            internet enabled systems.Laboratories are equipped with more than 120 computers.
-            Faculty uses state of the art audio and visual aids to ensure better content delivery
-            and facilitates greater student interaction. The department has a collection of around
-            216 titles and 05 volumes. The department has a collection of around 650 books.
-            The Major Lab are:
-
-            <li>VGST Research Lab</li>
-            <li>Aryabhatta Advanced Computing Lab</li>
-            <li>Charles Babbage Centre</li>
-            <li>Von Neumann Centre & Chomsky Centre</li>
-            <li>Electronics & Logic Design Lab</li>
+          <div class="rightBtn" id="rightBtn">
+            <i class="fas fa-angle-right"></i>
           </div>
         </div>
-      </section>
-      <section>
-        <h2>Results & Achievements</h2>
-        <div class="dep-content">
-          <div class="imgtab">
-            <img src="images/cseresult.jpg">
-          </div>
-          <div class="ptab" style="text-align: justify;">
-            Vision Group on Science & Technology (VGST) Govt. of Karnataka has sanctioned a grant of Rs.20 lakhs to Dr.
-            Anirban Basu, CSE Dept. under the K-FIST(Level 1) scheme.
-            Most of our faculties have presented papers at National and International conferences/journals.
-            Ms. Ashwini P B(1AP14CS011) secured 11th Rank in 2nd Semester VTU B.E Examination June/July-2015 and scored
-            100 out 100 in Engineering Mathematics-II
-          </div>
-        </div>
-      </section>
-      <section>
-        <h2>Departmental Activities</h2>
-        <div class="wait3" style="margin-bottom:1rem ;">
-
-          <div class="imgtab3"><img src="images/cseactivity1.jpeg" style="width: 500px; height: 300px;"></div>
-          <div class="ptab3">
-            Department organized A seminar on “Awareness on AICTE Development Schemes” has been arranged for the benefit
-            of all the faculties of all departments.
-            The seminar was presented by Prof. C.P Sameerana, Dept. of CSE.
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-  <style>
-    #container {
-      width: 90%;
-      overflow: hidden;
-      margin: 50px auto;
-      background: white;
-    }
-
-
-    /*photobanner*/
-
-    .photobanner {
-      height: 300px;
-      width: 3550px;
-      margin-bottom: -45px;
-    }
-
-    /*keyframe animations*/
-    .first {
-      -webkit-animation: bannermove 30s linear infinite;
-      -moz-animation: bannermove 30s linear infinite;
-      -ms-animation: bannermove 30s linear infinite;
-      -o-animation: bannermove 30s linear infinite;
-      animation: bannermove 30s linear infinite;
-    }
-
-    @keyframes bannermove {
-      0% {
-        margin-left: 0px;
-      }
-
-      100% {
-        margin-left: -2125px;
-      }
-
-    }
-
-    @-moz-keyframes bannermove {
-      0% {
-        margin-left: 0px;
-      }
-
-      100% {
-        margin-left: -2125px;
-      }
-
-    }
-
-    @-webkit-keyframes bannermove {
-      0% {
-        margin-left: 0px;
-      }
-
-      100% {
-        margin-left: -2125px;
-      }
-
-    }
-
-    @-ms-keyframes bannermove {
-      0% {
-        margin-left: 0px;
-      }
-
-      100% {
-        margin-left: -2125px;
-      }
-
-    }
-
-    @-o-keyframes bannermove {
-      0% {
-        margin-left: 0px;
-      }
-
-      100% {
-        margin-left: -2125px;
-      }
-
-    }
-
-
-
-    .photobanner img {
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-    }
-
-    .photobanner img:hover {
-      -webkit-transform: scale(1.1);
-      -moz-transform: scale(1.1);
-      -o-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      transform: scale(1.1);
-      cursor: pointer;
-
-      -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-      -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-    }
-  </style>
-
-  <div id="container" style="margin-top:-55px;">
-
-    <div class="photobanner">
-      <img class="first" src="images/lab1.jpg" />
-      <img src="images/lab2.jpg" alt="" />
-      <img src="images/lab3.jpg" alt="" />
-      <img src="images/lab4.jpg" alt="" />
-      <img src="images/ab5.jpg" alt="" />
-      <img src="images/lab6.jpg" alt="" />
-      <img src="images/lab3.jpg" alt="" />
-      <img src="images/lab4.jpg" alt="" />
-      <img src="images/lab5.jpg" alt="" />
-      <img src="images/lab6.jpg" alt="" />
-
-
+      </div>
     </div>
 
-  </div>
+    <div class="faq-header">
+      <i class="bi bi-question-diamond-fill"></i>Frequently Asked Questions
+    </div>
 
-  <div class="news" id="news">
-    <div class="cons">
-      <p id="naevents">Teaching Staff</p>
-      <h5 id="namonths">Computer Science & Engineering</h5>
-      <div class="buttons" id="btns">
-        <div class="leftBtn" id="leftBtn">
-          <i class="fas fa-angle-left"></i>
+    <div class="faq-content">
+      <div class="faq-question">
+        <input id="q1" type="checkbox" class="panel" />
+        <div class="plus"><i class="bi bi-plus-circle-fill"></i></div>
+        <label for="q1" class="panel-title">What is the meaning of life?</label>
+        <div class="panel-content">42</div>
+      </div>
+
+      <div class="faq-question">
+        <input id="q2" type="checkbox" class="panel" />
+        <div class="plus"><i class="bi bi-plus-circle-fill"></i></div>
+        <label for="q2" class="panel-title"
+          >How much wood would a woodchuck chuck?</label
+        >
+        <div class="panel-content">
+          A woodchuck would chuck all the wood he could chuck, if a woodchuck
+          could chuck wood!
         </div>
-        <div class="rightBtn" id="rightBtn">
-          <i class="fas fa-angle-right"></i>
+      </div>
+
+      <div class="faq-question">
+        <input id="q3" type="checkbox" class="panel" />
+        <div class="plus"><i class="bi bi-plus-circle-fill"></i></div>
+        <label for="q3" class="panel-title"
+          >What happens if Pinocchio says, "my nose will grow now"?</label
+        >
+        <div class="panel-content">
+          Certain questions are better left &nbsp;
+          <a
+            href="https://en.wikipedia.org/wiki/The_Unanswered_Question"
+            target="_blank"
+            >unanswered</a
+          >
         </div>
       </div>
     </div>
-    <div class="overflow">
-      <div class="qq" id="ov1">
-        <p id="q">CSE</p>
-        <img src="images/Dr.Sridhara.jpg" id="qimg" alt="">
-        <p id="qdate">Head Of the Department</p>
-        <h3 id="qtitle">Dr. Sridhara.S.B</h3>
-        <p id="qcontent">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis labore ipsa dolorem quo
-          vitae voluptatem laboriosam adipisci harum eos saepe.</p>
-        <a href="">Find out more<i class="bi bi-caret-right-fill"></i></a>
-      </div>
-      <div class="qq" id="ov2">
-        <p id="q">CSE</p>
-        <img src="images/SameeranaCP.jpg" id="qimg" alt="">
-        <p id="qdate">Associate Professor</p>
-        <h3 id="qtitle">Prof. C.P. Sameerana</h3>
-        <p id="qcontent">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis labore ipsa dolorem quo
-          vitae voluptatem laboriosam adipisci harum eos saepe.</p>
-        <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
-      </div>
-      <div class="qq" id="ov3">
-        <p id="q">CSE</p>
-        <img src="images/br1.jpg" id="qimg" alt="">
-        <p id="qdate">Assistant professor</p>
-        <h3 id="qtitle">Mrs. Bhagyashree R</h3>
-        <p id="qcontent">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis labore ipsa dolorem quo
-          vitae voluptatem laboriosam adipisci harum eos saepe.</p>
-        <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
-      </div>
-      <div class="qq" id="ov4">
-        <p id="q">CSE</p>
-        <img src="images/rajashree.jpg" id="qimg" alt="">
-        <p id="qdate">Assistant Professor</p>
-        <h3 id="qtitle">Prof. Rajashree Byalal</h3>
-        <p id="qcontent">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis labore ipsa dolorem quo
-          vitae voluptatem laboriosam adipisci harum eos saepe.</p>
-        <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
-      </div>
-      <div class="qq" id="ov5">
-        <p id="q">CSE</p>
-        <img src="images/AshaN.jpg" id="qimg" alt="">
-        <p id="qdate">Assistant Professor</p>
-        <h3 id="qtitle">Prof. Asha N</h3>
-        <p id="qcontent">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis labore ipsa dolorem quo
-          vitae voluptatem laboriosam adipisci harum eos saepe.</p>
-        <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
-      </div>
-      <div class="qq" id="ov5">
-        <p id="q">CSE</p>
-        <img src="images/saritha.jpg" id="qimg" alt="">
-        <p id="qdate">Assistant Professor</p>
-        <h3 id="qtitle">Prof. D. Saritha</h3>
-        <p id="qcontent">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis labore ipsa dolorem quo
-          vitae voluptatem laboriosam adipisci harum eos saepe.</p>
-        <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
-      </div>
-      <div class="qq" id="ov5">
-        <p id="q">CSE</p>
-        <img src="images/shruthi.jpg" id="qimg" alt="">
-        <p id="qdate">Assistant Professor</p>
-        <h3 id="qtitle">Prof. Shruthi T</h3>
-        <p id="qcontent">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis labore ipsa dolorem quo
-          vitae voluptatem laboriosam adipisci harum eos saepe.</p>
-        <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
-      </div>
-      <div class="qq" id="ov5">
-        <p id="q">CSE</p>
-        <img src="images/rajesh.jpg" id="qimg" alt="">
-        <p id="qdate">Assistant Professor</p>
-        <h3 id="qtitle">Prof. Rajesh M</h3>
-        <p id="qcontent">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis labore ipsa dolorem quo
-          vitae voluptatem laboriosam adipisci harum eos saepe.</p>
-        <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
-      </div>
-      <div class="qq" id="ov5">
-        <p id="q">CSE</p>
-        <img src="images/bhoomikap.jpg" id="qimg" alt="">
-        <p id="qdate">Assistant Professor</p>
-        <h3 id="qtitle">Prof. Bhoomika P</h3>
-        <p id="qcontent">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis labore ipsa dolorem quo
-          vitae voluptatem laboriosam adipisci harum eos saepe.</p>
-        <a href="">Find out more <i class="bi bi-caret-right-fill"></i></a>
-      </div>
-    </div>
 
-  </div>
-
-  <div class="news" id="news">
-    <div class="overflow">
-      <div class="qq" id="ov1">
-        <p id="q">CSE</p>
-        <img src="images/Mukund BS.jpg" id="qimg" alt="">
-        <p id="qdate">Lab Instructor</p>
-        <h3 id="qtitle">Mr. Mukund B S</h3>
-        <p id="qcontent">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis labore ipsa dolorem quo
-          vitae voluptatem laboriosam adipisci harum eos saepe.</p>
-      </div>
-      <div class="qq" id="ov2">
-        <p id="q">CSE</p>
-        <img src="images/Manjunath B.jpg" id="qimg" alt="">
-        <p id="qdate">Asst. Lab Instructor</p>
-        <h3 id="qtitle">Mr. Manjunath B</h3>
-        <p id="qcontent">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis labore ipsa dolorem quo
-          vitae voluptatem laboriosam adipisci harum eos saepe.</p>
-      </div>
-      <div class="qq" id="ov3">
-        <p id="q">CSE</p>
-        <img src="images/N Narayana.jpg" id="qimg" alt="">
-        <p id="qdate">Lab Attender</p>
-        <h3 id="qtitle">Mr. N Narayana</h3>
-        <p id="qcontent">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis labore ipsa dolorem quo
-          vitae voluptatem laboriosam adipisci harum eos saepe.</p>
-      </div>
-      <div class="qq" id="ov4">
-        <p id="q">CSE</p>
-        <img src="images/Ajjappa N.jpg" id="qimg" alt="">
-        <p id="qdate">Lab Attender</p>
-        <h3 id="qtitle">Mr. Ajjappa N</h3>
-        <p id="qcontent">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis labore ipsa dolorem quo
-          vitae voluptatem laboriosam adipisci harum eos saepe.</p>
-      </div>
-    </div>
-    <div class="cons" id="cons1">
-      <p id="naevents">Non Teaching Staff</p>
-      <h5 id="namonths">Computer Science & Engineering</h5>
-      <div class="buttons" id="btns">
-        <div class="leftBtn" id="leftBtn">
-          <i class="fas fa-angle-left"></i>
-        </div>
-        <div class="rightBtn" id="rightBtn">
-          <i class="fas fa-angle-right"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="faq-header"><i class="bi bi-question-diamond-fill"></i>Frequently Asked Questions</div>
-
-  <div class="faq-content">
-    <div class="faq-question">
-      <input id="q1" type="checkbox" class="panel">
-      <div class="plus"><i class="bi bi-plus-circle-fill"></i></div>
-      <label for="q1" class="panel-title">What is the meaning of life?</label>
-      <div class="panel-content">42</div>
-    </div>
-
-    <div class="faq-question">
-      <input id="q2" type="checkbox" class="panel">
-      <div class="plus"><i class="bi bi-plus-circle-fill"></i></div>
-      <label for="q2" class="panel-title">How much wood would a woodchuck chuck?</label>
-      <div class="panel-content">A woodchuck would chuck all the wood he could chuck, if a woodchuck could chuck wood!
-      </div>
-    </div>
-
-    <div class="faq-question">
-      <input id="q3" type="checkbox" class="panel">
-      <div class="plus"><i class="bi bi-plus-circle-fill"></i></div>
-      <label for="q3" class="panel-title">What happens if Pinocchio says, "my nose will grow now"?</label>
-      <div class="panel-content">Certain questions are better left &nbsp; <a
-          href="https://en.wikipedia.org/wiki/The_Unanswered_Question" target="_blank">unanswered</a></div>
-    </div>
-  </div>
-
-  <div id="footer-placeholder"></div>
-  <div id="back-to-top"></div>
-  <script src="/public_html/departments/dep.js"></script>
-  <script src="/public_html/js/mainindex.js"></script>
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-</body>
-
+    <div id="footer-placeholder"></div>
+    <div id="back-to-top"></div>
+    <script src="/js/mainindex.js"></script>
+    <script src="./depscript.js"></script>
+    <script src="../dep.js"></script>
+  </body>
 </html>
